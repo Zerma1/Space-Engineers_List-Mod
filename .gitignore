@@ -1,0 +1,16 @@
+# Build outputs (le jeu compile lui-même les scripts)
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
+# IDE
+.idea/workspace.xml
+.idea/shelf/
+.vscode/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
