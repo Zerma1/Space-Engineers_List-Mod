@@ -56,10 +56,10 @@ namespace Hannobal.ForceField
             block.DoorStateChanged += HandleDoorStateChanged;
             block.CustomNameChanged += HandleNameChanged;
             idleSound = new MySoundPair("BlockProjectorOff");
-            idleSoundEmitter = new MyEntity3DSoundEmitter(MyEntities.GetEntityById(block.EntityId));
+            idleSoundEmitter = new MyEntity3DSoundEmitter((MyEntity)Entity);
             idleSoundEmitter.CanPlayLoopSounds = true;
             openSound = new MySoundPair("BlockProjectorOn");
-            openSoundEmitter = new MyEntity3DSoundEmitter(MyEntities.GetEntityById(block.EntityId));
+            openSoundEmitter = new MyEntity3DSoundEmitter((MyEntity)Entity);
             openSoundEmitter.CanPlayLoopSounds = false;
             if (block.BlockDefinition.SubtypeId.Contains("Small"))
             {
@@ -75,15 +75,14 @@ namespace Hannobal.ForceField
             colorClosed = colorNames[7];
             HandleNameChanged(block as IMyTerminalBlock);
             HandleIsWorkingChanged(block as IMyCubeBlock);
-            Entity.NeedsUpdate |= MyEntityUpdateEnum.NONE;
-            var door = Entity as MyAirtightDoorGeneric;
         }
 
         public override void UpdateAfterSimulation10()
         {
             base.UpdateAfterSimulation10();
             MatrixD mat = Entity.WorldMatrix;
-            var door = Entity as MyAirtightDoorGeneric;
+            var door = Entity as MyEntity;
+            if (door == null || door.Subparts == null) return;
             foreach (KeyValuePair<string, MyEntitySubpart> sp in door.Subparts)
             {
                 sp.Value.PositionComp.UpdateWorldMatrix(ref mat, null, true, true);
@@ -169,7 +168,7 @@ namespace Hannobal.ForceField
         void UpdateFFVisibility()
         {
             if (MyAPIGateway.Session == null) return;
-            var door = Entity as MyAirtightDoorGeneric;
+            var door = Entity as MyEntity;
             if (door == null) return;
             if (block == null) return;
             if (door.Subparts == null) return;
@@ -184,12 +183,12 @@ namespace Hannobal.ForceField
                 if (sp.Key.Contains("Base")) continue;
                 if (block.IsWorking)
                 {
-                    if ((door.OpenRatio==0f && (sp.Key.Contains(colorClosed)))
-                        || (door.OpenRatio!=0f && sp.Key.Contains(colorOpen)))
+                    if ((block.OpenRatio==0f && (sp.Key.Contains(colorClosed)))
+                        || (block.OpenRatio!=0f && sp.Key.Contains(colorOpen)))
                     {
                         sp.Value.Render.Visible = true;
                     }
-                    else if (door.OpenRatio==0f && sp.Key.Contains("_door"))
+                    else if (block.OpenRatio==0f && sp.Key.Contains("_door"))
                     {
                         sp.Value.Render.Visible = false;
                         if (sp.Value.Physics != null) sp.Value.Physics.Enabled = true;
