@@ -21,6 +21,7 @@ Capsules cryogéniques, grands et petits blocs : capsule fonctionnelle (`CryoCha
 - `Models/Darth_Biomech/` : 8 modèles `.mwm`
 - `Textures/Darth_Biomech/` : textures des modèles ; `gui/` : 4 icônes
 - `metadata.mod` : ajouté dans ce dépôt (v1.1)
+- `DESCRIPTION.bbcode` : description pour la page Workshop (BBCode Steam, en anglais), ajoutée dans ce dépôt (v1.1)
 - `README.txt`, `thumb.jpg` : fichiers d'origine de l'auteur
 - Dépendances : aucune. Les sons et la texture de vitre sont repris du jeu de base (tous présents dans le jeu actuel).
 

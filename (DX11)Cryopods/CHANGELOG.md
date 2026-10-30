@@ -19,6 +19,7 @@ Catégories : **Corrigé**, **Modifié**, **Supprimé**, **Ajouté**.
   avec Armor Thrusters et Docking Ring.
 - `Data/BlockVariantGroups.sbc` : les 8 capsules regroupées dans un seul groupe de variantes
   « Cryogenic Pods » (barre G). Amélioration demandée, hors réparation minimale.
+- `DESCRIPTION.bbcode` : description de la page Workshop en BBCode Steam (anglais), à coller lors de la republication.
 - `README.md` et `CHANGELOG.md` du mod, avec l'analyse.
 
 ### Corrigé
