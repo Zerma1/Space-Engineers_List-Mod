@@ -119,12 +119,13 @@
         <MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.7"/>
         <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.7"/>
       </MountPoints>
-      <BlockPairName>DockingRingPart</BlockPairName> 
+      <BlockPairName>DockingRingPart</BlockPairName>
       <MirroringX>Y</MirroringX>
       <EdgeType>Light</EdgeType>
       <Public>true</Public>
       <BuildTimeSeconds>40</BuildTimeSeconds>
       <DamageEffectId>212</DamageEffectId>
+      <PCU>100</PCU>
     </Definition>
  
    <Definition>
@@ -214,6 +215,7 @@
       <OpenSound>BlockDoorSmallOpen</OpenSound>
       <CloseSound>BlockDoorSmallClose</CloseSound>
       <ResourceSinkGroup>Doors</ResourceSinkGroup>
+      <PCU>115</PCU>
     </Definition>
 
    
@@ -263,6 +265,7 @@
       <OpenSound>BlockDoorSmallOpen</OpenSound>
       <CloseSound>BlockDoorSmallClose</CloseSound>
       <ResourceSinkGroup>Doors</ResourceSinkGroup>
+      <PCU>115</PCU>
     </Definition>
 
 
@@ -313,6 +316,7 @@
       <OpenSound>BlockDoorSmallOpen</OpenSound>
       <CloseSound>BlockDoorSmallClose</CloseSound>
       <ResourceSinkGroup>Doors</ResourceSinkGroup>
+      <PCU>115</PCU>
     </Definition>
 
   
@@ -362,6 +366,7 @@
       <OpenSound>BlockDoorSmallOpen</OpenSound>
       <CloseSound>BlockDoorSmallClose</CloseSound>
       <ResourceSinkGroup>Doors</ResourceSinkGroup>
+      <PCU>115</PCU>
     </Definition>
 
 
@@ -426,11 +431,12 @@
         <MountPoint Side="Left" StartX="1" StartY="0.4" EndX="2.6" EndY="2.6" />
         <MountPoint Side="Right" StartX="1" StartY="0.4" EndX="2.6" EndY="2.6" />
       </MountPoints>
-      <BlockPairName>DockingRing</BlockPairName> 
+      <BlockPairName>DockingRing</BlockPairName>
       <MirroringX>Y</MirroringX>
       <EdgeType>Light</EdgeType>
       <Public>false</Public>
       <BuildTimeSeconds>20</BuildTimeSeconds>
+      <PCU>100</PCU>
     </Definition>
   </CubeBlocks>
   <BlockPositions>
