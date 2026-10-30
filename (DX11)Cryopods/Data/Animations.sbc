@@ -12,7 +12,7 @@
       <DisplayName>CryopodPosture</DisplayName>
       <Description>CryopodPosture</Description>
       <Icon>Textures\GUI\Icons\Fake.dds</Icon>
-      <AnimationModel>models\darth_biomech\character_cryopod_solo_pose.mwm</AnimationModel>
+      <AnimationModel>Models\Darth_Biomech\character_cryopod_solo_pose.mwm</AnimationModel>
       <ClipIndex>0</ClipIndex>
       <InfluenceArea>Body</InfluenceArea>
       <Public>false</Public>
