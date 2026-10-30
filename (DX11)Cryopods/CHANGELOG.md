@@ -17,6 +17,8 @@ Catégories : **Corrigé**, **Modifié**, **Supprimé**, **Ajouté**.
   cryo et du siège passager vanilla).
 - Les 4 variantes petite grille dans la catégorie « Darth Biomech Mods » (barre G), partagée
   avec Armor Thrusters et Docking Ring.
+- `Data/BlockVariantGroups.sbc` : les 8 capsules regroupées dans un seul groupe de variantes
+  « Cryogenic Pods » (barre G). Amélioration demandée, hors réparation minimale.
 - `README.md` et `CHANGELOG.md` du mod, avec l'analyse.
 
 ### Corrigé
@@ -26,8 +28,11 @@ Catégories : **Corrigé**, **Modifié**, **Supprimé**, **Ajouté**.
 Aucun `TypeId`/`SubtypeId` modifié. Les points non corrigeables (textures de construction
 absentes du jeu, pose du personnage de 2015) et les points cosmétiques sont documentés dans le README.
 
-**Testé sur :** non testé en jeu. Validation statique uniquement (XML valide, pas de
-`SubtypeId` en double, tous les chemins des `.sbc` présents).
+**Testé sur :** chargement d'un monde solo local le 2026-10-30, avant l'ajout du groupe de
+variantes : les 8 définitions sont créées, avec 4 `MOD_ERROR` non bloquantes déjà présentes dans
+la version d'origine (composant `Computer` dans les capsules décoratives, voir README point 11).
+Blocs, groupe et fonctionnement non vérifiés en jeu. Validation statique : XML valide, pas de
+`SubtypeId` en double, tous les chemins des `.sbc` présents.
 
 ## [1.0] — 2026-10-30
 

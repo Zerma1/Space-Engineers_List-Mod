@@ -17,7 +17,7 @@ Capsules cryogéniques, grands et petits blocs : capsule fonctionnelle (`CryoCha
 
 ## Contenu
 
-- `Data/` : `CubeBlocks.sbc` (8 blocs : 2 `CryoChamberDefinition`, 2 `CockpitDefinition`, 4 blocs décoratifs `CubeBlock`), `BlockCategories.sbc`, `Animations.sbc` (pose du personnage `CryopodPostureSolo`), `TransparentMaterials.sbc` (`CryopodGlass`)
+- `Data/` : `CubeBlocks.sbc` (8 blocs : 2 `CryoChamberDefinition`, 2 `CockpitDefinition`, 4 blocs décoratifs `CubeBlock`), `BlockCategories.sbc`, `BlockVariantGroups.sbc` (ajouté dans ce dépôt, v1.1), `Animations.sbc` (pose du personnage `CryopodPostureSolo`), `TransparentMaterials.sbc` (`CryopodGlass`)
 - `Models/Darth_Biomech/` : 8 modèles `.mwm`
 - `Textures/Darth_Biomech/` : textures des modèles ; `gui/` : 4 icônes
 - `metadata.mod` : ajouté dans ce dépôt (v1.1)
@@ -26,7 +26,9 @@ Capsules cryogéniques, grands et petits blocs : capsule fonctionnelle (`CryoCha
 
 Les blocs apparaissent dans la catégorie « Darth Biomech Mods » de la barre G, partagée
 avec [(DX11)Armor Thrusters](../%28DX11%29Armor%20Thrusters/) et [(DX11)Docking Ring](../%28DX11%29Docking%20Ring/)
-(même `<Name>darthbiomech</Name>` dans les trois mods).
+(même `<Name>darthbiomech</Name>` dans les trois mods). Depuis la v1.1, les 8 capsules
+(fonctionnelle, ouverte, décorative et pack, grande et petite grille) y forment un seul groupe
+de variantes, « Cryogenic Pods ».
 
 ## Licence d'origine
 
@@ -68,11 +70,20 @@ Les numéros de ligne renvoient à la v1.1.
 | 8 | `Data/BlockCategories.sbc:10,26` | Les catégories `LargeBlocks` et `SmallBlocks` n'existent plus dans le jeu : de nouvelles catégories portant ces noms peuvent apparaître dans la barre G | cosmétique | supposé, à vérifier en jeu | non modifié |
 | 9 | `Data/CubeBlocks.sbc:53` (et 7 autres) | `<DamageEffectId>` remplacé par `<DamageEffectName>` dans le jeu actuel ; encore utilisé par quelques fichiers vanilla, donc a priori accepté | cosmétique | supposé | non modifié |
 | 10 | `Models/Darth_Biomech/cryopod.mwm`, `Textures/Darth_Biomech/*_ns.dds`, `*_glass_clear_*.dds` | Fichiers non référencés par les `.sbc` (ou seulement par ce modèle inutilisé) : restes de la version DX9 | cosmétique | confirmé (aucune référence dans les `.sbc`) | conservés (binaires d'origine) |
+| 11 | `Data/CubeBlocks.sbc:240,334` (`DB_Cryopod`, `DB_Cryopod_pack`) et `:286,380` (versions petite grille) | Blocs décoratifs (`CubeBlock`) dont la recette contient un composant `Computer` : le jeu affiche 4 `MOD_ERROR` au chargement (« contient un ordinateur, mais le TypeId du bloc n'est pas celui d'un terminal » : le bloc a un propriétaire qui ne peut pas être changé via le terminal). Les blocs sont quand même créés. Présent dès la version d'origine | mineur | confirmé (`SpaceEngineers.log` du 2026-10-30) | non modifié : changer le `TypeId` est exclu (suppression des blocs des mondes) ; retirer le `Computer` de la recette changerait le coût de construction, en attente de décision |
+
+### Résultat du chargement en jeu (2026-10-30, solo local)
+
+Monde créatif local avec les 3 mods (DX11) en v1.1 (`SpaceEngineers.log` du 2026-10-30, 09:38 et 09:58) :
+les 8 définitions sont créées. Seul message : les 4 `MOD_ERROR` non bloquantes du point 11.
+Les modèles, textures et l'animation ne sont chargés qu'à l'affichage des blocs : pas encore vérifiés.
+Le groupe de variantes a été ajouté après ces chargements.
 
 ## À tester en jeu
 
-- [ ] Le monde se charge sans erreur de mod (vérifier le log : textures manquantes, animation)
+- [x] Le monde se charge (log du 2026-10-30, définitions seulement ; 4 `MOD_ERROR` non bloquantes, point 11)
 - [ ] Les 8 blocs apparaissent dans la catégorie « Darth Biomech Mods », avec ceux d'Armor Thrusters et Docking Ring
+- [ ] Le groupe « Cryogenic Pods » s'affiche avec son icône, et on passe d'une variante à l'autre
 - [ ] Icônes, modèles et étapes de construction s'affichent
 - [ ] Construction / soudure / démontage
 - [ ] Capsule fonctionnelle : entrer, pression/oxygène, respawn
