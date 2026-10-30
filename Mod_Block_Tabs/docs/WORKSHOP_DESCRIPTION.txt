@@ -1,0 +1,36 @@
+[h1]Mod Block Tabs[/h1]
+
+Find modded blocks instantly: this mod adds [b]one tab per loaded mod[/b] to the build menu (G), named [b][MOD] <mod name>[/b], listing every block of that mod.
+
+[table]
+[tr][td][b]Version[/b][/td][td]1.0[/td][/tr]
+[tr][td][b]Tested on Space Engineers[/b][/td][td]not tested in game yet[/td][/tr]
+[tr][td][b]Last update[/b][/td][td]2026-10-30[/td][/tr]
+[/table]
+
+[h2]Description[/h2]
+[list]
+[*]Tabs are created automatically when the world loads, from the world's mod list.
+[*]Blocks also stay in their original tabs: nothing is moved or removed.
+[*]Works with any mod that adds blocks. No configuration.
+[/list]
+
+[h2]How to use[/h2]
+[list]
+[*]Add the mod to your world (single player or dedicated server), then open the G menu: the [b][MOD] …[/b] tabs are listed with the other categories, in alphabetical order.
+[*]The script only runs on the player's game; on a dedicated server it does nothing but is downloaded by every player who joins.
+[/list]
+
+[h2]Known limitations[/h2]
+[list]
+[*]Only public blocks are listed; the game still applies its usual filters (survival, research, DLC).
+[*]Not tested in game yet: please report any "Prohibited type" or mod error with your log.
+[/list]
+
+[h2]Source, bug reports and contributions[/h2]
+Source code and full changelog: [url=https://github.com/Zerma1/Space-Engineers_List-Mod/tree/main/Mod_Block_Tabs]Mod_Block_Tabs on GitHub[/url], part of the [url=https://github.com/Zerma1/Space-Engineers_List-Mod]Space-Engineers_List-Mod on GitHub[/url] repository.
+Please report bugs in the [url=https://github.com/Zerma1/Space-Engineers_List-Mod/issues]GitHub issues[/url] or in the comments below, with your [i]SpaceEngineers.log[/i] excerpt.
+
+[h2]Credits and license[/h2]
+Made by Zerma1 for the Space-Engineers_List-Mod project, MIT license.
+Space Engineers is a trademark of Keen Software House. This project is not affiliated with Keen Software House.
