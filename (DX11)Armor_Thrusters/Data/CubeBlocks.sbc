@@ -81,6 +81,8 @@
       <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
       <EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
       <EffectivenessAtMaxInfluence>0.3</EffectivenessAtMaxInfluence>
+      <ThrusterType>Ion</ThrusterType>
+      <PCU>12</PCU>
     </Definition>
 	
 	
@@ -153,6 +155,8 @@
       <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
       <EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
       <EffectivenessAtMaxInfluence>0.3</EffectivenessAtMaxInfluence>
+      <ThrusterType>Ion</ThrusterType>
+      <PCU>12</PCU>
     </Definition>
 
 
@@ -236,6 +240,8 @@
       <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
       <EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
       <EffectivenessAtMaxInfluence>0.3</EffectivenessAtMaxInfluence>
+      <ThrusterType>Ion</ThrusterType>
+      <PCU>12</PCU>
     </Definition>
 	
 	
@@ -309,6 +315,8 @@
       <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
       <EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
       <EffectivenessAtMaxInfluence>0.3</EffectivenessAtMaxInfluence>
+      <ThrusterType>Ion</ThrusterType>
+      <PCU>12</PCU>
     </Definition>
 
 
