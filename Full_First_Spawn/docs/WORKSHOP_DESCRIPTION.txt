@@ -1,0 +1,36 @@
+[h1]Full First Spawn[/h1]
+
+New players start ready to go: on each player's [b]first spawn[/b] in the world, this mod fills [b]health, hunger, suit energy, oxygen and hydrogen[/b] to the maximum.
+
+[table]
+[tr][td][b]Version[/b][/td][td]1.0[/td][/tr]
+[tr][td][b]Tested on Space Engineers[/b][/td][td]not tested in game yet[/td][/tr]
+[tr][td][b]Last update[/b][/td][td]2026-10-30[/td][/tr]
+[/table]
+
+[h2]Description[/h2]
+[list]
+[*]Applied once per player, about 2 seconds after the first spawn.
+[*]A respawn after death is not refilled.
+[*]The list of players already served is saved in the world, so it survives server restarts.
+[*]Players who already spawned before the mod was added are served on their next spawn.
+[/list]
+
+[h2]How to use[/h2]
+[list]
+[*]Add the mod to your world or to your dedicated server's mod list. No configuration.
+[*]The script runs on the server (or on the host in single player).
+[/list]
+
+[h2]Known limitations[/h2]
+[list]
+[*]Not tested in game yet: please report any mod error with your log.
+[/list]
+
+[h2]Source, bug reports and contributions[/h2]
+Source code and full changelog: [url=https://github.com/Zerma1/Space-Engineers_List-Mod/tree/main/Full_First_Spawn]Full_First_Spawn on GitHub[/url], part of the [url=https://github.com/Zerma1/Space-Engineers_List-Mod]Space-Engineers_List-Mod on GitHub[/url] repository.
+Please report bugs in the [url=https://github.com/Zerma1/Space-Engineers_List-Mod/issues]GitHub issues[/url] or in the comments below, with your [i]SpaceEngineers.log[/i] excerpt.
+
+[h2]Credits and license[/h2]
+Made by Zerma1 for the Space-Engineers_List-Mod project, MIT license.
+Space Engineers is a trademark of Keen Software House. This project is not affiliated with Keen Software House.
