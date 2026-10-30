@@ -3,14 +3,18 @@ using Sandbox.Game;
 using Sandbox.Game.Components;
 using Sandbox.Game.Entities;
 using Sandbox.ModAPI;
+using VRage;
+using VRage.Game;
 using VRage.Game.Components;
 using VRage.Game.ModAPI;
+using VRage.ObjectBuilders;
 using VRage.Utils;
 
 namespace Zerma.FullFirstSpawn
 {
     // The first time each identity spawns in the world, fill its health, food, suit energy,
-    // oxygen and hydrogen. Runs on the server only; the game syncs the values to the client.
+    // oxygen and hydrogen, and add a starter kit to its inventory (on top of the default tools).
+    // Runs on the server only; the game syncs the values to the client.
     // Identities already served are stored in the world (sandbox variable), so a respawn after
     // death or a server restart does not refill them again.
     [MySessionComponentDescriptor(MyUpdateOrder.AfterSimulation)]
@@ -19,6 +23,27 @@ namespace Zerma.FullFirstSpawn
         const string StorageKey = "Zerma_FullFirstSpawn_Identities";
         // spawn code sets its own values first: wait ~2 s before overwriting them
         const int DelayTicks = 120;
+
+        // starter kit: S-10 pistol + 2 magazines, flare gun + 5 flares
+        static readonly KitItem[] StarterKit =
+        {
+            new KitItem(typeof(MyObjectBuilder_PhysicalGunObject), "SemiAutoPistolItem", 1),
+            new KitItem(typeof(MyObjectBuilder_AmmoMagazine), "SemiAutoPistolMagazine", 2),
+            new KitItem(typeof(MyObjectBuilder_PhysicalGunObject), "FlareGunItem", 1),
+            new KitItem(typeof(MyObjectBuilder_AmmoMagazine), "FlareClip", 5),
+        };
+
+        struct KitItem
+        {
+            public readonly MyDefinitionId Id;
+            public readonly int Amount;
+
+            public KitItem(MyObjectBuilderType type, string subtype, int amount)
+            {
+                Id = new MyDefinitionId(type, subtype);
+                Amount = amount;
+            }
+        }
 
         readonly HashSet<long> served = new HashSet<long>();
         readonly Dictionary<long, int> pending = new Dictionary<long, int>();
@@ -98,8 +123,27 @@ namespace Zerma.FullFirstSpawn
                 FillStat(stats, "Food");
             }
 
-            MyLog.Default.WriteLineAndConsole("Full First Spawn: stats filled for identity " + identityId);
+            GiveStarterKit(character);
+
+            MyLog.Default.WriteLineAndConsole("Full First Spawn: stats filled and starter kit given for identity " + identityId);
             return true;
+        }
+
+        static void GiveStarterKit(IMyCharacter character)
+        {
+            var inventory = character.GetInventory();
+            if (inventory == null)
+                return;
+
+            foreach (var item in StarterKit)
+            {
+                var content = (MyObjectBuilder_PhysicalObject)MyObjectBuilderSerializer.CreateNewObject(item.Id);
+                var amount = (MyFixedPoint)item.Amount;
+                if (inventory.CanItemsBeAdded(amount, item.Id))
+                    inventory.AddItems(amount, content);
+                else
+                    MyLog.Default.WriteLineAndConsole("Full First Spawn: inventory full, " + item.Id + " not given");
+            }
         }
 
         static void FillStat(MyEntityStatComponent stats, string name)

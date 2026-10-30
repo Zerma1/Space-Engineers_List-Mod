@@ -16,7 +16,9 @@
 ## Description
 
 À la **première apparition** de chaque joueur dans le monde, remplit au maximum :
-vie, faim (nourriture), énergie de la combinaison, O² et H².
+vie, faim (nourriture), énergie de la combinaison, O² et H², et ajoute un **kit de départ** dans
+l'inventaire, en plus des outils de base : un pistolet S-10 (`SemiAutoPistolItem`) avec 2 chargeurs
+(`SemiAutoPistolMagazine`), un pistolet lance-fusées (`FlareGunItem`) et 5 fusées (`FlareClip`).
 
 - Une seule fois par identité : une réapparition après une mort n'est pas remplie à nouveau.
 - La liste des identités déjà servies est enregistrée dans le monde (variable de session
@@ -57,7 +59,8 @@ pas qu'il passe la whitelist.
 
 - [ ] Le monde se charge sans erreur de mod
 - [ ] Nouveau joueur : vie, faim, énergie, O², H² à 100 % ~2 s après l'apparition
-- [ ] Le log contient `Full First Spawn: stats filled for identity …`
+- [ ] Nouveau joueur : outils de base + pistolet S-10, 2 chargeurs, pistolet lance-fusées, 5 fusées dans l'inventaire
+- [ ] Le log contient `Full First Spawn: stats filled and starter kit given for identity …`
 - [ ] Mort puis réapparition : pas de nouveau remplissage
 - [ ] Redémarrage du serveur : un joueur déjà servi n'est pas rempli à nouveau
 - [ ] Fonctionnement en solo

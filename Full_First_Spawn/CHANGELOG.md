@@ -7,6 +7,7 @@ Categories: **Fixed**, **Changed**, **Removed**, **Added**.
 
 ### Added
 - Mod created: health, food, energy, O² and H² filled to the maximum on each player's first spawn.
+- Starter kit on the first spawn, on top of the default tools: S-10 pistol + 2 magazines, flare gun + 5 flares.
 - `README.md` (English, reference), `README.fr.md`, `docs/WORKSHOP_DESCRIPTION.txt`.
 
 **Tested on:** not tested in game. Static check only (compiles against the game DLLs).

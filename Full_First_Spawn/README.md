@@ -16,7 +16,9 @@
 ## Description
 
 On each player's **first spawn** in the world, fills to the maximum: health, hunger (food),
-suit energy, oxygen (O²) and hydrogen (H²).
+suit energy, oxygen (O²) and hydrogen (H²), and adds a **starter kit** to the inventory, on top of the
+default tools: an S-10 pistol (`SemiAutoPistolItem`) with 2 magazines (`SemiAutoPistolMagazine`),
+a flare gun (`FlareGunItem`) and 5 flares (`FlareClip`).
 
 - Once per identity: a respawn after death is not refilled.
 - The identities already served are stored in the world (session variable
@@ -37,6 +39,8 @@ suit energy, oxygen (O²) and hydrogen (H²).
 - Energy, O² and H²: `SetPlayersEnergyLevel` / `SetPlayersOxygenLevel` / `SetPlayersHydrogenLevel`
   with the value `1` (0..1 ratio; checked in the game code: the energy value is multiplied by the
   suit battery capacity).
+- Starter kit: added to the character inventory with `AddItems`, after a `CanItemsBeAdded`
+  check (an item that does not fit is skipped and logged). The list is `StarterKit` in the script.
 - Health and food: `Health` and `Food` stats of the character's `MyEntityStatComponent`, set to their maximum.
 
 ## Original license
@@ -57,7 +61,8 @@ passes the whitelist.
 
 - [ ] The world loads without a mod error
 - [ ] New player: health, food, energy, O², H² at 100 % about 2 s after spawning
-- [ ] The log contains `Full First Spawn: stats filled for identity …`
+- [ ] New player: inventory contains the default tools + S-10 pistol, 2 magazines, flare gun, 5 flares
+- [ ] The log contains `Full First Spawn: stats filled and starter kit given for identity …`
 - [ ] Death then respawn: no refill
 - [ ] Server restart: a player already served is not refilled
 - [ ] Single player

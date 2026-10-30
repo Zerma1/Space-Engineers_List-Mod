@@ -1,6 +1,6 @@
 [h1]Full First Spawn[/h1]
 
-New players start ready to go: on each player's [b]first spawn[/b] in the world, this mod fills [b]health, hunger, suit energy, oxygen and hydrogen[/b] to the maximum.
+New players start ready to go: on each player's [b]first spawn[/b] in the world, this mod fills [b]health, hunger, suit energy, oxygen and hydrogen[/b] to the maximum, and adds a [b]starter kit[/b] on top of the default tools: an S-10 pistol with 2 magazines, a flare gun and 5 flares.
 
 [table]
 [tr][td][b]Version[/b][/td][td]1.0[/td][/tr]
