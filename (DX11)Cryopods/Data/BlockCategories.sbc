@@ -46,8 +46,13 @@
         <string>CryoChamber/DB_cryopodfunctional</string>  
         <string>Cockpit/DB_Cryopodopen</string>   
         <string>CubeBlock/DB_Cryopod</string>   
-        <string>CubeBlock/DB_Cryopod_pack</string> 
-		
+        <string>CubeBlock/DB_Cryopod_pack</string>
+
+        <string>CryoChamber/DB_cryopodfunctionalsmall</string>
+        <string>Cockpit/DB_CryopodopenSmall</string>
+        <string>CubeBlock/DB_Cryopod_Small</string>
+        <string>CubeBlock/DB_Cryopod_packSmall</string>
+
       </ItemIds>
     </Category>
 </CategoryClasses>
