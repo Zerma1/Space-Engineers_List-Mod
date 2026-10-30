@@ -21,6 +21,7 @@ Propulseurs intégrés dans un bloc d'armure, grands et petits blocs, en version
 - `Models/Darth_Biomech/` : 4 modèles `.mwm`
 - `Textures/Darth_Biomech/GUI/` : 2 icônes `.dds`
 - `metadata.mod` : ajouté dans ce dépôt (v1.1)
+- `DESCRIPTION.bbcode` : description pour la page Workshop (BBCode Steam, en anglais), ajoutée dans ce dépôt (v1.1)
 - `README.txt`, `thumb.jpg` : fichiers d'origine de l'auteur
 - Dépendances : aucune. Modèles de construction, sons et matériaux de flamme repris du jeu de base (tous présents dans le jeu actuel).
 

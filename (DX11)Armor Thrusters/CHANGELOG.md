@@ -17,6 +17,7 @@ Catégories : **Corrigé**, **Modifié**, **Supprimé**, **Ajouté**.
   propulseur ionique vanilla).
 - `Data/BlockVariantGroups.sbc` : les 4 propulseurs regroupés dans un seul groupe de variantes
   « Armor Thrusters » (barre G). Amélioration demandée, hors réparation minimale.
+- `DESCRIPTION.bbcode` : description de la page Workshop en BBCode Steam (anglais), à coller lors de la republication.
 - `README.md` et `CHANGELOG.md` du mod, avec l'analyse.
 
 ### Corrigé
