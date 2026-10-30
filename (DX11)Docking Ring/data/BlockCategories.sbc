@@ -1,0 +1,57 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CategoryClasses>
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+      <Name>LargeBlocks</Name>
+      <ItemIds>
+	  
+        <string>Door/DockingTubeDoor</string>  
+        <string>Door/DockingTubeDoorReverse</string>  
+        <string>Door/DockingTubeDoorCenter</string>  
+		<string>CubeBlock/DockingRingSectorPart</string>  
+		<string>CubeBlock/DockingRingSectorCorner</string>
+		<string>MergeBlock/DockingRingPart</string>
+		<string>CubeBlock/DockingRingCorner</string>
+		
+      </ItemIds>
+    </Category>  
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>DisplayName_Category_SmallBlocks</DisplayName>
+      <Name>SmallBlocks</Name>
+      <ItemIds>
+	  
+        <string>Door/DockingTubeDoorCenterS</string>  
+	  
+      </ItemIds>
+    </Category>
+
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>Darth Biomech Mods</DisplayName>
+      <Name>darthbiomech</Name>
+      <ItemIds>
+	  
+        <string>Door/DockingTubeDoor</string>  
+        <string>Door/DockingTubeDoorReverse</string>  
+        <string>Door/DockingTubeDoorCenter</string>  
+		<string>CubeBlock/DockingRingSectorPart</string>  
+		<string>CubeBlock/DockingRingSectorCorner</string>
+		<string>MergeBlock/DockingRingPart</string>
+		<string>CubeBlock/DockingRingCorner</string>
+		
+      </ItemIds>
+    </Category>
+</CategoryClasses>
+</Definitions>

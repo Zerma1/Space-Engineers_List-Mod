@@ -1,0 +1,438 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+
+   <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>DockingRingSectorPart</SubtypeId>
+      </Id>
+      <DisplayName>Docking Ring Sector</DisplayName>
+      <Icon>Textures\darth_biomech\gui\docking_ring_Sector.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\darth_biomech\docking_ring_Sector_Part.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="5" />
+        <Component Subtype="Construction" Count="25" />
+        <Component Subtype="LargeTube" Count="4" />
+        <Component Subtype="SmallTube" Count="1" />
+        <Component Subtype="Construction" Count="2" />
+        <Component Subtype="SteelPlate" Count="100" />
+      </Components>
+      <CriticalComponent Subtype="SmallTube" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.30" File="Models\darth_biomech\docking_ring_sector_progress_01.mwm" />
+        <Model BuildPercentUpperBound="0.60" File="Models\darth_biomech\docking_ring_sector_progress_02.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\darth_biomech\docking_ring_sector_progress_03.mwm" />
+      </BuildProgressModels>
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1"/>
+        <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.45"/>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.45"/>
+        <MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.7"/>
+        <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.7"/>
+      </MountPoints>
+      <BlockPairName>DockingRingSectorPart</BlockPairName> 
+      <MirroringX>Y</MirroringX>
+      <EdgeType>Light</EdgeType>
+      <Public>true</Public>
+      <BuildTimeSeconds>40</BuildTimeSeconds>
+    </Definition>
+ 
+   <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>DockingRingSectorCorner</SubtypeId>
+      </Id>
+      <DisplayName>Docking Ring Sector Corner</DisplayName>
+      <Icon>Textures\darth_biomech\gui\docking_ring_sector.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\darth_biomech\docking_ring_Sector_corner.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="5" />
+        <Component Subtype="Construction" Count="15" />
+        <Component Subtype="LargeTube" Count="1" />
+        <Component Subtype="SmallTube" Count="4" />
+        <Component Subtype="Construction" Count="2" />
+        <Component Subtype="SteelPlate" Count="25" />
+      </Components>
+      <CriticalComponent Subtype="SmallTube" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.30" File="Models\darth_biomech\docking_ring_corner_progress_01.mwm" />
+        <Model BuildPercentUpperBound="0.60" File="Models\darth_biomech\docking_ring_corner_progress_02.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\darth_biomech\docking_ring_corner_progress_03.mwm" />
+      </BuildProgressModels>
+      <MountPoints>
+        <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.45" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="0.45" />
+        <MountPoint Side="Right" StartX="0.55" StartY="0" EndX="1" EndY="0.45" />
+        <MountPoint Side="Left" StartX="0" StartY="0" EndX="0.45" EndY="0.45" />
+      </MountPoints>
+      <BlockPairName>DockingRingSectorCorner</BlockPairName> 
+      <MirroringX>ZMinusHalfX</MirroringX>
+      <MirroringY>MinusHalfX</MirroringY>
+      <MirroringZ>HalfX</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <Public>true</Public>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+    </Definition> 
+	
+	
+   <Definition xsi:type="MyObjectBuilder_MergeBlockDefinition">
+      <Id>
+        <TypeId>MergeBlock</TypeId>
+        <SubtypeId>DockingRingPart</SubtypeId>
+      </Id>
+      <DisplayName>Docking Ring Clamp</DisplayName>
+      <Icon>Textures\darth_biomech\gui\docking_ring.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <Strength>0.1</Strength>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\darth_biomech\docking_ring_Part.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="25" />
+        <Component Subtype="Construction" Count="25" />
+        <Component Subtype="SmallTube" Count="1" />
+        <Component Subtype="LargeTube" Count="4" />
+        <Component Subtype="Motor" Count="3" />
+        <Component Subtype="Construction" Count="2" />
+        <Component Subtype="SteelPlate" Count="250" />
+      </Components>
+      <CriticalComponent Subtype="Motor" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.30" File="Models\darth_biomech\docking_ring_sector_progress_01.mwm" />
+        <Model BuildPercentUpperBound="0.60" File="Models\darth_biomech\docking_ring_sector_progress_02.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\darth_biomech\docking_ring_sector_progress_03.mwm" />
+      </BuildProgressModels>
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1"/>
+        <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.45"/>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.45"/>
+        <MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.7"/>
+        <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.7"/>
+      </MountPoints>
+      <BlockPairName>DockingRingPart</BlockPairName> 
+      <MirroringX>Y</MirroringX>
+      <EdgeType>Light</EdgeType>
+      <Public>true</Public>
+      <BuildTimeSeconds>40</BuildTimeSeconds>
+      <DamageEffectId>212</DamageEffectId>
+    </Definition>
+ 
+   <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>DockingRingCorner</SubtypeId>
+      </Id>
+      <DisplayName>Docking Ring Clamp Corner</DisplayName>
+      <Icon>Textures\darth_biomech\gui\docking_ring.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\darth_biomech\docking_ring_corner.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="5" />
+        <Component Subtype="Construction" Count="15" />
+        <Component Subtype="LargeTube" Count="1" />
+        <Component Subtype="SmallTube" Count="4" />
+        <Component Subtype="Construction" Count="2" />
+        <Component Subtype="SteelPlate" Count="50" />
+      </Components>
+      <CriticalComponent Subtype="SmallTube" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.30" File="Models\darth_biomech\docking_ring_corner_progress_01.mwm" />
+        <Model BuildPercentUpperBound="0.60" File="Models\darth_biomech\docking_ring_corner_progress_02.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\darth_biomech\docking_ring_corner_progress_03.mwm" />
+      </BuildProgressModels>
+      <MountPoints>
+        <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.45" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="0.45" />
+        <MountPoint Side="Right" StartX="0.55" StartY="0" EndX="1" EndY="0.45" />
+      </MountPoints>
+      <BlockPairName>DockingRingCorner</BlockPairName> 
+      <MirroringX>ZMinusHalfX</MirroringX>
+      <MirroringY>MinusHalfX</MirroringY>
+      <MirroringZ>HalfX</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <Public>true</Public>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <DamageEffectId>212</DamageEffectId>
+    </Definition> 
+	
+    <Definition xsi:type="MyObjectBuilder_DoorDefinition">
+      <Id>
+        <TypeId>Door</TypeId>
+        <SubtypeId>DockingTubeDoor</SubtypeId>
+      </Id>
+      <DisplayName>Docking Ring Airlock</DisplayName>
+      <Icon>Textures\darth_biomech\gui\docking_ring_door.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0.95" />
+      <Model>Models\darth_biomech\docking_ring_door.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="2" />
+        <Component Subtype="InteriorPlate" Count="4" />
+        <Component Subtype="Construction" Count="15" />
+        <Component Subtype="MetalGrid" Count="4" />
+        <Component Subtype="SmallTube" Count="4" />
+        <Component Subtype="Motor" Count="2" />
+        <Component Subtype="Display" Count="1" />
+        <Component Subtype="Computer" Count="2" />
+        <Component Subtype="InteriorPlate" Count="6" />
+        <Component Subtype="Construction" Count="25" />
+        <Component Subtype="SteelPlate" Count="6" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Left" PropertiesMask="1" StartX="0.4" StartY="0" EndX="0.6" EndY="1" />
+        <MountPoint Side="Right" PropertiesMask="1" StartX="0.4" StartY="0" EndX="0.6" EndY="1" />
+        <MountPoint Side="Top" ExclusionMask="1" PropertiesMask="2" StartX="0" StartY="0.4" EndX="1" EndY="0.6" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0.325" EndX="0.25" EndY="0.675" />
+        <MountPoint Side="Bottom" StartX="0.75" StartY="0.325" EndX="1" EndY="0.675" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\darth_biomech\docking_ring_door_progress_01.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>DockingTubeDoor</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>24</BuildTimeSeconds>
+      <DisassembleRatio>1.5</DisassembleRatio>
+      <MaxOpen>1.7</MaxOpen>
+      <OpenSound>BlockDoorSmallOpen</OpenSound>
+      <CloseSound>BlockDoorSmallClose</CloseSound>
+      <ResourceSinkGroup>Doors</ResourceSinkGroup>
+    </Definition>
+
+   
+    <Definition xsi:type="MyObjectBuilder_DoorDefinition">
+      <Id>
+        <TypeId>Door</TypeId>
+        <SubtypeId>DockingTubeDoorReverse</SubtypeId>
+      </Id>
+      <DisplayName>Docking Ring Airlock (Reverse)</DisplayName>
+      <Icon>Textures\darth_biomech\gui\docking_ring_door_reverse.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="-0.95" />
+      <Model>Models\darth_biomech\docking_ring_door.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="2" />
+        <Component Subtype="InteriorPlate" Count="4" />
+        <Component Subtype="Construction" Count="15" />
+        <Component Subtype="MetalGrid" Count="4" />
+        <Component Subtype="SmallTube" Count="4" />
+        <Component Subtype="Motor" Count="2" />
+        <Component Subtype="Display" Count="1" />
+        <Component Subtype="Computer" Count="2" />
+        <Component Subtype="InteriorPlate" Count="6" />
+        <Component Subtype="Construction" Count="25" />
+        <Component Subtype="SteelPlate" Count="6" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Left" PropertiesMask="1" StartX="0.4" StartY="0" EndX="0.6" EndY="1" />
+        <MountPoint Side="Right" PropertiesMask="1" StartX="0.4" StartY="0" EndX="0.6" EndY="1" />
+        <MountPoint Side="Top" ExclusionMask="1" PropertiesMask="2" StartX="0" StartY="0.4" EndX="1" EndY="0.6" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0.325" EndX="0.25" EndY="0.675" />
+        <MountPoint Side="Bottom" StartX="0.75" StartY="0.325" EndX="1" EndY="0.675" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\darth_biomech\docking_ring_door_progress_01.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>DockingTubeDoorReverse</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>24</BuildTimeSeconds>
+      <DisassembleRatio>1.5</DisassembleRatio>
+      <MaxOpen>1.7</MaxOpen>
+      <OpenSound>BlockDoorSmallOpen</OpenSound>
+      <CloseSound>BlockDoorSmallClose</CloseSound>
+      <ResourceSinkGroup>Doors</ResourceSinkGroup>
+    </Definition>
+
+
+ 
+    <Definition xsi:type="MyObjectBuilder_DoorDefinition">
+      <Id>
+        <TypeId>Door</TypeId>
+        <SubtypeId>DockingTubeDoorCenterS</SubtypeId>
+      </Id>
+      <DisplayName>Docking Ring Airlock (centered)</DisplayName>
+      <Icon>Textures\darth_biomech\gui\docking_ring_door.dds</Icon>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="5" y="5" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\darth_biomech\docking_ring_door.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="2" />
+        <Component Subtype="InteriorPlate" Count="4" />
+        <Component Subtype="Construction" Count="15" />
+        <Component Subtype="MetalGrid" Count="4" />
+        <Component Subtype="SmallTube" Count="4" />
+        <Component Subtype="Motor" Count="2" />
+        <Component Subtype="Display" Count="1" />
+        <Component Subtype="Computer" Count="2" />
+        <Component Subtype="InteriorPlate" Count="6" />
+        <Component Subtype="Construction" Count="25" />
+        <Component Subtype="SteelPlate" Count="6" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Left" PropertiesMask="1" StartX="0.4" StartY="0" EndX="0.6" EndY="1" />
+        <MountPoint Side="Right" PropertiesMask="1" StartX="0.4" StartY="0" EndX="0.6" EndY="1" />
+        <MountPoint Side="Top" ExclusionMask="1" PropertiesMask="2" StartX="0" StartY="0.4" EndX="1" EndY="0.6" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0.325" EndX="0.25" EndY="0.675" />
+        <MountPoint Side="Bottom" StartX="0.75" StartY="0.325" EndX="1" EndY="0.675" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\darth_biomech\docking_ring_door_progress_01.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>DockingTubeDoorCenter</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>24</BuildTimeSeconds>
+      <DisassembleRatio>1.5</DisassembleRatio>
+      <MaxOpen>1.7</MaxOpen>
+      <OpenSound>BlockDoorSmallOpen</OpenSound>
+      <CloseSound>BlockDoorSmallClose</CloseSound>
+      <ResourceSinkGroup>Doors</ResourceSinkGroup>
+    </Definition>
+
+  
+    <Definition xsi:type="MyObjectBuilder_DoorDefinition">
+      <Id>
+        <TypeId>Door</TypeId>
+        <SubtypeId>DockingTubeDoorCenter</SubtypeId>
+      </Id>
+      <DisplayName>Docking Ring Airlock (centered)</DisplayName>
+      <Icon>Textures\darth_biomech\gui\docking_ring_door.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\darth_biomech\docking_ring_door.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="2" />
+        <Component Subtype="InteriorPlate" Count="4" />
+        <Component Subtype="Construction" Count="15" />
+        <Component Subtype="MetalGrid" Count="4" />
+        <Component Subtype="SmallTube" Count="4" />
+        <Component Subtype="Motor" Count="2" />
+        <Component Subtype="Display" Count="1" />
+        <Component Subtype="Computer" Count="2" />
+        <Component Subtype="InteriorPlate" Count="6" />
+        <Component Subtype="Construction" Count="25" />
+        <Component Subtype="SteelPlate" Count="6" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Left" PropertiesMask="1" StartX="0.4" StartY="0" EndX="0.6" EndY="1" />
+        <MountPoint Side="Right" PropertiesMask="1" StartX="0.4" StartY="0" EndX="0.6" EndY="1" />
+        <MountPoint Side="Top" ExclusionMask="1" PropertiesMask="2" StartX="0" StartY="0.4" EndX="1" EndY="0.6" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0.325" EndX="0.25" EndY="0.675" />
+        <MountPoint Side="Bottom" StartX="0.75" StartY="0.325" EndX="1" EndY="0.675" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\darth_biomech\docking_ring_door_progress_01.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>DockingTubeDoorCenter</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>24</BuildTimeSeconds>
+      <DisassembleRatio>1.5</DisassembleRatio>
+      <MaxOpen>1.7</MaxOpen>
+      <OpenSound>BlockDoorSmallOpen</OpenSound>
+      <CloseSound>BlockDoorSmallClose</CloseSound>
+      <ResourceSinkGroup>Doors</ResourceSinkGroup>
+    </Definition>
+
+
+	<Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>DockingTubeSector</SubtypeId>
+      </Id>
+      <DisplayName>Docking Ring Sector</DisplayName>
+      <Icon>Textures\darth_biomech\gui\docking_ring_sector.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="3" z="3" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\darth_biomech\docking_ring_sector.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="5" />
+        <Component Subtype="Construction" Count="15" />
+        <Component Subtype="SmallTube" Count="4" />
+        <Component Subtype="LargeTube" Count="1" />
+        <Component Subtype="Construction" Count="2" />
+        <Component Subtype="SteelPlate" Count="20" />
+      </Components>
+      <CriticalComponent Subtype="Construction" Index="0" />
+      <BuildProgressModels/>
+      <MountPoints>
+        <MountPoint Side="Left" StartX="1" StartY="0.4" EndX="2.6" EndY="2.6" />
+        <MountPoint Side="Right" StartX="1" StartY="0.4" EndX="2.6" EndY="2.6" />
+      </MountPoints>
+      <BlockPairName>DockingTubeSector</BlockPairName> 
+      <MirroringX>Y</MirroringX>
+      <EdgeType>Light</EdgeType>
+      <Public>false</Public>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+    </Definition>
+
+   <Definition xsi:type="MyObjectBuilder_MergeBlockDefinition">
+      <Id>
+        <TypeId>MergeBlock</TypeId>
+        <SubtypeId>DockingRing</SubtypeId>
+      </Id>
+      <DisplayName>Docking Ring Clamp</DisplayName>
+      <Icon>Textures\darth_biomech\gui\docking_ring.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <Strength>0.1</Strength>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="3" z="3" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\darth_biomech\docking_ring.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="5" />
+        <Component Subtype="Construction" Count="15" />
+        <Component Subtype="Motor" Count="4" />
+        <Component Subtype="SmallTube" Count="4" />
+        <Component Subtype="LargeTube" Count="1" />
+        <Component Subtype="Construction" Count="2" />
+        <Component Subtype="SteelPlate" Count="20" />
+      </Components>
+      <CriticalComponent Subtype="Motor" Index="0" />
+      <BuildProgressModels/>
+      <MountPoints>
+        <MountPoint Side="Left" StartX="1" StartY="0.4" EndX="2.6" EndY="2.6" />
+        <MountPoint Side="Right" StartX="1" StartY="0.4" EndX="2.6" EndY="2.6" />
+      </MountPoints>
+      <BlockPairName>DockingRing</BlockPairName> 
+      <MirroringX>Y</MirroringX>
+      <EdgeType>Light</EdgeType>
+      <Public>false</Public>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+    </Definition>
+  </CubeBlocks>
+  <BlockPositions>
+  </BlockPositions>
+</Definitions>
