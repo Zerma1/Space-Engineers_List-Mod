@@ -8,7 +8,7 @@
         <SubtypeId>LargeBlockArmorThrust</SubtypeId>
       </Id>
       <DisplayName>Small Armor Thrust</DisplayName>
-      <Icon>Textures\darth_biomech\GUI\armor_thrust.dds</Icon>
+      <Icon>Textures\Darth_Biomech\GUI\armor_thrust.dds</Icon>
       <CubeSize>Large</CubeSize>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size x="1" y="1" z="2" />
@@ -81,6 +81,8 @@
       <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
       <EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
       <EffectivenessAtMaxInfluence>0.3</EffectivenessAtMaxInfluence>
+      <ThrusterType>Ion</ThrusterType>
+      <PCU>12</PCU>
     </Definition>
 	
 	
@@ -90,12 +92,12 @@
         <SubtypeId>SmallBlockArmorThrust</SubtypeId>
       </Id>
       <DisplayName>Small Armor Thrust</DisplayName>
-      <Icon>Textures\darth_biomech\GUI\armor_thrust.dds</Icon>
+      <Icon>Textures\Darth_Biomech\GUI\armor_thrust.dds</Icon>
       <CubeSize>Small</CubeSize>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size x="1" y="1" z="2" />
       <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Darth_Biomech\small_armor_thruster.mwm</Model>
+      <Model>Models\Darth_Biomech\Small_armor_thruster.mwm</Model>
       <Components>
         <Component Subtype="LargeTube" Count="1" />
         <Component Subtype="Thrust" Count="1" />
@@ -153,6 +155,8 @@
       <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
       <EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
       <EffectivenessAtMaxInfluence>0.3</EffectivenessAtMaxInfluence>
+      <ThrusterType>Ion</ThrusterType>
+      <PCU>12</PCU>
     </Definition>
 
 
@@ -162,7 +166,7 @@
         <SubtypeId>LargeBlockArmorSloppedThrust</SubtypeId>
       </Id>
       <DisplayName>Small Armor Sloped Thrust</DisplayName>
-      <Icon>Textures\darth_biomech\GUI\armor_thrust_sloped.dds</Icon>
+      <Icon>Textures\Darth_Biomech\GUI\armor_thrust_sloped.dds</Icon>
       <CubeSize>Large</CubeSize>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size x="1" y="1" z="2" />
@@ -236,6 +240,8 @@
       <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
       <EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
       <EffectivenessAtMaxInfluence>0.3</EffectivenessAtMaxInfluence>
+      <ThrusterType>Ion</ThrusterType>
+      <PCU>12</PCU>
     </Definition>
 	
 	
@@ -245,7 +251,7 @@
         <SubtypeId>SmallBlockArmorSloppedThrust</SubtypeId>
       </Id>
       <DisplayName>Small Armor Sloped Thrust</DisplayName>
-      <Icon>Textures\darth_biomech\GUI\armor_thrust_sloped.dds</Icon>
+      <Icon>Textures\Darth_Biomech\GUI\armor_thrust_sloped.dds</Icon>
       <CubeSize>Small</CubeSize>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size x="1" y="1" z="2" />
@@ -309,6 +315,8 @@
       <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
       <EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
       <EffectivenessAtMaxInfluence>0.3</EffectivenessAtMaxInfluence>
+      <ThrusterType>Ion</ThrusterType>
+      <PCU>12</PCU>
     </Definition>
 
 
