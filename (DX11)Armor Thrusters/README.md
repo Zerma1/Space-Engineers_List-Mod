@@ -17,12 +17,17 @@ Propulseurs intégrés dans un bloc d'armure, grands et petits blocs, en version
 
 ## Contenu
 
-- `Data/` : `CubeBlocks.sbc` (4 `ThrustDefinition` : `LargeBlockArmorThrust`, `SmallBlockArmorThrust`, `LargeBlockArmorSloppedThrust`, `SmallBlockArmorSloppedThrust`), `BlockCategories.sbc`
+- `Data/` : `CubeBlocks.sbc` (4 `ThrustDefinition` : `LargeBlockArmorThrust`, `SmallBlockArmorThrust`, `LargeBlockArmorSloppedThrust`, `SmallBlockArmorSloppedThrust`), `BlockCategories.sbc`, `BlockVariantGroups.sbc` (ajouté dans ce dépôt, v1.1)
 - `Models/Darth_Biomech/` : 4 modèles `.mwm`
 - `Textures/Darth_Biomech/GUI/` : 2 icônes `.dds`
 - `metadata.mod` : ajouté dans ce dépôt (v1.1)
 - `README.txt`, `thumb.jpg` : fichiers d'origine de l'auteur
 - Dépendances : aucune. Modèles de construction, sons et matériaux de flamme repris du jeu de base (tous présents dans le jeu actuel).
+
+Les blocs apparaissent dans la catégorie « Darth Biomech Mods » de la barre G, partagée
+avec [(DX11)Cryopods](../%28DX11%29Cryopods/) et [(DX11)Docking Ring](../%28DX11%29Docking%20Ring/)
+(même `<Name>darthbiomech</Name>` dans les trois mods). Depuis la v1.1, les 4 propulseurs
+(droit et incliné, grande et petite grille) y forment un seul groupe de variantes, « Armor Thrusters ».
 
 ## Licence d'origine
 
@@ -62,10 +67,18 @@ Les numéros de ligne renvoient à la v1.1.
 | 6 | `Data/CubeBlocks.sbc:70,75,33` (et équivalents) | Balises anciennes : `<FlameGlareMaterial>` (remplacée par `<FlameFlare>`), `<DamageEffectId>` (remplacée par `<DamageEffectName>`), `<Variants>`. Elles figurent encore dans quelques fichiers vanilla, donc a priori acceptées ; au pire, pas de reflet de flamme ni d'effet de dégât | cosmétique | supposé, à vérifier en jeu | non modifié |
 | 7 | `Data/CubeBlocks.sbc:10` | Le grand bloc s'affiche « Small Armor Thrust » (idem pour la version inclinée, ligne 168) : même nom que la version petite grille | cosmétique | confirmé | non modifié (nom d'origine) |
 
+### Résultat du chargement en jeu (2026-10-30, solo local)
+
+Monde créatif local avec les 3 mods (DX11) en v1.1 (`SpaceEngineers.log` du 2026-10-30, 09:38 et 09:58) :
+les 4 définitions sont créées sans aucune erreur ni aucun avertissement. Les balises anciennes
+(point 6) sont donc acceptées par le jeu. Les modèles et textures ne sont chargés qu'à l'affichage
+des blocs : pas encore vérifiés. Le groupe de variantes a été ajouté après ces chargements.
+
 ## À tester en jeu
 
-- [ ] Le monde se charge sans erreur de mod (vérifier le log : balises inconnues, chemins)
+- [x] Le monde se charge sans erreur de mod (log du 2026-10-30, définitions seulement)
 - [ ] Les blocs apparaissent dans la barre G (catégorie « Darth Biomech Mods »)
+- [ ] Le groupe « Armor Thrusters » s'affiche avec son icône, et on passe d'une variante à l'autre
 - [ ] Icônes, modèles et étapes de construction s'affichent
 - [ ] Construction / soudure / démontage
 - [ ] Poussée, flamme bleue, PCU affiché à 12

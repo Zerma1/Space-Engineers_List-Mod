@@ -15,6 +15,8 @@ Catégories : **Corrigé**, **Modifié**, **Supprimé**, **Ajouté**.
 - `metadata.mod` (`ModVersion` 1.1).
 - `<ThrusterType>Ion</ThrusterType>` et `<PCU>12</PCU>` sur les 4 blocs (valeurs du petit
   propulseur ionique vanilla).
+- `Data/BlockVariantGroups.sbc` : les 4 propulseurs regroupés dans un seul groupe de variantes
+  « Armor Thrusters » (barre G). Amélioration demandée, hors réparation minimale.
 - `README.md` et `CHANGELOG.md` du mod, avec l'analyse.
 
 ### Corrigé
@@ -25,8 +27,10 @@ Catégories : **Corrigé**, **Modifié**, **Supprimé**, **Ajouté**.
 Aucun `TypeId`/`SubtypeId` modifié. Les points cosmétiques (anciennes catégories, balises
 obsolètes, nom « Small » du grand bloc) sont documentés dans le README mais pas modifiés.
 
-**Testé sur :** non testé en jeu. Validation statique uniquement (XML valide, pas de
-`SubtypeId` en double, chemins `<Icon>`/`<Model>`/`BuildProgressModels` présents).
+**Testé sur :** chargement d'un monde solo local le 2026-10-30, avant l'ajout du groupe de
+variantes : les 4 définitions sont créées sans erreur (log). Blocs, groupe et fonctionnement
+non vérifiés en jeu. Validation statique : XML valide, pas de `SubtypeId` en double, chemins
+`<Icon>`/`<Model>`/`BuildProgressModels` présents.
 
 ## [1.0] — 2026-10-30
 
