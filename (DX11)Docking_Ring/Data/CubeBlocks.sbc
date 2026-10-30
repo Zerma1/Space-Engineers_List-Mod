@@ -8,12 +8,12 @@
         <SubtypeId>DockingRingSectorPart</SubtypeId>
       </Id>
       <DisplayName>Docking Ring Sector</DisplayName>
-      <Icon>Textures\darth_biomech\gui\docking_ring_Sector.dds</Icon>
+      <Icon>Textures\Darth_Biomech\gui\docking_ring_sector.dds</Icon>
       <CubeSize>Large</CubeSize>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size x="1" y="1" z="1" />
       <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\darth_biomech\docking_ring_Sector_Part.mwm</Model>
+      <Model>Models\Darth_Biomech\Docking_Ring_sector_part.mwm</Model>
       <Components>
         <Component Subtype="SteelPlate" Count="5" />
         <Component Subtype="Construction" Count="25" />
@@ -24,9 +24,9 @@
       </Components>
       <CriticalComponent Subtype="SmallTube" Index="0" />
       <BuildProgressModels>
-        <Model BuildPercentUpperBound="0.30" File="Models\darth_biomech\docking_ring_sector_progress_01.mwm" />
-        <Model BuildPercentUpperBound="0.60" File="Models\darth_biomech\docking_ring_sector_progress_02.mwm" />
-        <Model BuildPercentUpperBound="1.00" File="Models\darth_biomech\docking_ring_sector_progress_03.mwm" />
+        <Model BuildPercentUpperBound="0.30" File="Models\Darth_Biomech\Docking_Ring_sector_progress_01.mwm" />
+        <Model BuildPercentUpperBound="0.60" File="Models\Darth_Biomech\Docking_Ring_sector_progress_02.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Darth_Biomech\Docking_Ring_sector_progress_03.mwm" />
       </BuildProgressModels>
       <MountPoints>
         <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1"/>
@@ -53,7 +53,7 @@
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size x="1" y="1" z="1" />
       <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\darth_biomech\docking_ring_Sector_corner.mwm</Model>
+      <Model>Models\Darth_Biomech\Docking_Ring_sector_corner.mwm</Model>
       <Components>
         <Component Subtype="SteelPlate" Count="5" />
         <Component Subtype="Construction" Count="15" />
@@ -64,9 +64,9 @@
       </Components>
       <CriticalComponent Subtype="SmallTube" Index="0" />
       <BuildProgressModels>
-        <Model BuildPercentUpperBound="0.30" File="Models\darth_biomech\docking_ring_corner_progress_01.mwm" />
-        <Model BuildPercentUpperBound="0.60" File="Models\darth_biomech\docking_ring_corner_progress_02.mwm" />
-        <Model BuildPercentUpperBound="1.00" File="Models\darth_biomech\docking_ring_corner_progress_03.mwm" />
+        <Model BuildPercentUpperBound="0.30" File="Models\Darth_Biomech\docking_ring_corner_progress_01.mwm" />
+        <Model BuildPercentUpperBound="0.60" File="Models\Darth_Biomech\docking_ring_corner_progress_02.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Darth_Biomech\docking_ring_corner_progress_03.mwm" />
       </BuildProgressModels>
       <MountPoints>
         <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.45" />
@@ -90,13 +90,13 @@
         <SubtypeId>DockingRingPart</SubtypeId>
       </Id>
       <DisplayName>Docking Ring Clamp</DisplayName>
-      <Icon>Textures\darth_biomech\gui\docking_ring.dds</Icon>
+      <Icon>Textures\Darth_Biomech\gui\docking_ring.dds</Icon>
       <CubeSize>Large</CubeSize>
       <Strength>0.1</Strength>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size x="1" y="1" z="1" />
       <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\darth_biomech\docking_ring_Part.mwm</Model>
+      <Model>Models\Darth_Biomech\Docking_Ring_part.mwm</Model>
       <Components>
         <Component Subtype="SteelPlate" Count="25" />
         <Component Subtype="Construction" Count="25" />
@@ -108,9 +108,9 @@
       </Components>
       <CriticalComponent Subtype="Motor" Index="0" />
       <BuildProgressModels>
-        <Model BuildPercentUpperBound="0.30" File="Models\darth_biomech\docking_ring_sector_progress_01.mwm" />
-        <Model BuildPercentUpperBound="0.60" File="Models\darth_biomech\docking_ring_sector_progress_02.mwm" />
-        <Model BuildPercentUpperBound="1.00" File="Models\darth_biomech\docking_ring_sector_progress_03.mwm" />
+        <Model BuildPercentUpperBound="0.30" File="Models\Darth_Biomech\Docking_Ring_sector_progress_01.mwm" />
+        <Model BuildPercentUpperBound="0.60" File="Models\Darth_Biomech\Docking_Ring_sector_progress_02.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Darth_Biomech\Docking_Ring_sector_progress_03.mwm" />
       </BuildProgressModels>
       <MountPoints>
         <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1"/>
@@ -133,12 +133,12 @@
         <SubtypeId>DockingRingCorner</SubtypeId>
       </Id>
       <DisplayName>Docking Ring Clamp Corner</DisplayName>
-      <Icon>Textures\darth_biomech\gui\docking_ring.dds</Icon>
+      <Icon>Textures\Darth_Biomech\gui\docking_ring.dds</Icon>
       <CubeSize>Large</CubeSize>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size x="1" y="1" z="1" />
       <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\darth_biomech\docking_ring_corner.mwm</Model>
+      <Model>Models\Darth_Biomech\docking_ring_corner.mwm</Model>
       <Components>
         <Component Subtype="SteelPlate" Count="5" />
         <Component Subtype="Construction" Count="15" />
@@ -149,9 +149,9 @@
       </Components>
       <CriticalComponent Subtype="SmallTube" Index="0" />
       <BuildProgressModels>
-        <Model BuildPercentUpperBound="0.30" File="Models\darth_biomech\docking_ring_corner_progress_01.mwm" />
-        <Model BuildPercentUpperBound="0.60" File="Models\darth_biomech\docking_ring_corner_progress_02.mwm" />
-        <Model BuildPercentUpperBound="1.00" File="Models\darth_biomech\docking_ring_corner_progress_03.mwm" />
+        <Model BuildPercentUpperBound="0.30" File="Models\Darth_Biomech\docking_ring_corner_progress_01.mwm" />
+        <Model BuildPercentUpperBound="0.60" File="Models\Darth_Biomech\docking_ring_corner_progress_02.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Darth_Biomech\docking_ring_corner_progress_03.mwm" />
       </BuildProgressModels>
       <MountPoints>
         <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.45" />
@@ -174,12 +174,12 @@
         <SubtypeId>DockingTubeDoor</SubtypeId>
       </Id>
       <DisplayName>Docking Ring Airlock</DisplayName>
-      <Icon>Textures\darth_biomech\gui\docking_ring_door.dds</Icon>
+      <Icon>Textures\Darth_Biomech\gui\docking_ring_door.dds</Icon>
       <CubeSize>Large</CubeSize>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size x="1" y="1" z="1" />
       <ModelOffset x="0" y="0" z="0.95" />
-      <Model>Models\darth_biomech\docking_ring_door.mwm</Model>
+      <Model>Models\Darth_Biomech\Docking_ring_door.mwm</Model>
       <Components>
         <Component Subtype="SteelPlate" Count="2" />
         <Component Subtype="InteriorPlate" Count="4" />
@@ -202,7 +202,7 @@
         <MountPoint Side="Bottom" StartX="0.75" StartY="0.325" EndX="1" EndY="0.675" />
       </MountPoints>
       <BuildProgressModels>
-        <Model BuildPercentUpperBound="1.00" File="Models\darth_biomech\docking_ring_door_progress_01.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Darth_Biomech\Docking_ring_door_progress_01.mwm" />
       </BuildProgressModels>
       <BlockPairName>DockingTubeDoor</BlockPairName>
       <MirroringY>Z</MirroringY>
@@ -223,12 +223,12 @@
         <SubtypeId>DockingTubeDoorReverse</SubtypeId>
       </Id>
       <DisplayName>Docking Ring Airlock (Reverse)</DisplayName>
-      <Icon>Textures\darth_biomech\gui\docking_ring_door_reverse.dds</Icon>
+      <Icon>Textures\Darth_Biomech\gui\docking_ring_door_reverse.dds</Icon>
       <CubeSize>Large</CubeSize>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size x="1" y="1" z="1" />
       <ModelOffset x="0" y="0" z="-0.95" />
-      <Model>Models\darth_biomech\docking_ring_door.mwm</Model>
+      <Model>Models\Darth_Biomech\Docking_ring_door.mwm</Model>
       <Components>
         <Component Subtype="SteelPlate" Count="2" />
         <Component Subtype="InteriorPlate" Count="4" />
@@ -251,7 +251,7 @@
         <MountPoint Side="Bottom" StartX="0.75" StartY="0.325" EndX="1" EndY="0.675" />
       </MountPoints>
       <BuildProgressModels>
-        <Model BuildPercentUpperBound="1.00" File="Models\darth_biomech\docking_ring_door_progress_01.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Darth_Biomech\Docking_ring_door_progress_01.mwm" />
       </BuildProgressModels>
       <BlockPairName>DockingTubeDoorReverse</BlockPairName>
       <MirroringY>Z</MirroringY>
@@ -273,12 +273,12 @@
         <SubtypeId>DockingTubeDoorCenterS</SubtypeId>
       </Id>
       <DisplayName>Docking Ring Airlock (centered)</DisplayName>
-      <Icon>Textures\darth_biomech\gui\docking_ring_door.dds</Icon>
+      <Icon>Textures\Darth_Biomech\gui\docking_ring_door.dds</Icon>
       <CubeSize>Small</CubeSize>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size x="5" y="5" z="1" />
       <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\darth_biomech\docking_ring_door.mwm</Model>
+      <Model>Models\Darth_Biomech\Docking_ring_door.mwm</Model>
       <Components>
         <Component Subtype="SteelPlate" Count="2" />
         <Component Subtype="InteriorPlate" Count="4" />
@@ -301,7 +301,7 @@
         <MountPoint Side="Bottom" StartX="0.75" StartY="0.325" EndX="1" EndY="0.675" />
       </MountPoints>
       <BuildProgressModels>
-        <Model BuildPercentUpperBound="1.00" File="Models\darth_biomech\docking_ring_door_progress_01.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Darth_Biomech\Docking_ring_door_progress_01.mwm" />
       </BuildProgressModels>
       <BlockPairName>DockingTubeDoorCenter</BlockPairName>
       <MirroringY>Z</MirroringY>
@@ -322,12 +322,12 @@
         <SubtypeId>DockingTubeDoorCenter</SubtypeId>
       </Id>
       <DisplayName>Docking Ring Airlock (centered)</DisplayName>
-      <Icon>Textures\darth_biomech\gui\docking_ring_door.dds</Icon>
+      <Icon>Textures\Darth_Biomech\gui\docking_ring_door.dds</Icon>
       <CubeSize>Large</CubeSize>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size x="1" y="1" z="1" />
       <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\darth_biomech\docking_ring_door.mwm</Model>
+      <Model>Models\Darth_Biomech\Docking_ring_door.mwm</Model>
       <Components>
         <Component Subtype="SteelPlate" Count="2" />
         <Component Subtype="InteriorPlate" Count="4" />
@@ -350,7 +350,7 @@
         <MountPoint Side="Bottom" StartX="0.75" StartY="0.325" EndX="1" EndY="0.675" />
       </MountPoints>
       <BuildProgressModels>
-        <Model BuildPercentUpperBound="1.00" File="Models\darth_biomech\docking_ring_door_progress_01.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Darth_Biomech\Docking_ring_door_progress_01.mwm" />
       </BuildProgressModels>
       <BlockPairName>DockingTubeDoorCenter</BlockPairName>
       <MirroringY>Z</MirroringY>
@@ -376,7 +376,7 @@
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size x="1" y="3" z="3" />
       <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\darth_biomech\docking_ring_sector.mwm</Model>
+      <Model>Models\Darth_Biomech\Docking_ring_sector.mwm</Model>
       <Components>
         <Component Subtype="SteelPlate" Count="5" />
         <Component Subtype="Construction" Count="15" />
@@ -404,13 +404,13 @@
         <SubtypeId>DockingRing</SubtypeId>
       </Id>
       <DisplayName>Docking Ring Clamp</DisplayName>
-      <Icon>Textures\darth_biomech\gui\docking_ring.dds</Icon>
+      <Icon>Textures\Darth_Biomech\gui\docking_ring.dds</Icon>
       <CubeSize>Large</CubeSize>
       <Strength>0.1</Strength>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size x="1" y="3" z="3" />
       <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\darth_biomech\docking_ring.mwm</Model>
+      <Model>Models\Darth_Biomech\Docking_ring.mwm</Model>
       <Components>
         <Component Subtype="SteelPlate" Count="5" />
         <Component Subtype="Construction" Count="15" />
