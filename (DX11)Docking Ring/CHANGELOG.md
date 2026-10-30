@@ -29,10 +29,13 @@ Aucun `TypeId`/`SubtypeId` modifié ; les 2 blocs cachés (`DockingTubeSector`, 
 sont conservés. Les points non corrigeables (textures référencées par les modèles) et les
 points cosmétiques sont documentés dans le README.
 
-**Testé sur :** chargement d'un monde solo local le 2026-10-30, avant l'ajout des groupes de
-variantes : les 10 définitions sont créées sans erreur (log). Blocs, groupes et fonctionnement
-non vérifiés en jeu. Validation statique : XML valide, pas de `SubtypeId` en double, tous les
-chemins des `.sbc` présents avec la bonne casse.
+**Testé sur :** Space Engineers 1.210.014 — solo local, créatif (2026-10-30). Chargement sans
+erreur ni avertissement pour ce mod. Onglet et 3 groupes visibles dans la barre G, 8 blocs publics
+posés, conservés après sauvegarde et rechargement. Testeur : ouverture et fermeture des 4 sas
+(grande et petite grille), fusion de deux grandes grilles par les pinces, et séparation en
+éteignant les pinces (une pince par grille, puis anneau complet de 4 pinces + 4 coins). Non testé :
+étanchéité et sons des sas, étapes de soudure en détail, PCU affiché, serveur dédié (republication
+nécessaire), migration d'un monde v1.0.
 
 ## [1.0] — 2026-10-30
 

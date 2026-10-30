@@ -6,9 +6,9 @@
 | **Workshop d'origine** | https://steamcommunity.com/sharedfiles/filedetails/?id=294619787 |
 | **Dernière mise à jour d'origine** | 2015-10-02 |
 | **Dernière modification (ce dépôt)** | 2026-10-30 |
-| **Statut** | `À tester` |
+| **Statut** | `Fonctionnel` (solo local ; serveur dédié à tester après republication) |
 | **Version actuelle** | 1.1 |
-| **Testé sur Space Engineers** | non testé en jeu (v1.0 chargée par un serveur dédié le 2026-10-29, blocs non vérifiés) |
+| **Testé sur Space Engineers** | 1.210.014 — solo local, créatif (2026-10-30) |
 | **Workshop republié** | non |
 
 ## Description
@@ -92,6 +92,14 @@ sauvegarde (dont 16 exemplaires de chaque pièce d'anneau, 2 à 6 de chaque sas)
 ne signale aucune texture manquante pour les modèles de ce mod : les textures `_de` absentes
 (point 6) n'ont donc pas d'effet visible dans le log.
 
+Pinces d'amarrage, testées en jeu le 2026-10-30 (grandes grilles) : la fusion fonctionne, et
+éteindre les pinces sépare bien les deux grilles, avec une pince seule par grille comme avec un
+anneau complet (4 pinces + 4 coins de pince à la jonction). Sur deux premiers vaisseaux de test,
+les grilles restaient fusionnées même toutes pinces éteintes ; le problème n'a pas été reproduit
+sur un nouvel anneau identique et vient a priori de ces vaisseaux (cause non identifiée). Si une
+jonction reste collée, vérifier qu'aucun autre bloc ne touche l'autre vaisseau : les grilles ne
+se séparent que si plus aucun point d'attache ne les relie.
+
 ## À tester en jeu
 
 - [x] Le monde se charge sans erreur de mod (log du 2026-10-30, définitions seulement)
@@ -100,11 +108,13 @@ ne signale aucune texture manquante pour les modèles de ce mod : les textures `
 - [x] Les blocs posés restent après sauvegarde et rechargement (8/8 dans la sauvegarde du 2026-10-30)
 - [ ] Icônes, modèles et étapes de construction s'affichent (aucune texture manquante dans le log de rendu ; contrôle visuel à confirmer)
 - [ ] Construction / soudure / démontage
-- [ ] Portes (sas) : ouverture/fermeture, sous-parties animées, sons, étanchéité
-- [ ] Pince d'amarrage (merge block) : fusion entre deux vaisseaux
+- [x] Portes (sas) : ouverture et fermeture des 4 sas, grande et petite grille — testeur, 2026-10-30
+- [ ] Portes (sas) : étanchéité et sons (pas vérifiés en détail)
+- [x] Pince d'amarrage (merge block) : fusion entre deux grandes grilles — testeur, 2026-10-30
+- [x] Pince d'amarrage : séparation en éteignant les pinces, y compris avec un anneau complet (4 pinces + 4 coins) — testeur, 2026-10-30
 - [ ] PCU affiché (115 portes, 100 pinces)
 - [ ] Les blocs d'un monde existant (v1.0) sont toujours là après passage à la v1.1
-- [ ] Fonctionnement en solo
+- [x] Fonctionnement en solo — 1.210.014, 2026-10-30
 - [ ] Fonctionnement en multijoueur / serveur dédié (après republication)
 
 ## Historique
