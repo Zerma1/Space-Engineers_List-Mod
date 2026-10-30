@@ -6,9 +6,9 @@
 | **Workshop d'origine** | https://steamcommunity.com/sharedfiles/filedetails/?id=295393216 |
 | **Dernière mise à jour d'origine** | 2015-12-10 |
 | **Dernière modification (ce dépôt)** | 2026-10-30 |
-| **Statut** | `À analyser` |
-| **Version actuelle** | 1.0 (pas de `metadata.mod` : mod au format Workshop 2015) |
-| **Testé sur Space Engineers** | non testé en jeu (chargé par un serveur dédié le 2026-10-29, blocs non vérifiés) |
+| **Statut** | `À tester` |
+| **Version actuelle** | 1.1 |
+| **Testé sur Space Engineers** | non testé en jeu (v1.0 chargée par un serveur dédié le 2026-10-29, blocs non vérifiés) |
 | **Workshop republié** | non |
 
 ## Description
@@ -17,11 +17,12 @@ Propulseurs intégrés dans un bloc d'armure, grands et petits blocs, en version
 
 ## Contenu
 
-- `data/` : `CubeBlocks.sbc` (4 `ThrustDefinition` : `LargeBlockArmorThrust`, `SmallBlockArmorThrust`, `LargeBlockArmorSloppedThrust`, `SmallBlockArmorSloppedThrust`), `BlockCategories.sbc`
-- `models/Darth_Biomech/` : 4 modèles `.mwm`
-- `textures/Darth_Biomech/` : icônes
+- `Data/` : `CubeBlocks.sbc` (4 `ThrustDefinition` : `LargeBlockArmorThrust`, `SmallBlockArmorThrust`, `LargeBlockArmorSloppedThrust`, `SmallBlockArmorSloppedThrust`), `BlockCategories.sbc`
+- `Models/Darth_Biomech/` : 4 modèles `.mwm`
+- `Textures/Darth_Biomech/GUI/` : 2 icônes `.dds`
+- `metadata.mod` : ajouté dans ce dépôt (v1.1)
 - `README.txt`, `thumb.jpg` : fichiers d'origine de l'auteur
-- Dépendances : aucune connue
+- Dépendances : aucune. Modèles de construction, sons et matériaux de flamme repris du jeu de base (tous présents dans le jeu actuel).
 
 ## Licence d'origine
 
@@ -31,12 +32,15 @@ Contact avec l'auteur : pas encore tenté.
 
 ## Note : mod Workshop « legacy » (2015)
 
-Le Workshop distribue ce mod sous forme d'une archive unique `<ugchandle>_legacy.bin`
-(un zip dont les chemins utilisent des `\`). Ce dossier contient cette archive extraite
-telle quelle (dossiers `data/`, `models/`, `textures/` en minuscules).
+Le Workshop distribue la version d'origine sous forme d'une archive unique `<ugchandle>_legacy.bin`
+(un zip dont les chemins utilisent des `\`). La v1.0 de ce dépôt est cette archive extraite
+telle quelle (dossiers `data/`, `models/`, `textures/` en minuscules). Depuis la v1.1, le dossier
+est au format moderne (`Data/`, `Models/`, `Textures/`, `metadata.mod`) : une fois **republié**,
+il devient un objet Workshop normal, que les serveurs dédiés téléchargent sans problème.
 
-Sur un **serveur dédié**, le téléchargement de ces anciens objets échoue
-(`k_EResultTimeout`) et le serveur ne démarre pas. Contournement constaté le 2026-10-29 :
+Sur un **serveur dédié**, le téléchargement de l'objet legacy d'origine échoue
+(`k_EResultTimeout`) et le serveur ne démarre pas. Contournement constaté le 2026-10-29,
+toujours nécessaire tant que le serveur utilise l'ID d'origine 295393216 :
 copier le `_legacy.bin` du client Steam dans `content/244850/295393216/` du serveur et déclarer
 l'objet dans `appworkshop_244850.acf` (sections `WorkshopItemsInstalled` et
 `WorkshopItemDetails`, `manifest` à `-1`, mêmes `ugchandle`, `size` et `timeupdated` que
@@ -44,17 +48,30 @@ le client). Le serveur le considère alors « Up to date » et le charge.
 
 ## Analyse
 
-| # | Fichier:ligne | Problème | Gravité | Confirmé ? |
-|---|---------------|----------|---------|------------|
-| 1 | — | Analyse pas encore faite | — | — |
+Analyse statique du 2026-10-30, comparée au contenu vanilla de la version du jeu installée.
+XML valide, aucun `SubtypeId` en double, les 4 blocs sont bien listés dans les catégories.
+Les numéros de ligne renvoient à la v1.1.
+
+| # | Fichier:ligne | Problème | Gravité | Confirmé ? | État |
+|---|---------------|----------|---------|------------|------|
+| 1 | (structure du mod) | Objet Workshop legacy (`_legacy.bin`) : son téléchargement échoue sur un serveur dédié (`k_EResultTimeout`) et le serveur ne démarre pas | bloquant (serveur dédié) | confirmé (serveur Pterodactyl, 2026-10-29) | dossier passé au format moderne en v1.1 ; republication Workshop nécessaire pour régler le problème |
+| 2 | (structure du mod) | Dossiers `data/`, `models/`, `textures/` en minuscules, pas de `metadata.mod` | mineur | confirmé | corrigé en v1.1 |
+| 3 | `Data/CubeBlocks.sbc:11,95,169,254,98` | Casse des chemins différente des fichiers (`darth_biomech`, `small_armor_thruster.mwm`) : aucun effet sous Windows, fichier introuvable possible sur un système sensible à la casse | mineur | supposé (aucun effet sous Windows) | corrigé en v1.1 |
+| 4 | `Data/CubeBlocks.sbc:84-85` (et équivalents) | Pas de `<ThrusterType>` ni de `<PCU>` (champs ajoutés au jeu après 2015) : type de propulseur et PCU laissés aux valeurs par défaut | mineur | supposé (valeurs par défaut non vérifiées) | corrigé en v1.1 (`Ion`, `12`, comme le petit propulseur ionique vanilla) |
+| 5 | `Data/BlockCategories.sbc:10,24,38` | Les catégories `LargeBlocks`, `SmallBlocks` et `ShipThrusters` n'existent plus dans le jeu : de nouvelles catégories portant ces noms peuvent apparaître dans la barre G. Les blocs restent accessibles via la catégorie « Darth Biomech Mods » (ligne 56) | cosmétique | supposé, à vérifier en jeu | non modifié |
+| 6 | `Data/CubeBlocks.sbc:70,75,33` (et équivalents) | Balises anciennes : `<FlameGlareMaterial>` (remplacée par `<FlameFlare>`), `<DamageEffectId>` (remplacée par `<DamageEffectName>`), `<Variants>`. Elles figurent encore dans quelques fichiers vanilla, donc a priori acceptées ; au pire, pas de reflet de flamme ni d'effet de dégât | cosmétique | supposé, à vérifier en jeu | non modifié |
+| 7 | `Data/CubeBlocks.sbc:10` | Le grand bloc s'affiche « Small Armor Thrust » (idem pour la version inclinée, ligne 168) : même nom que la version petite grille | cosmétique | confirmé | non modifié (nom d'origine) |
 
 ## À tester en jeu
 
-- [ ] Le monde se charge sans erreur de mod
-- [ ] Les blocs apparaissent dans la barre G
+- [ ] Le monde se charge sans erreur de mod (vérifier le log : balises inconnues, chemins)
+- [ ] Les blocs apparaissent dans la barre G (catégorie « Darth Biomech Mods »)
+- [ ] Icônes, modèles et étapes de construction s'affichent
 - [ ] Construction / soudure / démontage
+- [ ] Poussée, flamme bleue, PCU affiché à 12
+- [ ] Les blocs d'un monde existant (v1.0) sont toujours là après passage à la v1.1
 - [ ] Fonctionnement en solo
-- [ ] Fonctionnement en multijoueur / serveur dédié
+- [ ] Fonctionnement en multijoueur / serveur dédié (après republication)
 
 ## Historique
 

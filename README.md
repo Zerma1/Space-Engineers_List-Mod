@@ -13,7 +13,7 @@ fonctionnent plus ou ne sont plus mis à jour par leur auteur. Le but :
 | Mod | Auteur d'origine | Workshop | MAJ d'origine | Dernière modif. | Statut | Testé sur |
 |-----|------------------|----------|---------------|-----------------|--------|-----------|
 | [Airtight Force Field Hangar Doors](Airtight%20Force%20Field%20Hangar%20Doors/) | Hannobal | [901800144](https://steamcommunity.com/sharedfiles/filedetails/?id=901800144) | 2019-02-07 | 2026-10-27 | `À tester` | — |
-| [(DX11)Armor Thrusters](%28DX11%29Armor%20Thrusters/) | Darth Biomech | [295393216](https://steamcommunity.com/sharedfiles/filedetails/?id=295393216) | 2015-12-10 | 2026-10-30 | `À analyser` | — |
+| [(DX11)Armor Thrusters](%28DX11%29Armor%20Thrusters/) | Darth Biomech | [295393216](https://steamcommunity.com/sharedfiles/filedetails/?id=295393216) | 2015-12-10 | 2026-10-30 | `À tester` | — |
 | [(DX11)Cryopods](%28DX11%29Cryopods/) | Darth Biomech | [294618647](https://steamcommunity.com/sharedfiles/filedetails/?id=294618647) | 2015-12-17 | 2026-10-30 | `À analyser` | — |
 | [(DX11)Docking Ring](%28DX11%29Docking%20Ring/) | Darth Biomech | [294619787](https://steamcommunity.com/sharedfiles/filedetails/?id=294619787) | 2015-10-02 | 2026-10-30 | `À analyser` | — |
 
