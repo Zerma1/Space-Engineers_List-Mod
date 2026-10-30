@@ -73,15 +73,20 @@ Monde créatif local avec les 3 mods (DX11) en v1.1 (`SpaceEngineers.log` du 202
 les 4 définitions sont créées sans aucune erreur ni aucun avertissement. Les balises anciennes
 (point 6) sont donc acceptées par le jeu. Les modèles et textures ne sont chargés qu'à l'affichage
 des blocs : pas encore vérifiés. Troisième chargement à 10:05, avec le groupe de variantes :
-`BlockVariantGroups.sbc` est chargé et post-traité sans erreur ni avertissement. Affichage du
-groupe dans la barre G pas encore vérifié.
+`BlockVariantGroups.sbc` est chargé et post-traité sans erreur ni avertissement.
+
+Constaté en jeu par le testeur (2026-10-30) : l'onglet « Darth Biomech Mods » est bien séparé du
+reste de la barre G et le groupe « Armor Thrusters » s'affiche. Blocs posés puis monde sauvegardé
+et rechargé (10:09) : les 2 propulseurs petite grille sont présents dans la sauvegarde, et le log
+de rendu ne signale aucune texture manquante pour les modèles de ce mod. Les propulseurs grande
+grille ne sont pas dans la sauvegarde (une grande grille a été supprimée à 10:07, à vérifier).
 
 ## À tester en jeu
 
 - [x] Le monde se charge sans erreur de mod (log du 2026-10-30, définitions seulement)
-- [ ] Les blocs apparaissent dans la barre G (catégorie « Darth Biomech Mods »)
-- [ ] Le groupe « Armor Thrusters » s'affiche avec son icône, et on passe d'une variante à l'autre
-- [ ] Icônes, modèles et étapes de construction s'affichent
+- [x] Les blocs apparaissent dans la barre G (catégorie « Darth Biomech Mods ») — testeur, 2026-10-30
+- [x] Le groupe « Armor Thrusters » s'affiche — testeur, 2026-10-30
+- [ ] Icônes, modèles et étapes de construction s'affichent (petite grille : aucune texture manquante dans le log de rendu ; grande grille à refaire)
 - [ ] Construction / soudure / démontage
 - [ ] Poussée, flamme bleue, PCU affiché à 12
 - [ ] Les blocs d'un monde existant (v1.0) sont toujours là après passage à la v1.1
