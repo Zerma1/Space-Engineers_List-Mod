@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BlockVariantGroups>
+
+    <BlockVariantGroup>
+      <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="DB_DockingRingSectorGroup" />
+      <Icon>Textures\Darth_Biomech\gui\docking_ring_sector.dds</Icon>
+      <DisplayName>Docking Ring Sector</DisplayName>
+      <Blocks>
+        <Block Type="MyObjectBuilder_CubeBlock" Subtype="DockingRingSectorPart" />
+        <Block Type="MyObjectBuilder_CubeBlock" Subtype="DockingRingSectorCorner" />
+      </Blocks>
+    </BlockVariantGroup>
+
+    <BlockVariantGroup>
+      <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="DB_DockingRingClampGroup" />
+      <Icon>Textures\Darth_Biomech\gui\docking_ring.dds</Icon>
+      <DisplayName>Docking Ring Clamp</DisplayName>
+      <Blocks>
+        <Block Type="MyObjectBuilder_MergeBlock" Subtype="DockingRingPart" />
+        <Block Type="MyObjectBuilder_CubeBlock" Subtype="DockingRingCorner" />
+      </Blocks>
+    </BlockVariantGroup>
+
+    <BlockVariantGroup>
+      <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="DB_DockingRingAirlockGroup" />
+      <Icon>Textures\Darth_Biomech\gui\docking_ring_door.dds</Icon>
+      <DisplayName>Docking Ring Airlock</DisplayName>
+      <Blocks>
+        <Block Type="MyObjectBuilder_Door" Subtype="DockingTubeDoor" />
+        <Block Type="MyObjectBuilder_Door" Subtype="DockingTubeDoorReverse" />
+        <Block Type="MyObjectBuilder_Door" Subtype="DockingTubeDoorCenter" />
+        <Block Type="MyObjectBuilder_Door" Subtype="DockingTubeDoorCenterS" />
+      </Blocks>
+    </BlockVariantGroup>
+
+  </BlockVariantGroups>
+</Definitions>
