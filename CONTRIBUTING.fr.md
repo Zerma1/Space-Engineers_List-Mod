@@ -1,5 +1,7 @@
 # Contribuer
 
+> 🇬🇧 Version anglaise : [CONTRIBUTING.md](CONTRIBUTING.md). C'est la version de référence ; celle-ci peut être en retard.
+
 Merci de vouloir aider à garder ces mods en vie ! Le processus complet est décrit
 dans [AGENTS.md](AGENTS.md) ; il s'applique aussi bien aux humains qu'aux agents IA.
 
@@ -8,7 +10,7 @@ dans [AGENTS.md](AGENTS.md) ; il s'applique aussi bien aux humains qu'aux agents
 1. **Forkez** le dépôt et créez une branche : `fix/<nom-du-mod>-<sujet>` ou `import/<nom-du-mod>`.
 2. **Importer un nouveau mod** : premier commit = le mod tel que téléchargé, sans aucune
    modification. Ajoutez ensuite `README.md` et `CHANGELOG.md` depuis
-   [`docs/templates/`](docs/templates/) et une ligne dans le tableau du [README](README.md).
+   [`docs/templates/`](docs/templates/) et une ligne dans le tableau du [README](README.fr.md).
 3. **Réparer un mod** : commencez par remplir la section « Analyse » du README du mod,
    puis faites des correctifs **minimaux**, un sujet par commit.
 4. **Documentez** chaque changement dans le `CHANGELOG.md` du mod, et mettez à jour

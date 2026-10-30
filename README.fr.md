@@ -1,5 +1,7 @@
 # Space Engineers — Mods abandonnés, réparés par la communauté
 
+> 🇬🇧 Version anglaise : [README.md](README.md). C'est la version de référence ; celle-ci peut être en retard.
+
 Ce dépôt rassemble des mods du **Steam Workshop de Space Engineers** qui ne
 fonctionnent plus ou ne sont plus mis à jour par leur auteur. Le but :
 
@@ -36,7 +38,7 @@ l'historique dans son `CHANGELOG.md`.
 
 Toute aide est bienvenue : signaler un mod cassé, proposer un correctif, tester en jeu.
 
-- [CONTRIBUTING.md](CONTRIBUTING.md) — comment proposer une modification
+- [CONTRIBUTING.fr.md](CONTRIBUTING.fr.md) — comment proposer une modification
 - [AGENTS.md](AGENTS.md) — processus détaillé (analyse → réparation → changelog), valable aussi pour les agents IA
 - [docs/GUIDE_MODDING_SE.md](docs/GUIDE_MODDING_SE.md) — pannes fréquentes et où lire les erreurs
 - [docs/templates/](docs/templates/) — modèles de README et de CHANGELOG pour un nouveau mod
