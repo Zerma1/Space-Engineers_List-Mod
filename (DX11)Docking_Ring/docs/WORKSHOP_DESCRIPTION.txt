@@ -45,8 +45,8 @@ The tab is shared with the updated Armor Thrusters and Cryopods mods.
 [/list]
 
 [h2]Source, bug reports and contributions[/h2]
-Source code, full changelog and technical notes: [url=https://github.com/Zerma1/Space-Engineers_List-Mod]Space-Engineers_List-Mod on GitHub[/url].
-Please report bugs with your [i]SpaceEngineers.log[/i] excerpt.
+Source code, full changelog and technical notes for this mod: [url=https://github.com/Zerma1/Space-Engineers_List-Mod/tree/main/%28DX11%29Docking_Ring](DX11)Docking_Ring on GitHub[/url], part of the [url=https://github.com/Zerma1/Space-Engineers_List-Mod]Space-Engineers_List-Mod[/url] repository.
+Please report bugs in the [url=https://github.com/Zerma1/Space-Engineers_List-Mod/issues]GitHub issues[/url] or in the comments below, with your [i]SpaceEngineers.log[/i] excerpt.
 
 [h2]Credits and license[/h2]
 Original mod: [b]Darth Biomech[/b] ([url=http://darth-biomech.deviantart.com]DeviantArt[/url]) — [url=https://steamcommunity.com/sharedfiles/filedetails/?id=294619787]original Workshop page[/url].
