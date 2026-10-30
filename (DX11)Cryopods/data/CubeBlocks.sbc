@@ -1,0 +1,421 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+
+    <Definition xsi:type="MyObjectBuilder_CryoChamberDefinition">
+      <Id>
+        <TypeId>CryoChamber</TypeId>
+        <SubtypeId>DB_cryopodfunctionalsmall</SubtypeId>
+      </Id>
+      <DisplayName>Cryogenic Pod</DisplayName>
+      <Icon>textures\Darth_Biomech\gui\cryopod_solo.dds</Icon>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size>
+        <X>3</X>
+        <Y>4</Y>
+        <Z>5</Z>
+      </Size>
+      <ModelOffset>
+        <X>0</X>
+        <Y>0.25</Y>
+        <Z>0</Z>
+      </ModelOffset>
+      <Model>models\Darth_Biomech\cryopod_solo.mwm</Model>  
+      <CharacterAnimation>CryopodPostureSolo</CharacterAnimation>    
+      <Components>
+        <Component Subtype="InteriorPlate" Count="10" />
+        <Component Subtype="Construction" Count="10" />
+        <Component Subtype="Motor" Count="8" />
+        <Component Subtype="Computer" Count="12" />
+        <Component Subtype="BulletproofGlass" Count="20" />
+        <Component Subtype="Medical" Count="10" />
+        <Component Subtype="InteriorPlate" Count="10" />
+      </Components>
+      <CriticalComponent Subtype="Medical" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="3" EndY="4" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="3" EndY="5" />
+      </MountPoints>
+      <PhysicsOption>Box</PhysicsOption>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="models\Darth_Biomech\cryopod_solo_progress_01.mwm"/>
+      </BuildProgressModels>
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+      <BlockPairName>DB_cryopodfunctional</BlockPairName>
+      <OverlayTexture>textures\Darth_Biomech\cryopod_overlay.dds</OverlayTexture>
+      <BuildTimeSeconds>15</BuildTimeSeconds>
+      <EnableFirstPerson>true</EnableFirstPerson>
+      <IsPressurized>true</IsPressurized>
+      <OxygenCapacity>1</OxygenCapacity>
+      <EdgeType>Light</EdgeType>
+      <DamageEffectId>214</DamageEffectId>
+      <ResourceSinkGroup>Utility</ResourceSinkGroup>
+      <IdlePowerConsumption>0.00003</IdlePowerConsumption>
+      <OutsideSound>BlockCryoOut</OutsideSound>
+      <InsideSound>BlockCryoIn</InsideSound>
+      <PrimarySound>BlockCockpitSm</PrimarySound>
+      <DamagedSound>ParticleElectrical</DamagedSound>
+    </Definition>
+
+    <Definition xsi:type="MyObjectBuilder_CryoChamberDefinition">
+      <Id>
+        <TypeId>CryoChamber</TypeId>
+        <SubtypeId>DB_cryopodfunctional</SubtypeId>
+      </Id>
+      <DisplayName>Cryogenic Pod</DisplayName>
+      <Icon>textures\Darth_Biomech\gui\cryopod_solo.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </Size>
+      <ModelOffset>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </ModelOffset>
+      <Model>models\Darth_Biomech\cryopod_solo.mwm</Model>  
+      <CharacterAnimation>CryopodPostureSolo</CharacterAnimation>    
+      <Components>
+        <Component Subtype="InteriorPlate" Count="10" />
+        <Component Subtype="Construction" Count="10" />
+        <Component Subtype="Motor" Count="8" />
+        <Component Subtype="Computer" Count="12" />
+        <Component Subtype="BulletproofGlass" Count="20" />
+        <Component Subtype="Medical" Count="10" />
+        <Component Subtype="InteriorPlate" Count="10" />
+      </Components>
+      <CriticalComponent Subtype="Medical" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+      </MountPoints>
+      <PhysicsOption>Box</PhysicsOption>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="models\Darth_Biomech\cryopod_solo_progress_01.mwm"/>
+      </BuildProgressModels>
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+      <BlockPairName>DB_cryopodfunctional</BlockPairName>
+      <OverlayTexture>textures\Darth_Biomech\cryopod_overlay.dds</OverlayTexture>
+      <BuildTimeSeconds>15</BuildTimeSeconds>
+      <EnableFirstPerson>true</EnableFirstPerson>
+      <IsPressurized>true</IsPressurized>
+      <OxygenCapacity>1</OxygenCapacity>
+      <EdgeType>Light</EdgeType>
+      <DamageEffectId>214</DamageEffectId>
+      <ResourceSinkGroup>Utility</ResourceSinkGroup>
+      <IdlePowerConsumption>0.00003</IdlePowerConsumption>
+      <OutsideSound>BlockCryoOut</OutsideSound>
+      <InsideSound>BlockCryoIn</InsideSound>
+      <PrimarySound>BlockCockpitSm</PrimarySound>
+      <DamagedSound>ParticleElectrical</DamagedSound>
+    </Definition>	
+ 
+
+ 
+     <Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+      <Id>
+        <TypeId>Cockpit</TypeId>
+        <SubtypeId>DB_CryopodopenSmall</SubtypeId>
+      </Id>
+      <DisplayName>Cryogenic Pod Empty</DisplayName>
+      <Icon>textures\Darth_Biomech\gui\cryopod_opened.dds</Icon>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size>
+        <X>3</X>
+        <Y>4</Y>
+        <Z>5</Z>
+      </Size>
+      <ModelOffset>
+        <X>0</X>
+        <Y>0.25</Y>
+        <Z>0</Z>
+      </ModelOffset>
+      <Model>models\Darth_Biomech\cryopod_solo_chair.mwm</Model>  
+      <CharacterAnimation>CryopodPostureSolo</CharacterAnimation>    
+      <Components>
+        <Component Subtype="InteriorPlate" Count="10" />
+        <Component Subtype="Construction" Count="10" />
+        <Component Subtype="Motor" Count="8" />
+        <Component Subtype="Computer" Count="12" />
+        <Component Subtype="BulletproofGlass" Count="20" />
+        <Component Subtype="Medical" Count="10" />
+        <Component Subtype="InteriorPlate" Count="10" />
+      </Components>
+      <CriticalComponent Subtype="Medical" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="3" EndY="4" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="3" EndY="5" />
+      </MountPoints>
+      <PhysicsOption>Box</PhysicsOption>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="models\Darth_Biomech\cryopod_solo_progress_01.mwm"/>
+      </BuildProgressModels>
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+      <BlockPairName>DB_cryopodopen</BlockPairName>
+      <ExcludedAreaForCamera />
+      <CenterOffset xsi:nil="true" />
+      <EnableFirstPerson>true</EnableFirstPerson>
+      <EnableShipControl>false</EnableShipControl>
+      <IsPressurized>false</IsPressurized>
+      <DamageEffectId>214</DamageEffectId>
+      <ResourceSinkGroup>Utility</ResourceSinkGroup>
+      <IdlePowerConsumption>0.00003</IdlePowerConsumption>
+      <OutsideSound>BlockCryoOut</OutsideSound>
+      <InsideSound>BlockCryoIn</InsideSound>
+      <PrimarySound>BlockCockpitSm</PrimarySound>
+      <DamagedSound>ParticleElectrical</DamagedSound>
+    </Definition>
+
+	<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+      <Id>
+        <TypeId>Cockpit</TypeId>
+        <SubtypeId>DB_Cryopodopen</SubtypeId>
+      </Id>
+      <DisplayName>Cryogenic Pod Empty</DisplayName>
+      <Icon>textures\Darth_Biomech\gui\cryopod_opened.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </Size>
+      <ModelOffset>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </ModelOffset>
+      <Model>models\Darth_Biomech\cryopod_solo_chair.mwm</Model>  
+      <CharacterAnimation>CryopodPostureSolo</CharacterAnimation>    
+      <Components>
+        <Component Subtype="InteriorPlate" Count="10" />
+        <Component Subtype="Construction" Count="10" />
+        <Component Subtype="Motor" Count="8" />
+        <Component Subtype="Computer" Count="12" />
+        <Component Subtype="BulletproofGlass" Count="20" />
+        <Component Subtype="Medical" Count="10" />
+        <Component Subtype="InteriorPlate" Count="10" />
+      </Components>
+      <CriticalComponent Subtype="Medical" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+      </MountPoints>
+      <PhysicsOption>Box</PhysicsOption>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="models\Darth_Biomech\cryopod_solo_progress_01.mwm"/>
+      </BuildProgressModels>
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+      <BlockPairName>DB_cryopodopen</BlockPairName>
+      <ExcludedAreaForCamera />
+      <CenterOffset xsi:nil="true" />
+      <EnableFirstPerson>true</EnableFirstPerson>
+      <EnableShipControl>false</EnableShipControl>
+      <IsPressurized>false</IsPressurized>
+      <DamageEffectId>214</DamageEffectId>
+      <ResourceSinkGroup>Utility</ResourceSinkGroup>
+      <IdlePowerConsumption>0.00003</IdlePowerConsumption>
+      <PrimarySound>BlockCockpitSm</PrimarySound>
+      <DamagedSound>ParticleElectrical</DamagedSound>
+    </Definition>
+
+ 
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>DB_Cryopod</SubtypeId>
+      </Id>
+      <DisplayName>Cryogenic Pod</DisplayName>
+      <Icon>textures\Darth_Biomech\gui\cryopod.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </Size>
+      <ModelOffset>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </ModelOffset>
+      <Model>models\Darth_Biomech\cryopod_solo_closed.mwm</Model>
+      <Components>
+        <Component Subtype="InteriorPlate" Count="10" />
+        <Component Subtype="Construction" Count="10" />
+        <Component Subtype="Motor" Count="8" />
+        <Component Subtype="Computer" Count="12" />
+        <Component Subtype="BulletproofGlass" Count="20" />
+        <Component Subtype="Medical" Count="10" />
+        <Component Subtype="InteriorPlate" Count="10" />
+      </Components>
+      <CriticalComponent Subtype="Medical" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+      </MountPoints>
+      <PhysicsOption>Box</PhysicsOption>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="models\Darth_Biomech\cryopod_solo_progress_01.mwm" />
+      </BuildProgressModels>
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+      <BlockPairName>DB_cryopod_solo</BlockPairName>
+      <ExcludedAreaForCamera />
+      <CenterOffset xsi:nil="true" />
+      <DamageEffectId>214</DamageEffectId>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>DB_Cryopod_Small</SubtypeId>
+      </Id>
+      <DisplayName>Cryogenic Pod</DisplayName>
+      <Icon>textures\Darth_Biomech\gui\cryopod.dds</Icon>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size>
+        <X>3</X>
+        <Y>4</Y>
+        <Z>5</Z>
+      </Size>
+      <ModelOffset>
+        <X>0</X>
+        <Y>0.25</Y>
+        <Z>0</Z>
+      </ModelOffset>
+      <Model>models\Darth_Biomech\cryopod_solo_closed.mwm</Model>
+      <Components>
+        <Component Subtype="InteriorPlate" Count="10" />
+        <Component Subtype="Construction" Count="10" />
+        <Component Subtype="Motor" Count="8" />
+        <Component Subtype="Computer" Count="12" />
+        <Component Subtype="BulletproofGlass" Count="20" />
+        <Component Subtype="Medical" Count="10" />
+        <Component Subtype="InteriorPlate" Count="10" />
+      </Components>
+      <CriticalComponent Subtype="Medical" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="3" EndY="4" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="3" EndY="5" />
+      </MountPoints>
+      <PhysicsOption>Box</PhysicsOption>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="models\Darth_Biomech\cryopod_solo_progress_01.mwm" />
+      </BuildProgressModels>
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+      <BlockPairName>DB_cryopod_solo</BlockPairName>
+      <ExcludedAreaForCamera />
+      <CenterOffset xsi:nil="true" />
+      <DamageEffectId>214</DamageEffectId>
+    </Definition>
+
+ 
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>DB_Cryopod_pack</SubtypeId>
+      </Id>
+      <DisplayName>Cryogenic Pod Pack</DisplayName>
+      <Icon>textures\Darth_Biomech\gui\cryopod_pack.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </Size>
+      <ModelOffset>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </ModelOffset>
+      <Model>models\Darth_Biomech\cryopod_closed.mwm</Model>
+      <Components>
+        <Component Subtype="InteriorPlate" Count="25" />
+        <Component Subtype="Construction" Count="20" />
+        <Component Subtype="Motor" Count="16" />
+        <Component Subtype="Computer" Count="24" />
+        <Component Subtype="BulletproofGlass" Count="50" />
+        <Component Subtype="Medical" Count="20" />
+        <Component Subtype="InteriorPlate" Count="20" />
+      </Components>
+      <CriticalComponent Subtype="Medical" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+      </MountPoints>
+      <PhysicsOption>Box</PhysicsOption>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="models\Darth_Biomech\cryopod_progress_01.mwm" />
+      </BuildProgressModels>
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+      <BlockPairName>DB_cryopod</BlockPairName>
+      <ExcludedAreaForCamera />
+      <CenterOffset xsi:nil="true" />
+      <DamageEffectId>214</DamageEffectId>	 
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>DB_Cryopod_packSmall</SubtypeId>
+      </Id>
+      <DisplayName>Cryogenic Pod Pack</DisplayName>
+      <Icon>textures\Darth_Biomech\gui\cryopod_pack.dds</Icon>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size>
+        <X>5</X>
+        <Y>4</Y>
+        <Z>5</Z>
+      </Size>
+      <ModelOffset>
+        <X>0</X>
+        <Y>0.25</Y>
+        <Z>0</Z>
+      </ModelOffset>
+      <Model>models\Darth_Biomech\cryopod_closed.mwm</Model>
+      <Components>
+        <Component Subtype="InteriorPlate" Count="25" />
+        <Component Subtype="Construction" Count="20" />
+        <Component Subtype="Motor" Count="16" />
+        <Component Subtype="Computer" Count="24" />
+        <Component Subtype="BulletproofGlass" Count="50" />
+        <Component Subtype="Medical" Count="20" />
+        <Component Subtype="InteriorPlate" Count="20" />
+      </Components>
+      <CriticalComponent Subtype="Medical" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="5" EndY="4" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="5" EndY="5" />
+      </MountPoints>
+      <PhysicsOption>Box</PhysicsOption>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="models\Darth_Biomech\cryopod_progress_01.mwm" />
+      </BuildProgressModels>
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+      <BlockPairName>DB_cryopod</BlockPairName>
+      <ExcludedAreaForCamera />
+      <CenterOffset xsi:nil="true" />
+      <DamageEffectId>214</DamageEffectId>
+    </Definition>
+ </CubeBlocks>
+  <BlockPositions>
+  </BlockPositions>
+</Definitions>

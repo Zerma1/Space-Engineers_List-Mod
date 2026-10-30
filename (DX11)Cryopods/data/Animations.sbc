@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Animations>
+  
+  
+  
+    <Animation>
+      <Id>
+        <TypeId>AnimationDefinition</TypeId>
+        <SubtypeId>CryopodPostureSolo</SubtypeId>
+      </Id>
+      <DisplayName>CryopodPosture</DisplayName>
+      <Description>CryopodPosture</Description>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <AnimationModel>models\darth_biomech\character_cryopod_solo_pose.mwm</AnimationModel>
+      <ClipIndex>0</ClipIndex>
+      <InfluenceArea>Body</InfluenceArea>
+      <Public>false</Public>
+    </Animation>
+  
+  </Animations>
+</Definitions>
