@@ -1,0 +1,68 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CategoryClasses>
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+      <Name>LargeBlocks</Name>
+      <ItemIds>
+	  
+        <string>Thrust/LargeBlockArmorThrust</string>   
+        <string>Thrust/LargeBlockArmorSloppedThrust</string>  
+		
+      </ItemIds>
+    </Category>  
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>DisplayName_Category_SmallBlocks</DisplayName>
+      <Name>SmallBlocks</Name>
+      <ItemIds>
+	  
+        <string>Thrust/SmallBlockArmorThrust</string>   
+        <string>Thrust/SmallBlockArmorSloppedThrust</string>   
+	  
+      </ItemIds>
+    </Category>
+   <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>DisplayName_Category_ShipThrusters</DisplayName>
+      <Name>ShipThrusters</Name>
+      <IsShipCategory>true</IsShipCategory>
+      <IsBlockCategory>false</IsBlockCategory>
+      <ItemIds>
+        <string>Thrust/LargeBlockArmorThrust</string>   
+        <string>Thrust/LargeBlockArmorSloppedThrust</string>  
+		
+        <string>Thrust/SmallBlockArmorThrust</string>   
+        <string>Thrust/SmallBlockArmorSloppedThrust</string>   
+      </ItemIds>
+    </Category>
+	
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>Darth Biomech Mods</DisplayName>
+      <Name>darthbiomech</Name>
+      <ItemIds>
+	  
+        <string>Thrust/LargeBlockArmorThrust</string>   
+        <string>Thrust/LargeBlockArmorSloppedThrust</string>  
+		
+        <string>Thrust/SmallBlockArmorThrust</string>   
+        <string>Thrust/SmallBlockArmorSloppedThrust</string>   
+		
+      </ItemIds>
+    </Category>
+</CategoryClasses>
+</Definitions>
