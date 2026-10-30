@@ -50,7 +50,9 @@
 		<string>CubeBlock/DockingRingSectorCorner</string>
 		<string>MergeBlock/DockingRingPart</string>
 		<string>CubeBlock/DockingRingCorner</string>
-		
+
+        <string>Door/DockingTubeDoorCenterS</string>
+
       </ItemIds>
     </Category>
 </CategoryClasses>
