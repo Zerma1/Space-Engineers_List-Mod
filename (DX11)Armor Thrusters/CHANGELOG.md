@@ -27,10 +27,11 @@ Catégories : **Corrigé**, **Modifié**, **Supprimé**, **Ajouté**.
 Aucun `TypeId`/`SubtypeId` modifié. Les points cosmétiques (anciennes catégories, balises
 obsolètes, nom « Small » du grand bloc) sont documentés dans le README mais pas modifiés.
 
-**Testé sur :** chargement d'un monde solo local le 2026-10-30, avant l'ajout du groupe de
-variantes : les 4 définitions sont créées sans erreur (log). Blocs, groupe et fonctionnement
-non vérifiés en jeu. Validation statique : XML valide, pas de `SubtypeId` en double, chemins
-`<Icon>`/`<Model>`/`BuildProgressModels` présents.
+**Testé sur :** Space Engineers 1.210.014 — solo local, créatif (2026-10-30). Chargement sans
+erreur (log), onglet et groupe visibles dans la barre G, 4 blocs posés (grande et petite
+grille), poussée, flamme bleue et PCU 12 vérifiés par le testeur, blocs conservés après
+sauvegarde et rechargement. Non testé : serveur dédié (republication nécessaire), migration d'un
+monde v1.0, étapes de soudure en détail.
 
 ## [1.0] — 2026-10-30
 

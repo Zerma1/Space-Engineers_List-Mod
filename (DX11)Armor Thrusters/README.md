@@ -6,9 +6,9 @@
 | **Workshop d'origine** | https://steamcommunity.com/sharedfiles/filedetails/?id=295393216 |
 | **Dernière mise à jour d'origine** | 2015-12-10 |
 | **Dernière modification (ce dépôt)** | 2026-10-30 |
-| **Statut** | `À tester` |
+| **Statut** | `Fonctionnel` (solo local ; serveur dédié à tester après republication) |
 | **Version actuelle** | 1.1 |
-| **Testé sur Space Engineers** | non testé en jeu (v1.0 chargée par un serveur dédié le 2026-10-29, blocs non vérifiés) |
+| **Testé sur Space Engineers** | 1.210.014 — solo local, créatif (2026-10-30) |
 | **Workshop republié** | non |
 
 ## Description
@@ -86,11 +86,12 @@ grille n'ont pas encore été posés (oubli confirmé par le testeur) : à teste
 - [x] Le monde se charge sans erreur de mod (log du 2026-10-30, définitions seulement)
 - [x] Les blocs apparaissent dans la barre G (catégorie « Darth Biomech Mods ») — testeur, 2026-10-30
 - [x] Le groupe « Armor Thrusters » s'affiche — testeur, 2026-10-30
-- [ ] Icônes, modèles et étapes de construction s'affichent (petite grille : aucune texture manquante dans le log de rendu ; grande grille à refaire)
-- [ ] Construction / soudure / démontage
-- [ ] Poussée, flamme bleue, PCU affiché à 12
+- [x] Icônes et modèles s'affichent, les 4 blocs se posent (grande et petite grille) — testeur, 2026-10-30 ; aucune texture manquante dans le log de rendu
+- [ ] Étapes de soudure / démontage (pas vérifiées en détail)
+- [x] Poussée, flamme bleue, PCU affiché à 12 — testeur, 2026-10-30
+- [x] Les blocs posés restent après sauvegarde et rechargement (4/4 dans la sauvegarde du 2026-10-30, 10:12)
 - [ ] Les blocs d'un monde existant (v1.0) sont toujours là après passage à la v1.1
-- [ ] Fonctionnement en solo
+- [x] Fonctionnement en solo — 1.210.014, 2026-10-30
 - [ ] Fonctionnement en multijoueur / serveur dédié (après republication)
 
 ## Historique
