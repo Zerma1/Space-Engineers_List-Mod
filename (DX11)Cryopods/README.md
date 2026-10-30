@@ -65,7 +65,7 @@ Les numéros de ligne renvoient à la v1.1.
 | 3 | `Data/CubeBlocks.sbc` (tous les `<Icon>`, `<Model>`, `<OverlayTexture>`), `Data/Animations.sbc:15` | Casse des chemins différente des dossiers (`models\`, `textures\`, `darth_biomech`) | mineur | supposé (aucun effet sous Windows) | corrigé en v1.1. Les `.mwm` référencent eux-mêmes `textures\darth_biomech\…` en minuscules : non modifiable sans les sources des modèles |
 | 4 | `Data/CubeBlocks.sbc:60,118,177,232` | Pas de `<PCU>` (champ ajouté au jeu après 2015) | mineur | supposé (valeur par défaut non vérifiée) | corrigé en v1.1 (`15` sur les capsules fonctionnelles et les cockpits, comme la chambre cryo et le siège passager vanilla) ; blocs décoratifs laissés à la valeur par défaut |
 | 5 | `Data/BlockCategories.sbc:43-54` | La catégorie « Darth Biomech Mods » ne listait que les 4 blocs grande grille | mineur | supposé (les variantes petite grille restent peut-être accessibles via le changement de taille, `BlockPairName`) | corrigé en v1.1 (8 blocs listés) |
-| 6 | `Models/Darth_Biomech/*_progress_01.mwm` | Les modèles de construction utilisent `Textures\Models\Cubes\armor\armor_construction_*.dds`, qui n'existent plus dans le jeu : texture manquante pendant la construction | cosmétique | supposé (fichiers absents du jeu installé), à vérifier en jeu | non modifiable (binaire) |
+| 6 | `Models/Darth_Biomech/*_progress_01.mwm` | Les modèles de construction utilisent `Textures\Models\Cubes\armor\armor_construction_*.dds`, qui n'existent plus dans le jeu : texture manquante pendant la construction | cosmétique | confirmé pour `cryopod_progress_01.mwm` (log de rendu du 2026-10-30 : « Missing textures for part(s) 03 - Default ») ; `cryopod_solo_progress_01.mwm` pas encore affiché | non modifiable (binaire) |
 | 7 | `Data/Animations.sbc:15`, `Data/CubeBlocks.sbc:25,83,143,200` | Pose du personnage (`character_cryopod_solo_pose.mwm`) exportée en 2015 : le squelette du personnage a changé depuis, la pose peut être incorrecte | mineur | supposé, à vérifier en jeu | non modifié |
 | 8 | `Data/BlockCategories.sbc:10,26` | Les catégories `LargeBlocks` et `SmallBlocks` n'existent plus dans le jeu : de nouvelles catégories portant ces noms peuvent apparaître dans la barre G | cosmétique | supposé, à vérifier en jeu | non modifié |
 | 9 | `Data/CubeBlocks.sbc:53` (et 7 autres) | `<DamageEffectId>` remplacé par `<DamageEffectName>` dans le jeu actuel ; encore utilisé par quelques fichiers vanilla, donc a priori accepté | cosmétique | supposé | non modifié |
@@ -77,7 +77,8 @@ Les numéros de ligne renvoient à la v1.1.
 Monde créatif local avec les 3 mods (DX11) en v1.1 (`SpaceEngineers.log` du 2026-10-30, 09:38 et 09:58) :
 les 8 définitions sont créées. Seul message : les 4 `MOD_ERROR` non bloquantes du point 11.
 Les modèles, textures et l'animation ne sont chargés qu'à l'affichage des blocs : pas encore vérifiés.
-Le groupe de variantes a été ajouté après ces chargements.
+Troisième chargement à 10:05, avec le groupe de variantes : `BlockVariantGroups.sbc` est chargé et
+post-traité sans erreur ni avertissement. Affichage du groupe dans la barre G pas encore vérifié.
 
 ## À tester en jeu
 
