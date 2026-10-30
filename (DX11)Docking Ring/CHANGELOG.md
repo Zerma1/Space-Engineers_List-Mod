@@ -16,6 +16,9 @@ Catégories : **Corrigé**, **Modifié**, **Supprimé**, **Ajouté**.
 - `<PCU>115</PCU>` sur les 4 portes et `<PCU>100</PCU>` sur les 2 merge blocks (valeurs vanilla).
 - La porte petite grille `DockingTubeDoorCenterS` dans la catégorie « Darth Biomech Mods »
   (barre G), partagée avec Armor Thrusters et Cryopods.
+- `Data/BlockVariantGroups.sbc` : 3 groupes de variantes dans la barre G, **Docking Ring Sector**
+  (secteur + coin), **Docking Ring Clamp** (pince + coin) et **Docking Ring Airlock** (4 portes).
+  Amélioration demandée, hors réparation minimale.
 - `README.md` et `CHANGELOG.md` du mod, avec l'analyse.
 
 ### Corrigé
@@ -26,8 +29,10 @@ Aucun `TypeId`/`SubtypeId` modifié ; les 2 blocs cachés (`DockingTubeSector`, 
 sont conservés. Les points non corrigeables (textures référencées par les modèles) et les
 points cosmétiques sont documentés dans le README.
 
-**Testé sur :** non testé en jeu. Validation statique uniquement (XML valide, pas de
-`SubtypeId` en double, tous les chemins des `.sbc` présents avec la bonne casse).
+**Testé sur :** chargement d'un monde solo local le 2026-10-30, avant l'ajout des groupes de
+variantes : les 10 définitions sont créées sans erreur (log). Blocs, groupes et fonctionnement
+non vérifiés en jeu. Validation statique : XML valide, pas de `SubtypeId` en double, tous les
+chemins des `.sbc` présents avec la bonne casse.
 
 ## [1.0] — 2026-10-30
 
