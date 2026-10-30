@@ -72,7 +72,9 @@ Les numéros de ligne renvoient à la v1.1.
 Monde créatif local avec les 3 mods (DX11) en v1.1 (`SpaceEngineers.log` du 2026-10-30, 09:38 et 09:58) :
 les 4 définitions sont créées sans aucune erreur ni aucun avertissement. Les balises anciennes
 (point 6) sont donc acceptées par le jeu. Les modèles et textures ne sont chargés qu'à l'affichage
-des blocs : pas encore vérifiés. Le groupe de variantes a été ajouté après ces chargements.
+des blocs : pas encore vérifiés. Troisième chargement à 10:05, avec le groupe de variantes :
+`BlockVariantGroups.sbc` est chargé et post-traité sans erreur ni avertissement. Affichage du
+groupe dans la barre G pas encore vérifié.
 
 ## À tester en jeu
 
