@@ -6,9 +6,9 @@
 | **Workshop d'origine** | https://steamcommunity.com/sharedfiles/filedetails/?id=294618647 |
 | **Dernière mise à jour d'origine** | 2015-12-17 |
 | **Dernière modification (ce dépôt)** | 2026-10-30 |
-| **Statut** | `À analyser` |
-| **Version actuelle** | 1.0 (pas de `metadata.mod` : mod au format Workshop 2015) |
-| **Testé sur Space Engineers** | non testé en jeu (chargé par un serveur dédié le 2026-10-29, blocs non vérifiés) |
+| **Statut** | `À tester` |
+| **Version actuelle** | 1.1 |
+| **Testé sur Space Engineers** | non testé en jeu (v1.0 chargée par un serveur dédié le 2026-10-29, blocs non vérifiés) |
 | **Workshop republié** | non |
 
 ## Description
@@ -17,11 +17,16 @@ Capsules cryogéniques, grands et petits blocs : capsule fonctionnelle (`CryoCha
 
 ## Contenu
 
-- `data/` : `CubeBlocks.sbc` (8 blocs, dont 2 `CryoChamberDefinition` et 2 `CockpitDefinition`), `BlockCategories.sbc`, `Animations.sbc` (pose du personnage), `TransparentMaterials.sbc`
-- `models/Darth_Biomech/` : 8 modèles `.mwm`
-- `textures/Darth_Biomech/` : textures et icônes
+- `Data/` : `CubeBlocks.sbc` (8 blocs : 2 `CryoChamberDefinition`, 2 `CockpitDefinition`, 4 blocs décoratifs `CubeBlock`), `BlockCategories.sbc`, `Animations.sbc` (pose du personnage `CryopodPostureSolo`), `TransparentMaterials.sbc` (`CryopodGlass`)
+- `Models/Darth_Biomech/` : 8 modèles `.mwm`
+- `Textures/Darth_Biomech/` : textures des modèles ; `gui/` : 4 icônes
+- `metadata.mod` : ajouté dans ce dépôt (v1.1)
 - `README.txt`, `thumb.jpg` : fichiers d'origine de l'auteur
-- Dépendances : aucune connue
+- Dépendances : aucune. Les sons et la texture de vitre sont repris du jeu de base (tous présents dans le jeu actuel).
+
+Les blocs apparaissent dans la catégorie « Darth Biomech Mods » de la barre G, partagée
+avec [(DX11)Armor Thrusters](../%28DX11%29Armor%20Thrusters/) et [(DX11)Docking Ring](../%28DX11%29Docking%20Ring/)
+(même `<Name>darthbiomech</Name>` dans les trois mods).
 
 ## Licence d'origine
 
@@ -31,12 +36,15 @@ Contact avec l'auteur : pas encore tenté.
 
 ## Note : mod Workshop « legacy » (2015)
 
-Le Workshop distribue ce mod sous forme d'une archive unique `<ugchandle>_legacy.bin`
-(un zip dont les chemins utilisent des `\`). Ce dossier contient cette archive extraite
-telle quelle (dossiers `data/`, `models/`, `textures/` en minuscules).
+Le Workshop distribue la version d'origine sous forme d'une archive unique `<ugchandle>_legacy.bin`
+(un zip dont les chemins utilisent des `\`). La v1.0 de ce dépôt est cette archive extraite
+telle quelle (dossiers `data/`, `models/`, `textures/` en minuscules). Depuis la v1.1, le dossier
+est au format moderne (`Data/`, `Models/`, `Textures/`, `metadata.mod`) : une fois **republié**,
+il devient un objet Workshop normal, que les serveurs dédiés téléchargent sans problème.
 
-Sur un **serveur dédié**, le téléchargement de ces anciens objets échoue
-(`k_EResultTimeout`) et le serveur ne démarre pas. Contournement constaté le 2026-10-29 :
+Sur un **serveur dédié**, le téléchargement de l'objet legacy d'origine échoue
+(`k_EResultTimeout`) et le serveur ne démarre pas. Contournement constaté le 2026-10-29,
+toujours nécessaire tant que le serveur utilise l'ID d'origine 294618647 :
 copier le `_legacy.bin` du client Steam dans `content/244850/294618647/` du serveur et déclarer
 l'objet dans `appworkshop_244850.acf` (sections `WorkshopItemsInstalled` et
 `WorkshopItemDetails`, `manifest` à `-1`, mêmes `ugchandle`, `size` et `timeupdated` que
@@ -44,17 +52,35 @@ le client). Le serveur le considère alors « Up to date » et le charge.
 
 ## Analyse
 
-| # | Fichier:ligne | Problème | Gravité | Confirmé ? |
-|---|---------------|----------|---------|------------|
-| 1 | — | Analyse pas encore faite | — | — |
+Analyse statique du 2026-10-30, comparée au contenu vanilla de la version du jeu installée.
+XML valide, aucun `SubtypeId` en double, tous les chemins des `.sbc` pointent vers des fichiers existants.
+Les numéros de ligne renvoient à la v1.1.
+
+| # | Fichier:ligne | Problème | Gravité | Confirmé ? | État |
+|---|---------------|----------|---------|------------|------|
+| 1 | (structure du mod) | Objet Workshop legacy (`_legacy.bin`) : son téléchargement échoue sur un serveur dédié (`k_EResultTimeout`) et le serveur ne démarre pas | bloquant (serveur dédié) | confirmé (serveur Pterodactyl, 2026-10-29) | dossier passé au format moderne en v1.1 ; republication Workshop nécessaire pour régler le problème |
+| 2 | (structure du mod) | Dossiers `data/`, `models/`, `textures/` en minuscules, pas de `metadata.mod` | mineur | confirmé | corrigé en v1.1 |
+| 3 | `Data/CubeBlocks.sbc` (tous les `<Icon>`, `<Model>`, `<OverlayTexture>`), `Data/Animations.sbc:15` | Casse des chemins différente des dossiers (`models\`, `textures\`, `darth_biomech`) | mineur | supposé (aucun effet sous Windows) | corrigé en v1.1. Les `.mwm` référencent eux-mêmes `textures\darth_biomech\…` en minuscules : non modifiable sans les sources des modèles |
+| 4 | `Data/CubeBlocks.sbc:60,118,177,232` | Pas de `<PCU>` (champ ajouté au jeu après 2015) | mineur | supposé (valeur par défaut non vérifiée) | corrigé en v1.1 (`15` sur les capsules fonctionnelles et les cockpits, comme la chambre cryo et le siège passager vanilla) ; blocs décoratifs laissés à la valeur par défaut |
+| 5 | `Data/BlockCategories.sbc:43-54` | La catégorie « Darth Biomech Mods » ne listait que les 4 blocs grande grille | mineur | supposé (les variantes petite grille restent peut-être accessibles via le changement de taille, `BlockPairName`) | corrigé en v1.1 (8 blocs listés) |
+| 6 | `Models/Darth_Biomech/*_progress_01.mwm` | Les modèles de construction utilisent `Textures\Models\Cubes\armor\armor_construction_*.dds`, qui n'existent plus dans le jeu : texture manquante pendant la construction | cosmétique | supposé (fichiers absents du jeu installé), à vérifier en jeu | non modifiable (binaire) |
+| 7 | `Data/Animations.sbc:15`, `Data/CubeBlocks.sbc:25,83,143,200` | Pose du personnage (`character_cryopod_solo_pose.mwm`) exportée en 2015 : le squelette du personnage a changé depuis, la pose peut être incorrecte | mineur | supposé, à vérifier en jeu | non modifié |
+| 8 | `Data/BlockCategories.sbc:10,26` | Les catégories `LargeBlocks` et `SmallBlocks` n'existent plus dans le jeu : de nouvelles catégories portant ces noms peuvent apparaître dans la barre G | cosmétique | supposé, à vérifier en jeu | non modifié |
+| 9 | `Data/CubeBlocks.sbc:53` (et 7 autres) | `<DamageEffectId>` remplacé par `<DamageEffectName>` dans le jeu actuel ; encore utilisé par quelques fichiers vanilla, donc a priori accepté | cosmétique | supposé | non modifié |
+| 10 | `Models/Darth_Biomech/cryopod.mwm`, `Textures/Darth_Biomech/*_ns.dds`, `*_glass_clear_*.dds` | Fichiers non référencés par les `.sbc` (ou seulement par ce modèle inutilisé) : restes de la version DX9 | cosmétique | confirmé (aucune référence dans les `.sbc`) | conservés (binaires d'origine) |
 
 ## À tester en jeu
 
-- [ ] Le monde se charge sans erreur de mod
-- [ ] Les blocs apparaissent dans la barre G
+- [ ] Le monde se charge sans erreur de mod (vérifier le log : textures manquantes, animation)
+- [ ] Les 8 blocs apparaissent dans la catégorie « Darth Biomech Mods », avec ceux d'Armor Thrusters et Docking Ring
+- [ ] Icônes, modèles et étapes de construction s'affichent
 - [ ] Construction / soudure / démontage
+- [ ] Capsule fonctionnelle : entrer, pression/oxygène, respawn
+- [ ] Capsule ouverte (cockpit) : s'asseoir, pose du personnage correcte
+- [ ] PCU affiché à 15 sur les blocs fonctionnels
+- [ ] Les blocs d'un monde existant (v1.0) sont toujours là après passage à la v1.1
 - [ ] Fonctionnement en solo
-- [ ] Fonctionnement en multijoueur / serveur dédié
+- [ ] Fonctionnement en multijoueur / serveur dédié (après republication)
 
 ## Historique
 
