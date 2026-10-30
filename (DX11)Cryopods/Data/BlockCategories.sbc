@@ -10,13 +10,10 @@
       <Name>LargeBlocks</Name>
       <ItemIds>
 	  
-        <string>Door/DockingTubeDoor</string>  
-        <string>Door/DockingTubeDoorReverse</string>  
-        <string>Door/DockingTubeDoorCenter</string>  
-		<string>CubeBlock/DockingRingSectorPart</string>  
-		<string>CubeBlock/DockingRingSectorCorner</string>
-		<string>MergeBlock/DockingRingPart</string>
-		<string>CubeBlock/DockingRingCorner</string>
+        <string>CryoChamber/DB_cryopodfunctional</string>   
+        <string>Cockpit/DB_Cryopodopen</string>   
+        <string>CubeBlock/DB_Cryopod</string>     
+        <string>CubeBlock/DB_Cryopod_pack</string>   
 		
       </ItemIds>
     </Category>  
@@ -29,7 +26,10 @@
       <Name>SmallBlocks</Name>
       <ItemIds>
 	  
-        <string>Door/DockingTubeDoorCenterS</string>  
+        <string>CryoChamber/DB_cryopodfunctional</string>  
+        <string>Cockpit/DB_Cryopodopen</string>   
+        <string>CubeBlock/DB_Cryopod</string>   
+        <string>CubeBlock/DB_Cryopod_pack</string> 
 	  
       </ItemIds>
     </Category>
@@ -43,14 +43,16 @@
       <Name>darthbiomech</Name>
       <ItemIds>
 	  
-        <string>Door/DockingTubeDoor</string>  
-        <string>Door/DockingTubeDoorReverse</string>  
-        <string>Door/DockingTubeDoorCenter</string>  
-		<string>CubeBlock/DockingRingSectorPart</string>  
-		<string>CubeBlock/DockingRingSectorCorner</string>
-		<string>MergeBlock/DockingRingPart</string>
-		<string>CubeBlock/DockingRingCorner</string>
-		
+        <string>CryoChamber/DB_cryopodfunctional</string>  
+        <string>Cockpit/DB_Cryopodopen</string>   
+        <string>CubeBlock/DB_Cryopod</string>   
+        <string>CubeBlock/DB_Cryopod_pack</string>
+
+        <string>CryoChamber/DB_cryopodfunctionalsmall</string>
+        <string>Cockpit/DB_CryopodopenSmall</string>
+        <string>CubeBlock/DB_Cryopod_Small</string>
+        <string>CubeBlock/DB_Cryopod_packSmall</string>
+
       </ItemIds>
     </Category>
 </CategoryClasses>

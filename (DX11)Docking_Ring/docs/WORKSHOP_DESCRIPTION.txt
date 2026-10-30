@@ -1,0 +1,54 @@
+[h1](DX11) Docking Ring[/h1]
+
+[b]Community-maintained update[/b] of [url=https://steamcommunity.com/sharedfiles/filedetails/?id=294619787](DX11)Docking Ring[/url] by [b]Darth Biomech[/b]. All credit for the original mod goes to them.
+
+[table]
+[tr][td][b]Version[/b][/td][td]1.1[/td][/tr]
+[tr][td][b]Tested on Space Engineers[/b][/td][td]1.210.014 (Steam build 24675677), single player[/td][/tr]
+[tr][td][b]Last original update[/b][/td][td]2015-10-02[/td][/tr]
+[tr][td][b]Last update of this version[/b][/td][td]2026-10-30[/td][/tr]
+[/table]
+
+[h2]Description[/h2]
+A modular docking ring: ring sectors, docking clamps (merge blocks) and airlock doors, mostly for large grids.
+
+The original mod uses the old "legacy" Workshop format from 2015. Dedicated servers fail to download it ([i]k_EResultTimeout[/i]) and then refuse to start. This version uses the modern mod format, so servers download it normally.
+
+[h2]How to use[/h2]
+All blocks are in the [b]Darth Biomech Mods[/b] tab of the G menu, sorted into 3 block groups:
+[list]
+[*][b]Docking Ring Sector[/b]: ring sector and sector corner.
+[*][b]Docking Ring Clamp[/b]: docking clamp (a merge block) and clamp corner.
+[*][b]Docking Ring Airlock[/b]: 3 large-grid airlock doors (normal, reversed, centered) and 1 small-grid airlock door.
+[/list]
+The tab is shared with the updated Armor Thrusters and Cryopods mods.
+
+[list]
+[*]To dock: build a ring of clamps and clamp corners on both ships and bring the rings face to face. The clamps merge the two ships like vanilla merge blocks.
+[*]To undock: turn off the clamps on one side. The ships only separate once no other block connects them.
+[*]Switching from the original mod: block IDs (SubtypeIds) are unchanged. Replace the original mod with this one in your world's mod list, and do not load both at the same time. Back up your world first, because this migration has not been tested yet.
+[/list]
+
+[h2]What changed in this version[/h2]
+[list]
+[*]Modern mod folder layout (Data / Models / Textures, metadata.mod).
+[*]File path casing fixed.
+[*]PCU set to 115 on the doors and 100 on the clamps, same as vanilla doors and merge blocks. This field did not exist in 2015.
+[*]The small-grid airlock door is added to the Darth Biomech Mods tab.
+[*]Blocks are grouped into 3 block variant groups in the G menu.
+[*]Sizes, mount points and build costs are unchanged. The two hidden legacy blocks of the original mod are kept, so that worlds which still use them do not lose them.
+[/list]
+
+[h2]Known limitations[/h2]
+[list]
+[*]Airtightness of the airlocks and dedicated servers are not tested yet.
+[/list]
+
+[h2]Source, bug reports and contributions[/h2]
+Source code, full changelog and technical notes: [url=https://github.com/Zerma1/Space-Engineers_List-Mod]Space-Engineers_List-Mod on GitHub[/url].
+Please report bugs with your [i]SpaceEngineers.log[/i] excerpt.
+
+[h2]Credits and license[/h2]
+Original mod: [b]Darth Biomech[/b] ([url=http://darth-biomech.deviantart.com]DeviantArt[/url]) — [url=https://steamcommunity.com/sharedfiles/filedetails/?id=294619787]original Workshop page[/url].
+Fixes and documentation by the Space-Engineers_List-Mod contributors, MIT license; the original assets remain the property of their author. If you are the original author and want this update changed or removed, please leave a comment.
+Space Engineers is a trademark of Keen Software House. This project is not affiliated with Keen Software House.

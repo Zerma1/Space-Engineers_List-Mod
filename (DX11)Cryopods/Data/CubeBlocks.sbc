@@ -8,7 +8,7 @@
         <SubtypeId>DB_cryopodfunctionalsmall</SubtypeId>
       </Id>
       <DisplayName>Cryogenic Pod</DisplayName>
-      <Icon>textures\Darth_Biomech\gui\cryopod_solo.dds</Icon>
+      <Icon>Textures\Darth_Biomech\gui\cryopod_solo.dds</Icon>
       <CubeSize>Small</CubeSize>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size>
@@ -21,7 +21,7 @@
         <Y>0.25</Y>
         <Z>0</Z>
       </ModelOffset>
-      <Model>models\Darth_Biomech\cryopod_solo.mwm</Model>  
+      <Model>Models\Darth_Biomech\cryopod_solo.mwm</Model>  
       <CharacterAnimation>CryopodPostureSolo</CharacterAnimation>    
       <Components>
         <Component Subtype="InteriorPlate" Count="10" />
@@ -39,12 +39,12 @@
       </MountPoints>
       <PhysicsOption>Box</PhysicsOption>
       <BuildProgressModels>
-        <Model BuildPercentUpperBound="1.00" File="models\Darth_Biomech\cryopod_solo_progress_01.mwm"/>
+        <Model BuildPercentUpperBound="1.00" File="Models\Darth_Biomech\cryopod_solo_progress_01.mwm"/>
       </BuildProgressModels>
       <MirroringZ>Y</MirroringZ>
       <MirroringY>Z</MirroringY>
       <BlockPairName>DB_cryopodfunctional</BlockPairName>
-      <OverlayTexture>textures\Darth_Biomech\cryopod_overlay.dds</OverlayTexture>
+      <OverlayTexture>Textures\Darth_Biomech\cryopod_overlay.dds</OverlayTexture>
       <BuildTimeSeconds>15</BuildTimeSeconds>
       <EnableFirstPerson>true</EnableFirstPerson>
       <IsPressurized>true</IsPressurized>
@@ -57,6 +57,7 @@
       <InsideSound>BlockCryoIn</InsideSound>
       <PrimarySound>BlockCockpitSm</PrimarySound>
       <DamagedSound>ParticleElectrical</DamagedSound>
+      <PCU>15</PCU>
     </Definition>
 
     <Definition xsi:type="MyObjectBuilder_CryoChamberDefinition">
@@ -65,7 +66,7 @@
         <SubtypeId>DB_cryopodfunctional</SubtypeId>
       </Id>
       <DisplayName>Cryogenic Pod</DisplayName>
-      <Icon>textures\Darth_Biomech\gui\cryopod_solo.dds</Icon>
+      <Icon>Textures\Darth_Biomech\gui\cryopod_solo.dds</Icon>
       <CubeSize>Large</CubeSize>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size>
@@ -78,7 +79,7 @@
         <Y>0</Y>
         <Z>0</Z>
       </ModelOffset>
-      <Model>models\Darth_Biomech\cryopod_solo.mwm</Model>  
+      <Model>Models\Darth_Biomech\cryopod_solo.mwm</Model>  
       <CharacterAnimation>CryopodPostureSolo</CharacterAnimation>    
       <Components>
         <Component Subtype="InteriorPlate" Count="10" />
@@ -96,12 +97,12 @@
       </MountPoints>
       <PhysicsOption>Box</PhysicsOption>
       <BuildProgressModels>
-        <Model BuildPercentUpperBound="1.00" File="models\Darth_Biomech\cryopod_solo_progress_01.mwm"/>
+        <Model BuildPercentUpperBound="1.00" File="Models\Darth_Biomech\cryopod_solo_progress_01.mwm"/>
       </BuildProgressModels>
       <MirroringZ>Y</MirroringZ>
       <MirroringY>Z</MirroringY>
       <BlockPairName>DB_cryopodfunctional</BlockPairName>
-      <OverlayTexture>textures\Darth_Biomech\cryopod_overlay.dds</OverlayTexture>
+      <OverlayTexture>Textures\Darth_Biomech\cryopod_overlay.dds</OverlayTexture>
       <BuildTimeSeconds>15</BuildTimeSeconds>
       <EnableFirstPerson>true</EnableFirstPerson>
       <IsPressurized>true</IsPressurized>
@@ -114,6 +115,7 @@
       <InsideSound>BlockCryoIn</InsideSound>
       <PrimarySound>BlockCockpitSm</PrimarySound>
       <DamagedSound>ParticleElectrical</DamagedSound>
+      <PCU>15</PCU>
     </Definition>	
  
 
@@ -124,7 +126,7 @@
         <SubtypeId>DB_CryopodopenSmall</SubtypeId>
       </Id>
       <DisplayName>Cryogenic Pod Empty</DisplayName>
-      <Icon>textures\Darth_Biomech\gui\cryopod_opened.dds</Icon>
+      <Icon>Textures\Darth_Biomech\gui\cryopod_opened.dds</Icon>
       <CubeSize>Small</CubeSize>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size>
@@ -137,7 +139,7 @@
         <Y>0.25</Y>
         <Z>0</Z>
       </ModelOffset>
-      <Model>models\Darth_Biomech\cryopod_solo_chair.mwm</Model>  
+      <Model>Models\Darth_Biomech\cryopod_solo_chair.mwm</Model>  
       <CharacterAnimation>CryopodPostureSolo</CharacterAnimation>    
       <Components>
         <Component Subtype="InteriorPlate" Count="10" />
@@ -155,7 +157,7 @@
       </MountPoints>
       <PhysicsOption>Box</PhysicsOption>
       <BuildProgressModels>
-        <Model BuildPercentUpperBound="1.00" File="models\Darth_Biomech\cryopod_solo_progress_01.mwm"/>
+        <Model BuildPercentUpperBound="1.00" File="Models\Darth_Biomech\cryopod_solo_progress_01.mwm"/>
       </BuildProgressModels>
       <MirroringZ>Y</MirroringZ>
       <MirroringY>Z</MirroringY>
@@ -172,6 +174,7 @@
       <InsideSound>BlockCryoIn</InsideSound>
       <PrimarySound>BlockCockpitSm</PrimarySound>
       <DamagedSound>ParticleElectrical</DamagedSound>
+      <PCU>15</PCU>
     </Definition>
 
 	<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
@@ -180,7 +183,7 @@
         <SubtypeId>DB_Cryopodopen</SubtypeId>
       </Id>
       <DisplayName>Cryogenic Pod Empty</DisplayName>
-      <Icon>textures\Darth_Biomech\gui\cryopod_opened.dds</Icon>
+      <Icon>Textures\Darth_Biomech\gui\cryopod_opened.dds</Icon>
       <CubeSize>Large</CubeSize>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size>
@@ -193,7 +196,7 @@
         <Y>0</Y>
         <Z>0</Z>
       </ModelOffset>
-      <Model>models\Darth_Biomech\cryopod_solo_chair.mwm</Model>  
+      <Model>Models\Darth_Biomech\cryopod_solo_chair.mwm</Model>  
       <CharacterAnimation>CryopodPostureSolo</CharacterAnimation>    
       <Components>
         <Component Subtype="InteriorPlate" Count="10" />
@@ -211,7 +214,7 @@
       </MountPoints>
       <PhysicsOption>Box</PhysicsOption>
       <BuildProgressModels>
-        <Model BuildPercentUpperBound="1.00" File="models\Darth_Biomech\cryopod_solo_progress_01.mwm"/>
+        <Model BuildPercentUpperBound="1.00" File="Models\Darth_Biomech\cryopod_solo_progress_01.mwm"/>
       </BuildProgressModels>
       <MirroringZ>Y</MirroringZ>
       <MirroringY>Z</MirroringY>
@@ -226,6 +229,7 @@
       <IdlePowerConsumption>0.00003</IdlePowerConsumption>
       <PrimarySound>BlockCockpitSm</PrimarySound>
       <DamagedSound>ParticleElectrical</DamagedSound>
+      <PCU>15</PCU>
     </Definition>
 
  
@@ -236,7 +240,7 @@
         <SubtypeId>DB_Cryopod</SubtypeId>
       </Id>
       <DisplayName>Cryogenic Pod</DisplayName>
-      <Icon>textures\Darth_Biomech\gui\cryopod.dds</Icon>
+      <Icon>Textures\Darth_Biomech\gui\cryopod.dds</Icon>
       <CubeSize>Large</CubeSize>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size>
@@ -249,7 +253,7 @@
         <Y>0</Y>
         <Z>0</Z>
       </ModelOffset>
-      <Model>models\Darth_Biomech\cryopod_solo_closed.mwm</Model>
+      <Model>Models\Darth_Biomech\cryopod_solo_closed.mwm</Model>
       <Components>
         <Component Subtype="InteriorPlate" Count="10" />
         <Component Subtype="Construction" Count="10" />
@@ -266,7 +270,7 @@
       </MountPoints>
       <PhysicsOption>Box</PhysicsOption>
       <BuildProgressModels>
-        <Model BuildPercentUpperBound="1.00" File="models\Darth_Biomech\cryopod_solo_progress_01.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Darth_Biomech\cryopod_solo_progress_01.mwm" />
       </BuildProgressModels>
       <MirroringZ>Y</MirroringZ>
       <MirroringY>Z</MirroringY>
@@ -282,7 +286,7 @@
         <SubtypeId>DB_Cryopod_Small</SubtypeId>
       </Id>
       <DisplayName>Cryogenic Pod</DisplayName>
-      <Icon>textures\Darth_Biomech\gui\cryopod.dds</Icon>
+      <Icon>Textures\Darth_Biomech\gui\cryopod.dds</Icon>
       <CubeSize>Small</CubeSize>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size>
@@ -295,7 +299,7 @@
         <Y>0.25</Y>
         <Z>0</Z>
       </ModelOffset>
-      <Model>models\Darth_Biomech\cryopod_solo_closed.mwm</Model>
+      <Model>Models\Darth_Biomech\cryopod_solo_closed.mwm</Model>
       <Components>
         <Component Subtype="InteriorPlate" Count="10" />
         <Component Subtype="Construction" Count="10" />
@@ -312,7 +316,7 @@
       </MountPoints>
       <PhysicsOption>Box</PhysicsOption>
       <BuildProgressModels>
-        <Model BuildPercentUpperBound="1.00" File="models\Darth_Biomech\cryopod_solo_progress_01.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Darth_Biomech\cryopod_solo_progress_01.mwm" />
       </BuildProgressModels>
       <MirroringZ>Y</MirroringZ>
       <MirroringY>Z</MirroringY>
@@ -330,7 +334,7 @@
         <SubtypeId>DB_Cryopod_pack</SubtypeId>
       </Id>
       <DisplayName>Cryogenic Pod Pack</DisplayName>
-      <Icon>textures\Darth_Biomech\gui\cryopod_pack.dds</Icon>
+      <Icon>Textures\Darth_Biomech\gui\cryopod_pack.dds</Icon>
       <CubeSize>Large</CubeSize>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size>
@@ -343,7 +347,7 @@
         <Y>0</Y>
         <Z>0</Z>
       </ModelOffset>
-      <Model>models\Darth_Biomech\cryopod_closed.mwm</Model>
+      <Model>Models\Darth_Biomech\cryopod_closed.mwm</Model>
       <Components>
         <Component Subtype="InteriorPlate" Count="25" />
         <Component Subtype="Construction" Count="20" />
@@ -360,7 +364,7 @@
       </MountPoints>
       <PhysicsOption>Box</PhysicsOption>
       <BuildProgressModels>
-        <Model BuildPercentUpperBound="1.00" File="models\Darth_Biomech\cryopod_progress_01.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Darth_Biomech\cryopod_progress_01.mwm" />
       </BuildProgressModels>
       <MirroringZ>Y</MirroringZ>
       <MirroringY>Z</MirroringY>
@@ -376,7 +380,7 @@
         <SubtypeId>DB_Cryopod_packSmall</SubtypeId>
       </Id>
       <DisplayName>Cryogenic Pod Pack</DisplayName>
-      <Icon>textures\Darth_Biomech\gui\cryopod_pack.dds</Icon>
+      <Icon>Textures\Darth_Biomech\gui\cryopod_pack.dds</Icon>
       <CubeSize>Small</CubeSize>
       <BlockTopology>TriangleMesh</BlockTopology>
       <Size>
@@ -389,7 +393,7 @@
         <Y>0.25</Y>
         <Z>0</Z>
       </ModelOffset>
-      <Model>models\Darth_Biomech\cryopod_closed.mwm</Model>
+      <Model>Models\Darth_Biomech\cryopod_closed.mwm</Model>
       <Components>
         <Component Subtype="InteriorPlate" Count="25" />
         <Component Subtype="Construction" Count="20" />
@@ -406,7 +410,7 @@
       </MountPoints>
       <PhysicsOption>Box</PhysicsOption>
       <BuildProgressModels>
-        <Model BuildPercentUpperBound="1.00" File="models\Darth_Biomech\cryopod_progress_01.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Darth_Biomech\cryopod_progress_01.mwm" />
       </BuildProgressModels>
       <MirroringZ>Y</MirroringZ>
       <MirroringY>Z</MirroringY>
