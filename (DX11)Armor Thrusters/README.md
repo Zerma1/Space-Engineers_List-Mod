@@ -78,8 +78,8 @@ des blocs : pas encore vérifiés. Troisième chargement à 10:05, avec le group
 Constaté en jeu par le testeur (2026-10-30) : l'onglet « Darth Biomech Mods » est bien séparé du
 reste de la barre G et le groupe « Armor Thrusters » s'affiche. Blocs posés puis monde sauvegardé
 et rechargé (10:09) : les 2 propulseurs petite grille sont présents dans la sauvegarde, et le log
-de rendu ne signale aucune texture manquante pour les modèles de ce mod. Les propulseurs grande
-grille ne sont pas dans la sauvegarde (une grande grille a été supprimée à 10:07, à vérifier).
+de rendu ne signale aucune texture manquante pour les modèles de ce mod. Les 2 propulseurs grande
+grille n'ont pas encore été posés (oubli confirmé par le testeur) : à tester.
 
 ## À tester en jeu
 
