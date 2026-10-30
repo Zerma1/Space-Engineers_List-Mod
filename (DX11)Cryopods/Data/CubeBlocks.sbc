@@ -57,6 +57,7 @@
       <InsideSound>BlockCryoIn</InsideSound>
       <PrimarySound>BlockCockpitSm</PrimarySound>
       <DamagedSound>ParticleElectrical</DamagedSound>
+      <PCU>15</PCU>
     </Definition>
 
     <Definition xsi:type="MyObjectBuilder_CryoChamberDefinition">
@@ -114,6 +115,7 @@
       <InsideSound>BlockCryoIn</InsideSound>
       <PrimarySound>BlockCockpitSm</PrimarySound>
       <DamagedSound>ParticleElectrical</DamagedSound>
+      <PCU>15</PCU>
     </Definition>	
  
 
@@ -172,6 +174,7 @@
       <InsideSound>BlockCryoIn</InsideSound>
       <PrimarySound>BlockCockpitSm</PrimarySound>
       <DamagedSound>ParticleElectrical</DamagedSound>
+      <PCU>15</PCU>
     </Definition>
 
 	<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
@@ -226,6 +229,7 @@
       <IdlePowerConsumption>0.00003</IdlePowerConsumption>
       <PrimarySound>BlockCockpitSm</PrimarySound>
       <DamagedSound>ParticleElectrical</DamagedSound>
+      <PCU>15</PCU>
     </Definition>
 
  
