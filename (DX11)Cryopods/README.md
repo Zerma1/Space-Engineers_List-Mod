@@ -78,14 +78,21 @@ Monde créatif local avec les 3 mods (DX11) en v1.1 (`SpaceEngineers.log` du 202
 les 8 définitions sont créées. Seul message : les 4 `MOD_ERROR` non bloquantes du point 11.
 Les modèles, textures et l'animation ne sont chargés qu'à l'affichage des blocs : pas encore vérifiés.
 Troisième chargement à 10:05, avec le groupe de variantes : `BlockVariantGroups.sbc` est chargé et
-post-traité sans erreur ni avertissement. Affichage du groupe dans la barre G pas encore vérifié.
+post-traité sans erreur ni avertissement.
+
+Constaté en jeu par le testeur (2026-10-30) : l'onglet « Darth Biomech Mods » est bien séparé du
+reste de la barre G et le groupe « Cryogenic Pods » s'affiche. Les 8 blocs (grande et petite grille)
+ont été posés, puis le monde a été sauvegardé et rechargé (10:09) : les 8 sont présents dans la sauvegarde.
+Log de rendu : seul `cryopod_progress_01.mwm` signale des textures manquantes (point 6) ; aucun
+message pour les autres modèles. Aucun message sur l'animation dans le log du jeu.
 
 ## À tester en jeu
 
 - [x] Le monde se charge (log du 2026-10-30, définitions seulement ; 4 `MOD_ERROR` non bloquantes, point 11)
-- [ ] Les 8 blocs apparaissent dans la catégorie « Darth Biomech Mods », avec ceux d'Armor Thrusters et Docking Ring
-- [ ] Le groupe « Cryogenic Pods » s'affiche avec son icône, et on passe d'une variante à l'autre
-- [ ] Icônes, modèles et étapes de construction s'affichent
+- [x] Les 8 blocs apparaissent dans la catégorie « Darth Biomech Mods », avec ceux d'Armor Thrusters et Docking Ring — testeur, 2026-10-30
+- [x] Le groupe « Cryogenic Pods » s'affiche — testeur, 2026-10-30
+- [x] Les blocs posés restent après sauvegarde et rechargement (8/8 dans la sauvegarde du 2026-10-30)
+- [ ] Icônes, modèles et étapes de construction s'affichent (log de rendu : seul le modèle de construction du pack signale des textures manquantes ; contrôle visuel à confirmer)
 - [ ] Construction / soudure / démontage
 - [ ] Capsule fonctionnelle : entrer, pression/oxygène, respawn
 - [ ] Capsule ouverte (cockpit) : s'asseoir, pose du personnage correcte
