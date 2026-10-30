@@ -21,6 +21,7 @@ Anneau d'amarrage modulaire : secteurs, coins, pinces d'amarrage (blocs de fusio
 - `Models/Darth_Biomech/` : 16 modèles `.mwm` (dont les sous-parties de porte `Docking_ring_door_left/right.mwm`)
 - `Textures/Darth_Biomech/` : textures des modèles ; `gui/` : 4 icônes
 - `metadata.mod` : ajouté dans ce dépôt (v1.1)
+- `DESCRIPTION.bbcode` : description pour la page Workshop (BBCode Steam, en anglais), ajoutée dans ce dépôt (v1.1)
 - `README.txt`, `thumb.jpg` : fichiers d'origine de l'auteur
 - Dépendances : aucune. Sons de porte et textures de construction repris du jeu de base.
 

@@ -1,0 +1,46 @@
+[h1](DX11) Docking Ring — maintenance update[/h1]
+
+A modular docking ring: ring sectors, docking clamps (merge blocks) and airlock doors, mostly for large grids.
+
+[b]This is an unofficial maintenance update of [url=https://steamcommunity.com/sharedfiles/filedetails/?id=294619787](DX11)Docking Ring[/url] by Darth Biomech (2015).[/b] All models and textures are the original author's work. This update only fixes what the current game needs.
+
+[h2]Why this update?[/h2]
+The original mod uses the old "legacy" Workshop format from 2015. Dedicated servers fail to download it ([i]k_EResultTimeout[/i]) and then refuse to start. This version uses the modern mod format, so servers download it normally.
+
+[h2]Blocks[/h2]
+All blocks are in the [b]Darth Biomech Mods[/b] tab of the G menu, sorted into 3 block groups:
+[list]
+[*][b]Docking Ring Sector[/b]: ring sector and sector corner.
+[*][b]Docking Ring Clamp[/b]: docking clamp (a merge block) and clamp corner.
+[*][b]Docking Ring Airlock[/b]: 3 large-grid airlock doors (normal, reversed, centered) and 1 small-grid airlock door.
+[/list]
+The tab is shared with the updated Armor Thrusters and Cryopods mods.
+
+[h2]How to dock[/h2]
+Build a ring of clamps and clamp corners on both ships. Bring the rings face to face, and the clamps merge the two ships like vanilla merge blocks. To undock, turn off the clamps on one side. The ships only separate once no other block connects them.
+
+[h2]Changes from the original[/h2]
+[list]
+[*]Modern mod folder layout (Data / Models / Textures, metadata.mod).
+[*]File path casing fixed.
+[*]PCU set to 115 on the doors and 100 on the clamps, same as vanilla doors and merge blocks. This field did not exist in 2015.
+[*]The small-grid airlock door is added to the Darth Biomech Mods tab.
+[*]Blocks are grouped into 3 block variant groups in the G menu.
+[/list]
+Sizes, mount points and build costs are unchanged. The two hidden legacy blocks of the original mod are kept, so that worlds which still use them do not lose them.
+
+[h2]Switching from the original mod[/h2]
+Block IDs (SubtypeIds) are unchanged. Replace the original mod with this one in your world's mod list, and do not load both at the same time. Your existing blocks should stay in place. Back up your world first, because this migration has not been tested yet.
+
+[h2]Tested[/h2]
+Space Engineers 1.210.014, local single player (creative), with these results:
+[list]
+[*]All blocks can be placed, and they stay after saving and reloading.
+[*]All 4 airlocks open and close.
+[*]Two large-grid ships docked and undocked, including with a full ring of 4 clamps and 4 clamp corners.
+[/list]
+Airtightness and dedicated servers are not tested yet.
+
+[h2]Credits[/h2]
+Models and textures: [b]Darth Biomech[/b]. [url=http://darth-biomech.deviantart.com]DeviantArt[/url], [url=https://steamcommunity.com/sharedfiles/filedetails/?id=294619787]original Workshop item[/url].
+If you are the original author and want this update changed or removed, please leave a comment.

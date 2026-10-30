@@ -19,6 +19,7 @@ Catégories : **Corrigé**, **Modifié**, **Supprimé**, **Ajouté**.
 - `Data/BlockVariantGroups.sbc` : 3 groupes de variantes dans la barre G, **Docking Ring Sector**
   (secteur + coin), **Docking Ring Clamp** (pince + coin) et **Docking Ring Airlock** (4 portes).
   Amélioration demandée, hors réparation minimale.
+- `DESCRIPTION.bbcode` : description de la page Workshop en BBCode Steam (anglais), à coller lors de la republication.
 - `README.md` et `CHANGELOG.md` du mod, avec l'analyse.
 
 ### Corrigé
