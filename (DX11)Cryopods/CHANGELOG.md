@@ -28,11 +28,13 @@ Catégories : **Corrigé**, **Modifié**, **Supprimé**, **Ajouté**.
 Aucun `TypeId`/`SubtypeId` modifié. Les points non corrigeables (textures de construction
 absentes du jeu, pose du personnage de 2015) et les points cosmétiques sont documentés dans le README.
 
-**Testé sur :** chargement d'un monde solo local le 2026-10-30, avant l'ajout du groupe de
-variantes : les 8 définitions sont créées, avec 4 `MOD_ERROR` non bloquantes déjà présentes dans
-la version d'origine (composant `Computer` dans les capsules décoratives, voir README point 11).
-Blocs, groupe et fonctionnement non vérifiés en jeu. Validation statique : XML valide, pas de
-`SubtypeId` en double, tous les chemins des `.sbc` présents.
+**Testé sur :** Space Engineers 1.210.014 — solo local, créatif (2026-10-30). Chargement avec
+4 `MOD_ERROR` non bloquantes déjà présentes dans la version d'origine (composant `Computer` dans
+les capsules décoratives, voir README point 11). Onglet et groupe visibles dans la barre G, 8 blocs
+posés, conservés après sauvegarde et rechargement. Testeur : entrée dans les 4 capsules
+(fonctionnelles et ouvertes, grande et petite grille), pose du personnage correcte, capsule
+pressurisée. Non testé : respawn, PCU affiché, serveur dédié (republication nécessaire),
+migration d'un monde v1.0, étapes de soudure en détail.
 
 ## [1.0] — 2026-10-30
 

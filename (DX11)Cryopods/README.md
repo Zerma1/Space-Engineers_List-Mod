@@ -6,9 +6,9 @@
 | **Workshop d'origine** | https://steamcommunity.com/sharedfiles/filedetails/?id=294618647 |
 | **Dernière mise à jour d'origine** | 2015-12-17 |
 | **Dernière modification (ce dépôt)** | 2026-10-30 |
-| **Statut** | `À tester` |
+| **Statut** | `Fonctionnel` (solo local ; serveur dédié à tester après republication ; 4 `MOD_ERROR` non bloquantes, voir point 11) |
 | **Version actuelle** | 1.1 |
-| **Testé sur Space Engineers** | non testé en jeu (v1.0 chargée par un serveur dédié le 2026-10-29, blocs non vérifiés) |
+| **Testé sur Space Engineers** | 1.210.014 — solo local, créatif (2026-10-30) |
 | **Workshop republié** | non |
 
 ## Description
@@ -92,13 +92,14 @@ message pour les autres modèles. Aucun message sur l'animation dans le log du j
 - [x] Les 8 blocs apparaissent dans la catégorie « Darth Biomech Mods », avec ceux d'Armor Thrusters et Docking Ring — testeur, 2026-10-30
 - [x] Le groupe « Cryogenic Pods » s'affiche — testeur, 2026-10-30
 - [x] Les blocs posés restent après sauvegarde et rechargement (8/8 dans la sauvegarde du 2026-10-30)
-- [ ] Icônes, modèles et étapes de construction s'affichent (log de rendu : seul le modèle de construction du pack signale des textures manquantes ; contrôle visuel à confirmer)
-- [ ] Construction / soudure / démontage
-- [ ] Capsule fonctionnelle : entrer, pression/oxygène, respawn
-- [ ] Capsule ouverte (cockpit) : s'asseoir, pose du personnage correcte
-- [ ] PCU affiché à 15 sur les blocs fonctionnels
+- [x] Icônes et modèles s'affichent — testeur, 2026-10-30 (seul le modèle de construction du pack signale des textures manquantes dans le log de rendu, point 6)
+- [ ] Étapes de soudure / démontage (pas vérifiées en détail)
+- [x] Capsules fonctionnelles (grande et petite) : entrer, capsule pressurisée — testeur, 2026-10-30
+- [ ] Capsule fonctionnelle : respawn
+- [x] Capsules ouvertes (cockpit, grande et petite) : s'asseoir, pose du personnage correcte, vue 1re personne — testeur, 2026-10-30
+- [ ] PCU affiché à 15 sur les blocs fonctionnels (non vérifié explicitement)
 - [ ] Les blocs d'un monde existant (v1.0) sont toujours là après passage à la v1.1
-- [ ] Fonctionnement en solo
+- [x] Fonctionnement en solo — 1.210.014, 2026-10-30
 - [ ] Fonctionnement en multijoueur / serveur dédié (après republication)
 
 ## Historique
