@@ -40,6 +40,9 @@ The full rules are in [CONTRIBUTING.md](CONTRIBUTING.md) and [AGENTS.md](AGENTS.
 - **`Functional` only after a human has tested the mod in game.** Static checks are not enough.
 - **Steam Workshop description in BBCode.** Each mod has a `docs/WORKSHOP_DESCRIPTION.txt` (BBCode, ready to paste
   on the Workshop page, max 8000 characters). It must stay in sync with the player-facing parts of the mod's `README.md`.
+- **Link to this repository on the Workshop page.** Once a mod update is pushed, its Steam description
+  (`docs/WORKSHOP_DESCRIPTION.txt` and the published Workshop page) must contain a link to this repository:
+  https://github.com/Zerma1/Space-Engineers_List-Mod.
 - **Mod folder names have no spaces.** Use underscores instead (e.g. `(DX11)Docking_Ring`).
 - **No secrets or personal paths** (Steam IDs, user names, tokens) in any file.
 

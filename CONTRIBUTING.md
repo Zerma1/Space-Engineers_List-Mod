@@ -25,6 +25,11 @@ It applies to humans and AI agents alike.
   description, how to use, changes, known limitations, versions, dates) in Steam BBCode, ready to paste
   as the Workshop description. Steam does not render Markdown, and the description is limited to
   8000 characters. Keep it in sync with `README.md`.
+- **Link to this repository in the Steam description.** Once a mod update is pushed, the mod's
+  Steam description must contain a link to this repository
+  (`[url=https://github.com/Zerma1/Space-Engineers_List-Mod]Space-Engineers_List-Mod on GitHub[/url]`):
+  first in `docs/WORKSHOP_DESCRIPTION.txt`, then on the Workshop page when the mod is published or
+  updated there. Players can then find the source, the full changelog and where to report bugs.
 - **`Functional` only after a human has tested the mod in game.**
 - **No secrets or personal paths** (Steam IDs, user names, tokens) in any file.
 - By contributing, you agree that your contribution is published under the [MIT License](LICENSE).
