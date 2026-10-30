@@ -83,14 +83,22 @@ Monde créatif local avec les 3 mods (DX11) en v1.1 (`SpaceEngineers.log` du 202
 les 10 définitions de blocs sont créées, sans aucune erreur ni aucun avertissement pour ce mod.
 Les modèles et textures ne sont chargés qu'à l'affichage des blocs : pas encore vérifiés.
 Second chargement à 09:58, avec les groupes de variantes : `BlockVariantGroups.sbc` est chargé et
-post-traité sans erreur ni avertissement. Affichage des groupes dans la barre G pas encore vérifié.
+post-traité sans erreur ni avertissement.
+
+Constaté en jeu par le testeur (2026-10-30) : l'onglet « Darth Biomech Mods » est bien séparé du
+reste de la barre G et les 3 groupes s'affichent. Les 8 blocs publics (dont le sas petite grille)
+ont été posés, puis le monde a été sauvegardé et rechargé (10:09) : les 8 sont présents dans la
+sauvegarde (dont 16 exemplaires de chaque pièce d'anneau, 2 à 6 de chaque sas). Le log de rendu
+ne signale aucune texture manquante pour les modèles de ce mod : les textures `_de` absentes
+(point 6) n'ont donc pas d'effet visible dans le log.
 
 ## À tester en jeu
 
 - [x] Le monde se charge sans erreur de mod (log du 2026-10-30, définitions seulement)
-- [ ] Les 8 blocs publics apparaissent dans la catégorie « Darth Biomech Mods », avec ceux d'Armor Thrusters et Cryopods
-- [ ] Les 3 groupes (Sector, Clamp, Airlock) s'affichent avec leur icône, et on passe d'une variante à l'autre
-- [ ] Icônes, modèles et étapes de construction s'affichent
+- [x] Les 8 blocs publics apparaissent dans la catégorie « Darth Biomech Mods », avec ceux d'Armor Thrusters et Cryopods — testeur, 2026-10-30
+- [x] Les 3 groupes (Sector, Clamp, Airlock) s'affichent — testeur, 2026-10-30
+- [x] Les blocs posés restent après sauvegarde et rechargement (8/8 dans la sauvegarde du 2026-10-30)
+- [ ] Icônes, modèles et étapes de construction s'affichent (aucune texture manquante dans le log de rendu ; contrôle visuel à confirmer)
 - [ ] Construction / soudure / démontage
 - [ ] Portes (sas) : ouverture/fermeture, sous-parties animées, sons, étanchéité
 - [ ] Pince d'amarrage (merge block) : fusion entre deux vaisseaux
