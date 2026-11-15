@@ -63,10 +63,10 @@ Contact with Sektan: not attempted yet.
 |---|-----------|---------|----------|------------|
 | 1 | `thumb.jpg` | Same file as the thumbnail of S - Docking position lights: it is Sektan's image, not Zerma1's | major (rights) | confirmed (identical file) |
 | 1b | `Models/Zerma_DockingLight_Globe.mwm` | Globe model taken from Sektan's mod (stated in the Workshop description); Sektan's permission not documented | major (rights) | confirmed by Zerma1 |
-| 2 | `Data/CubeBlocks.sbc:13`, `:74` | Comment `[AUTEUR ORIGINAL À COMPLÉTER]`: original author (Sektan) not filled in | cosmetic | confirmed |
+| 2 | `Data/CubeBlocks.sbc:11`, `:73` | Comment `[AUTEUR ORIGINAL À COMPLÉTER]`: original author not filled in | cosmetic | fixed (2026-11-15): Sektan credited |
 | 3 | `Data/CubeBlocks.sbc`, `ZdlControls.cs` | In-game texts (description, terminal labels, tooltips) are in French only | minor | confirmed |
 
-The Workshop descriptions are in `docs/` (`WORKSHOP_DESCRIPTION.en.bbc` is the reference, `WORKSHOP_DESCRIPTION.fr.bbc` the French copy).
+The Workshop descriptions are in `docs/` (`WORKSHOP_DESCRIPTION.en.bbc` is the reference, `WORKSHOP_DESCRIPTION.fr.bbc`, `.es.bbc`, `.ru.bbc`, `.zh.bbc` (Simplified Chinese) and `.ja.bbc` are translations).
 
 Static checks (2026-11-15): the 5 `.sbc` files are valid XML, no duplicate `SubtypeId`, every `<Icon>` and
 `<Model>` of the mod exists. Not checked against the ModAPI whitelist in game.

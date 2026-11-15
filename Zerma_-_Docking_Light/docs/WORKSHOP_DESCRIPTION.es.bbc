@@ -1,0 +1,84 @@
+[h1]Zerma - Docking Light[/h1]
+[b]Docking Light (Zerma)[/b] es un foco de atraque para cuadrículas grandes y pequeñas.
+
+A lo largo de su haz, proyecta una [b]línea de esferas luminosas 3D[/b] que guía la aproximación de una nave hacia un conector, un hangar o una pista de aterrizaje.
+
+[h2]Ajustes (terminal y Bloque Programable)[/h2]
+[list]
+[*][b]Distancia[/b] de la línea: de 5 a 100 m en cuadrícula grande, de 2 a 50 m en cuadrícula pequeña.
+[*][b]Separación[/b] y [b]tamaño[/b] de las esferas.
+[*][b]Desplazamientos[/b] vertical y horizontal de la línea, en pasos de 0,05 m (por ejemplo, para colocar las esferas a ras de una pista).
+[*][b]Parpadeo[/b]: Ninguno, General, Onda saliente u Onda entrante, con periodo, ancho de onda y nivel mínimo ajustables.
+[*][b]Color e intensidad[/b]: selector nativo del foco. El haz y las esferas comparten el mismo color.
+[*][b]Halo[/b] luminoso alrededor de las esferas, siempre activo.
+[/list]
+
+[h2]Acciones de barra de herramientas / cabina[/h2]
+[list]
+[*]Nativas: Encender/Apagar y Alternar, intensidad, radio…
+[*][b]Aumentar / Disminuir[/b]: distancia, separación, desplazamiento vertical y desplazamiento horizontal. Cada acción muestra el valor actual y respeta los límites.
+[*][b]Paso ajustable[/b]: las acciones «Paso distancia», «Paso separación», «Paso desplazamiento vertical» y «Paso desplazamiento horizontal» recorren los pasos y muestran el paso actual. El paso también se ajusta en el terminal.
+[/list]
+
+[table]
+[tr][th]Ajuste[/th][th]Pasos disponibles (cuadrícula grande)[/th][th]Por defecto[/th][/tr]
+[tr][td]Distancia[/td][td]1 / 5 / 10 / 25 m[/td][td]5 m[/td][/tr]
+[tr][td]Separación[/td][td]0,1 / 0,5 / 1 / 2 m[/td][td]0,5 m[/td][/tr]
+[tr][td]Desplazamientos[/td][td]0,05 / 0,25 / 0,5 / 1 / 2,5 m[/td][td]0,25 m[/td][/tr]
+[/table]
+
+En cuadrícula pequeña, todos los pasos se dividen entre dos. Los pasos son propios de cada bloque, se guardan y se sincronizan en multijugador.
+
+[h2]Funcionamiento[/h2]
+[list]
+[*][b]Condiciones[/b]: las esferas solo aparecen si el foco está encendido, alimentado y operativo.
+[*][b]Sin colisión[/b]: se puede volar y caminar a través de las esferas.
+[*][b]Consumo eléctrico[/b] proporcional al número de esferas y a la intensidad (unos 2,5 kW en cuadrícula grande con 20 m de línea y 2 m de separación).
+[*][b]Progresión[/b]: el bloque se desbloquea tras construir un [b]Proyector[/b] (de planos), en cuadrícula grande o pequeña.
+[*][b]Multijugador[/b]: ajustes guardados y sincronizados. Solo los jugadores con acceso al bloque pueden modificarlos. El servidor dedicado no muestra nada.
+[*][b]Modelos 3D propios[/b] para ambos tamaños, con niveles de detalle (LOD) para el rendimiento.
+[/list]
+
+[h2]Propiedades para Bloque Programable[/h2]
+[table]
+[tr][th]Propiedad[/th][th]Tipo[/th][/tr]
+[tr][td]ZermaDL_Distance[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_Spacing[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_GlobeSize[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_BlinkMode[/td][td]long: 0 = ninguno, 1 = general, 2 = onda saliente, 3 = onda entrante[/td][/tr]
+[tr][td]ZermaDL_BlinkPeriod[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_BlinkDuty[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_MinLevel[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_DistanceStep[/td][td]long: índice del paso, de 0 a 3[/td][/tr]
+[tr][td]ZermaDL_SpacingStep[/td][td]long: índice del paso, de 0 a 3[/td][/tr]
+[tr][td]ZermaDL_OffsetVStep[/td][td]long: índice del paso, de 0 a 4[/td][/tr]
+[tr][td]ZermaDL_OffsetHStep[/td][td]long: índice del paso, de 0 a 4[/td][/tr]
+[tr][td]ZermaDL_OffsetV[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_OffsetH[/td][td]float[/td][/tr]
+[/table]
+
+Las propiedades nativas de la luz (Color, Intensity, Radius…) siguen disponibles.
+
+[code]
+// Ejemplo
+var light = GridTerminalSystem.GetBlockWithName("Docking Light") as IMyReflectorLight;
+light.SetValue("ZermaDL_Distance", 50f);
+light.SetValue<long>("ZermaDL_BlinkMode", 2);
+[/code]
+
+[h2]Recetas[/h2]
+[list]
+[*][b]Cuadrícula grande[/b]: 8 placas interiores, 12 componentes de construcción, 4 tubos de acero grandes, 4 tubos de acero pequeños, 8 ordenadores, 1 componente de radiocomunicación, 4 cristales blindados.
+[*][b]Cuadrícula pequeña[/b]: 4 placas interiores, 6 componentes de construcción, 4 tubos de acero pequeños, 4 ordenadores, 1 componente de radiocomunicación, 2 cristales blindados.
+[/list]
+
+[h2]Código fuente, errores y contribuciones[/h2]
+Código fuente y registro de cambios completo: [url=https://github.com/Zerma1/Space-Engineers_List-Mod/tree/main/Zerma_-_Docking_Light]Zerma_-_Docking_Light en GitHub[/url], dentro del repositorio [url=https://github.com/Zerma1/Space-Engineers_List-Mod]Space-Engineers_List-Mod en GitHub[/url].
+Informa de los errores en las [url=https://github.com/Zerma1/Space-Engineers_List-Mod/issues]issues de GitHub[/url] o en los comentarios de abajo, con un extracto de tu [i]SpaceEngineers.log[/i].
+
+[h2]Créditos[/h2]
+[list]
+[*]Inspirado en el mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=379096179]S - Docking position lights[/url] de [url=https://steamcommunity.com/id/sektan/myworkshopfiles/]Sektan[/url], publicado en 2015. El modelo de las esferas procede de ese mod.
+[*]Modelos del foco: Zerma, a partir del foco vanilla de Space Engineers (Keen Software House).
+[*]Mod: Zerma.
+[/list]

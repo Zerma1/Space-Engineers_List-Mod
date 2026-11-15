@@ -1,0 +1,84 @@
+[h1]Zerma - Docking Light[/h1]
+[b]Docking Light (Zerma)[/b] は、大型・小型グリッド対応のドッキング用サーチライトです。
+
+ビームの軸上に[b]光る 3D 球体のライン[/b]を投影し、コネクター、格納庫、滑走路への船の進入を誘導します。
+
+[h2]設定（ターミナルとプログラマブルブロック）[/h2]
+[list]
+[*]ラインの[b]距離[/b]：大型グリッドで 5～100 m、小型グリッドで 2～50 m。
+[*]球体の[b]間隔[/b]と[b]サイズ[/b]。
+[*]ラインの垂直・水平[b]オフセット[/b]、0.05 m 刻み（例：滑走路の表面に球体を揃える）。
+[*][b]点滅[/b]：なし、全体、外向きウェーブ、内向きウェーブ。周期、ウェーブ幅、最低レベルを調整可能。
+[*][b]色と強度[/b]：サーチライト標準のセレクター。ビームと球体は同じ色になります。
+[*]球体の周りに光る[b]ハロー[/b]、常に有効。
+[/list]
+
+[h2]ツールバー / コックピットのアクション[/h2]
+[list]
+[*]標準：オン/オフと切り替え、強度、半径…
+[*][b]増加 / 減少[/b]：距離、間隔、垂直オフセット、水平オフセット。各アクションは現在の値を表示し、上限・下限を超えません。
+[*][b]ステップ調整[/b]：「距離ステップ」「間隔ステップ」「垂直オフセットステップ」「水平オフセットステップ」の各アクションでステップを切り替え、現在のステップを表示します。ステップはターミナルでも設定できます。
+[/list]
+
+[table]
+[tr][th]設定[/th][th]選択可能なステップ（大型グリッド）[/th][th]初期値[/th][/tr]
+[tr][td]距離[/td][td]1 / 5 / 10 / 25 m[/td][td]5 m[/td][/tr]
+[tr][td]間隔[/td][td]0.1 / 0.5 / 1 / 2 m[/td][td]0.5 m[/td][/tr]
+[tr][td]オフセット[/td][td]0.05 / 0.25 / 0.5 / 1 / 2.5 m[/td][td]0.25 m[/td][/tr]
+[/table]
+
+小型グリッドではすべてのステップが半分になります。ステップはブロックごとに設定され、保存され、マルチプレイで同期されます。
+
+[h2]仕組み[/h2]
+[list]
+[*][b]条件[/b]：サーチライトがオンで、電力が供給され、機能している場合にのみ球体が表示されます。
+[*][b]衝突なし[/b]：球体は飛行・歩行ですり抜けられます。
+[*][b]消費電力[/b]は球体の数と強度に比例します（大型グリッドで 20 m のライン、2 m 間隔の場合、約 2.5 kW）。
+[*][b]進行状況[/b]：大型または小型グリッドで（設計図用の）[b]プロジェクター[/b]を建造するとアンロックされます。
+[*][b]マルチプレイ[/b]：設定は保存・同期されます。ブロックへのアクセス権を持つプレイヤーのみ変更できます。専用サーバーでは何も描画されません。
+[*]両サイズ用の[b]専用 3D モデル[/b]、パフォーマンスのための詳細度（LOD）付き。
+[/list]
+
+[h2]プログラマブルブロック用プロパティ[/h2]
+[table]
+[tr][th]プロパティ[/th][th]型[/th][/tr]
+[tr][td]ZermaDL_Distance[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_Spacing[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_GlobeSize[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_BlinkMode[/td][td]long：0 = なし、1 = 全体、2 = 外向きウェーブ、3 = 内向きウェーブ[/td][/tr]
+[tr][td]ZermaDL_BlinkPeriod[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_BlinkDuty[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_MinLevel[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_DistanceStep[/td][td]long：ステップ番号、0～3[/td][/tr]
+[tr][td]ZermaDL_SpacingStep[/td][td]long：ステップ番号、0～3[/td][/tr]
+[tr][td]ZermaDL_OffsetVStep[/td][td]long：ステップ番号、0～4[/td][/tr]
+[tr][td]ZermaDL_OffsetHStep[/td][td]long：ステップ番号、0～4[/td][/tr]
+[tr][td]ZermaDL_OffsetV[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_OffsetH[/td][td]float[/td][/tr]
+[/table]
+
+ライト標準のプロパティ（Color、Intensity、Radius…）も引き続き使用できます。
+
+[code]
+// 例
+var light = GridTerminalSystem.GetBlockWithName("Docking Light") as IMyReflectorLight;
+light.SetValue("ZermaDL_Distance", 50f);
+light.SetValue<long>("ZermaDL_BlinkMode", 2);
+[/code]
+
+[h2]レシピ[/h2]
+[list]
+[*][b]大型グリッド[/b]：内装プレート 8、建設コンポーネント 12、大型鋼管 4、小型鋼管 4、コンピューター 8、無線通信コンポーネント 1、防弾ガラス 4。
+[*][b]小型グリッド[/b]：内装プレート 4、建設コンポーネント 6、小型鋼管 4、コンピューター 4、無線通信コンポーネント 1、防弾ガラス 2。
+[/list]
+
+[h2]ソースコード、バグ報告、貢献[/h2]
+ソースコードと完全な変更履歴：[url=https://github.com/Zerma1/Space-Engineers_List-Mod/tree/main/Zerma_-_Docking_Light]GitHub の Zerma_-_Docking_Light[/url]（[url=https://github.com/Zerma1/Space-Engineers_List-Mod]GitHub の Space-Engineers_List-Mod[/url] リポジトリ内）。
+バグは [url=https://github.com/Zerma1/Space-Engineers_List-Mod/issues]GitHub の issues[/url] または下のコメント欄に、[i]SpaceEngineers.log[/i] の該当部分を添えて報告してください。
+
+[h2]クレジット[/h2]
+[list]
+[*][url=https://steamcommunity.com/id/sektan/myworkshopfiles/]Sektan[/url] 氏が 2015 年に公開した MOD [url=https://steamcommunity.com/sharedfiles/filedetails/?id=379096179]S - Docking position lights[/url] に着想を得ています。球体のモデルはこの MOD から流用しています。
+[*]サーチライトのモデル：Zerma、Space Engineers バニラのサーチライト（Keen Software House）をベースに制作。
+[*]MOD：Zerma。
+[/list]
