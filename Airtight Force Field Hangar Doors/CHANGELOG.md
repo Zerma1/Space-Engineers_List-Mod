@@ -1,30 +1,73 @@
 # Changelog — Airtight Force Field Hangar Doors
 
-Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
-Catégories : **Corrigé**, **Modifié**, **Supprimé**, **Ajouté**.
+Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
+Categories: **Fixed**, **Changed**, **Removed**, **Added**.
 
-## [Non publié] — 2026-10-27
+## [Unreleased] — 2026-10-28
 
-### Corrigé
-- `ForceField.cs` : remplace les types internes du jeu `MyEntities` et `MyAirtightDoorGeneric`
-  par `MyEntity` et `IMyDoor.OpenRatio`, pour éviter un refus du script par la whitelist ModAPI.
-  Comportement identique attendu.
-- `ForceField.cs` : ajoute une garde `null` dans `UpdateAfterSimulation10` pour éviter un plantage.
+### Fixed
+- **The force fields did nothing (no colors, sounds or collisions): the script did not compile.**
+  `ForceField.cs` now has `using Sandbox.Common.ObjectBuilders;`; without it the compiler could not
+  find `MyObjectBuilder_AirtightHangarDoor` (`CS0246`). This was the cause of the breakage.
+- **A switched-off or unpowered force field stayed airtight** (bug that existed before the game
+  update). Reworked so that:
 
-### Supprimé
-- `Data/CubeBlocks - Copy.sbc` : doublon qui définissait les 22 blocs une seconde fois.
-  ⚠️ La copie autorisait le montage sur toute la hauteur des faces avant/arrière ; la version
-  conservée (`CubeBlocks.sbc`) ne l'autorise que sur le bloc du haut, comme pour les faces gauche/droite.
-  Si des constructions existantes ne se raccordent plus, c'est ce point à revoir.
-- `Data/Scripts/ForceField/obj/` : fichiers générés par Visual Studio.
-- `ForceField.cs` : ligne sans effet `NeedsUpdate |= NONE` et une variable inutilisée.
+  | Field state | Air | Players / objects / ships |
+  |-------------|-----|---------------------------|
+  | switched off / unpowered | passes | pass |
+  | active, passable | blocked | pass |
+  | active, solid | blocked | blocked |
 
-### Ajouté
-- `README.md` et `CHANGELOG.md` du mod.
+  - Every definition had `<IsAirTight>true</IsAirTight>`, which the game checks first
+    (`MyGridGasSystem.IsAirtightBlock`): the block was always airtight. Removed from the 22
+    definitions (no `TypeId`/`SubtypeId` change). Airtightness now follows the real door state.
+  - The script keeps the door closed while the field is active (airtight) and opens it when the
+    field is inactive. The game refuses to move the door of a block that is off or unpowered, so:
+    when switched off, the block is switched on for a single call; when the grid cannot supply it,
+    the block asks for 0 W (which the game counts as powered) until power is available again
+    (checked every ~1.7 s).
+  - Solid / passable is a separate state, stored in the Custom Data line `ForceField: solid|passable`
+    (saved and synced in multiplayer). The terminal **Open** switch, the toolbar / timer actions
+    *Open / Open On / Open Off*, the use key and programmable blocks now switch it. Worlds saved
+    before: an open door becomes passable, a closed one solid.
+  - **Collision fixed** (in-game tests 3 to 7). The original `UpdateAfterSimulation10` forced the
+    world matrix of every subpart every 10 frames: it teleported the collision bodies out of the
+    doorway while the game's constraint pulled them back, so the field jittered and violently
+    pushed players away. Removed; visual subparts now just keep `NeedsWorldMatrix` so they follow a
+    moving grid. A re-enabled collision body lands on its subpart entity, which the game leaves at
+    the block origin: the collision is now re-enabled by asking the game to rebuild the door subparts.
+  - Add `ffdebug` to the block name to log its state to `SpaceEngineers.log` once per second;
+    state changes are always logged.
+  ⚠️ Limitation: a damaged (non-functional) field keeps its last airtightness.
+- `ForceField.cs`: `null` guard in `UpdateAfterSimulation10` to avoid a crash.
 
-**Testé sur :** non testé en jeu. Vérifications statiques uniquement (XML valide, aucun doublon d'ID,
-chemins des `.sbc` présents).
+### Fixed then replaced
+- First airtightness fix (2026-10-28, `UpdateAirtightness`): it changed the door state, which the
+  `IsAirTight` flag overrides, so **it had no effect** on the air; it also made a closed field let
+  objects through (in-game test 2). Replaced by the rework above.
+
+### Changed
+- `ForceField.cs`: `MyEntities` and `MyAirtightDoorGeneric` replaced with `MyEntity` and
+  `IMyDoor.OpenRatio`. Same behaviour. This change was not needed: these types are whitelisted,
+  contrary to what was assumed on 2026-10-27.
+
+### Removed
+- `Data/CubeBlocks - Copy.sbc`: duplicate that defined the 22 blocks a second time.
+  ⚠️ The copy allowed mounting over the full height of the front/back faces; the kept version
+  (`CubeBlocks.sbc`) only allows it on the top block, like the left/right faces.
+  If existing builds no longer connect, this is the point to review.
+- `Data/Scripts/ForceField/obj/`: files generated by Visual Studio.
+- `ForceField.cs`: a no-op `NeedsUpdate |= NONE` line and an unused variable.
+
+### Added
+- Mod `README.md`, `CHANGELOG.md` and `IN_GAME_TESTS.md`.
+
+**Tested on:** Steam build 24675677 — `tools/Test-Mod.ps1`: 0 errors (XML, duplicates, paths,
+game Roslyn compilation, ModAPI whitelist) — in game (2026-10-28, solo): the mod loads and works as
+before (test 1). First airtightness fix: failed (test 2). Rework (test 3): air correct in every state,
+collision broken; test 7: air, collision, power and weapons all OK. **Visual fix after a world load
+not yet retested.**
 
 ## [1.0] — 2026-10-27
 
-Version d'origine importée depuis le Workshop (901800144), auteur Hannobal. Aucune modification.
+Original version imported from the Workshop (901800144), author Hannobal. No changes.

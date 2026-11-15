@@ -2,69 +2,98 @@
 
 | | |
 |---|---|
-| **Auteur d'origine** | Hannobal |
-| **Workshop d'origine** | https://steamcommunity.com/sharedfiles/filedetails/?id=901800144 |
-| **Dernière mise à jour d'origine** | 2019-02-07 |
-| **Dernière modification (ce dépôt)** | 2026-10-27 |
-| **Statut** | `À tester` (correctifs faits, non validés en jeu) |
-| **Version actuelle** | 1.0 (`metadata.mod`) |
-| **Testé sur Space Engineers** | non testé |
-| **Workshop republié** | non |
+| **Original author** | Hannobal |
+| **Original Workshop page** | https://steamcommunity.com/sharedfiles/filedetails/?id=901800144 |
+| **Last original update** | 2019-02-07 |
+| **Last repo update** | 2026-10-28 |
+| **Status** | `To test` (rework works in game, test 7; visual fix after world load to confirm) |
+| **Current version** | 1.0 (`metadata.mod`) |
+| **Tested on Space Engineers** | Steam build 24675677: loading and behaviour confirmed in game (2026-10-28) |
+| **Republished on the Workshop** | no |
 
 ## Description
 
-Portes de hangar étanches à champ de force (grands et petits blocs), empilables
-sur 1 à 10 blocs de hauteur. La couleur du champ ouvert/fermé se règle via le nom
-du bloc dans le terminal : `co <couleur>` (ouvert) et `cc <couleur>` (fermé).
-Couleurs : `red orange yellow lime green spring cyan sky blue purple magenta pink`.
+Airtight force field hangar doors (large and small grid), stackable from 1 to 10 blocks high.
+The open/closed field color is set through the block name in the terminal: `co <color>` (open)
+and `cc <color>` (closed).
+Colors: `red orange yellow lime green spring cyan sky blue purple magenta pink`.
 
-## Contenu
+### How it works (since the 2026-10-28 rework)
 
-- `Data/` : `CubeBlocks.sbc` (22 blocs : 11 grands, 11 petits), `BlockCategories.sbc`, `Audio.sbc`
-  (sons personnalisés commentés, le script utilise les sons vanilla `BlockProjectorOn/Off`),
-  `TransparentMaterials_ForceFieldDoors.sbc` (un matériau `H_ForceField_<couleur>` par couleur)
-- `Data/Scripts/ForceField/` : `ForceField.cs` (logique de couleur, sons, collisions) + `.csproj`/`.sln` (IDE uniquement)
-- `Models/ForceFieldDoors/` : base, portes 1 à 10, champs de couleur (Large/Small), collisions
-- `Textures/` : icônes, textures émissives, particules
-- Dépendances : aucune connue
+| Field state | Air | Players / objects / ships |
+|-------------|-----|---------------------------|
+| Switched off, unpowered (grid cannot supply it) | passes | pass |
+| Active, **passable** ("Open" switch on) | blocked | pass (bullets, flares and rockets too) |
+| Active, **solid** ("Open" switch off) | blocked | blocked (bullets, flares and rockets hit and damage the field) |
 
-## Licence d'origine
+- The terminal **Open** switch, the toolbar / timer actions *Open / Open On / Open Off*, the use key
+  and programmable blocks switch between **solid** and **passable** (`cc` color when solid, `co`
+  color when passable).
+- When the field becomes solid again, the script asks the game to rebuild the door subparts: this
+  recreates the collision in the doorway.
+- The state is stored in the block **Custom Data** as a line `ForceField: solid` or
+  `ForceField: passable` (saved with the world, synced in multiplayer). Do not remove that line;
+  if it is missing the field starts passable when the door was open, solid otherwise.
+- Behind the scenes the game's door stays **closed while the field is active** (that is what makes
+  it airtight) and is **opened when the field is inactive**. Do not be surprised if a programmable
+  block reads the door status as "Closed" while the field is passable.
+- Diagnostics: add `ffdebug` to the block name to write its state to `SpaceEngineers.log` once per
+  second (and on screen). State changes are always logged.
+- Limitation: a **damaged** (non-functional) field keeps its last airtightness, because the game
+  forbids moving the door of a non-functional block.
 
-Aucune licence précisée dans les fichiers du mod. Description Workshop à vérifier.
-Contact avec l'auteur : pas encore tenté.
+## Contents
 
-## Analyse
+- `Data/`: `CubeBlocks.sbc` (22 blocks: 11 large, 11 small), `BlockCategories.sbc`, `Audio.sbc`
+  (custom sounds commented out; the script uses the vanilla `BlockProjectorOn/Off` sounds),
+  `TransparentMaterials_ForceFieldDoors.sbc` (one `H_ForceField_<color>` material per color)
+- `Data/Scripts/ForceField/`: `ForceField.cs` (colors, sounds, collisions, airtightness, power, terminal switch) + `.csproj`/`.sln` (IDE only)
+- `Models/ForceFieldDoors/`: base, doors 1 to 10, colored fields (Large/Small), collisions
+- `Textures/`: icons, emissive textures, particles
+- Dependencies: none known
 
-Analyse statique (lecture des fichiers et des chemins dans les `.mwm`, sans lancement du jeu :
-aucune installation de Space Engineers sur le poste d'analyse).
+## Original license
 
-| # | Fichier:ligne | Problème | Gravité | Confirmé ? | État |
-|---|---------------|----------|---------|------------|------|
-| 1 | `Data/CubeBlocks - Copy.sbc` | Copie quasi identique de `CubeBlocks.sbc` (seuls 40 `MountPoint` Front/Back diffèrent). Le jeu charge tous les `.sbc` : les 22 blocs étaient définis deux fois. | majeur | confirmé | **corrigé** (fichier supprimé, `CubeBlocks.sbc` conservé) |
-| 2 | `Data/Scripts/ForceField/obj/Debug/*` | Fichiers générés par Visual Studio (`.cs` vides, `.cache`) dans le dossier compilé par le jeu. | mineur | confirmé | **corrigé** (supprimés) |
-| 3 | `ForceField.cs` (ex-lignes 59, 62, 79, 86, 172) | Utilisation des types internes `MyEntities` et `MyAirtightDoorGeneric`, qui risquent d'être refusés par la whitelist ModAPI actuelle → échec de compilation du script. | bloquant potentiel | supposé | **corrigé** (remplacés par `MyEntity` et `IMyDoor.OpenRatio`) |
-| 4 | `ForceField.cs` (ex-ligne 78) | `Entity.NeedsUpdate \|= MyEntityUpdateEnum.NONE;` n'a aucun effet. | cosmétique | confirmé | **corrigé** |
-| 5 | `ForceField.cs` (ex-ligne 79) | Variable `door` déclarée et jamais utilisée. | cosmétique | confirmé | **corrigé** |
-| 6 | `ForceField.cs:80` | `UpdateAfterSimulation10` sans test `null` : une exception dans un `Update` fait planter le jeu. | mineur | supposé | **corrigé** (garde ajoutée) |
-| 7 | `ForceField.cs:210` | `GetObjectBuilder` renvoie le builder d'initialisation sans tenir compte de `copy`. | mineur | supposé | non modifié (pas de preuve de bug) |
-| 8 | `ForceField.cs` | Sons et rendu gérés sans test serveur dédié (`IsDedicated`). | mineur | à vérifier en dédié | non modifié |
-| 9 | `ForceField.cs:3-18` | `using` de namespaces peut-être hors whitelist (`VRageRender`, `Sandbox.Definitions`…). Le type `MyObjectBuilder_AirtightHangarDoor` et le reste n'ont pas pu être vérifiés sans les DLL du jeu. | inconnu | à vérifier dans le log du jeu | non modifié |
-| 10 | `Data/CubeBlocks.sbc` | Aucune balise `<PCU>`, pas de `BlockVariantGroup`, `DamageEffectId` numérique (ancien format). Le jeu applique des valeurs par défaut. | mineur | à vérifier en jeu | non modifié |
-| 11 | Modèles `ForceFieldBlock_*.mwm` (242) | Référencent `Textures\Models\H_ForceField_{add,cm,ng}.dds`, absentes à cet emplacement (elles sont dans `Textures\Models\tmp\`). Le rendu passe probablement par les matériaux transparents `H_ForceField_<couleur>` (texture présente), donc sans effet visible. | mineur | à vérifier en jeu | non modifié. Si textures roses/damier : copier `tmp\H_ForceField_*.dds` dans `Textures\Models\` |
-| 12 | `ForceField.csproj` | Références à des DLL qui n'existent plus (`Sandbox.Graphics`, `VRage.Native`…) et chemin Steam en dur. N'affecte que l'IDE. | cosmétique | supposé | non modifié |
+No license stated in the mod files. Workshop description to check.
+Contact with the author: not attempted yet.
 
-Vérifications faites : XML valide pour les 4 `.sbc`, aucun `SubtypeId` en double, tous les
-chemins `Models\…` et `Textures\…` des `.sbc` existent.
+## Analysis
 
-## À tester en jeu
+Static analysis against **Space Engineers Steam build 24675677** (2026-10-28), with
+[`tools/Test-Mod.ps1`](../tools/Test-Mod.ps1): script compilation with the game's Roslyn compiler,
+and comparison with the ModAPI whitelist read from `SpaceEngineers.Game.dll`.
 
-- [ ] Le monde se charge sans erreur de mod (log : `Compilation of` / `ForceField`)
-- [ ] Les blocs apparaissent dans la barre G
-- [ ] Construction / soudure / démontage
-- [ ] Ouverture / fermeture, changement de couleur via `co` / `cc`
-- [ ] Étanchéité (pressurisation) quand le champ est fermé
-- [ ] Fonctionnement en multijoueur / serveur dédié
+**Root cause (confirmed by compilation):** the type `MyObjectBuilder_AirtightHangarDoor` lives in
+the namespace `Sandbox.Common.ObjectBuilders`, which the script did not import. The script therefore
+did not compile: without it, the colors, sounds and collisions of the force field do not work.
 
-## Historique
+| # | File:line | Issue | Severity | Confirmed? | State |
+|---|-----------|-------|----------|------------|-------|
+| 1 | `ForceField.cs` (original line 23, now 42) | `error CS0246: The type or namespace name 'MyObjectBuilder_AirtightHangarDoor' could not be found`: missing `using Sandbox.Common.ObjectBuilders;`. | **blocking** | **confirmed** (game Roslyn compilation) | **fixed** (`using` added, line 5) |
+| 2 | `Data/CubeBlocks - Copy.sbc` | Near-identical copy of `CubeBlocks.sbc` (only 40 Front/Back `MountPoint` lines differ). The game loads every `.sbc`: the 22 blocks were defined twice. | major | confirmed | **fixed** (file removed, `CubeBlocks.sbc` kept) |
+| 3 | `Data/Scripts/ForceField/obj/Debug/*` | Files generated by Visual Studio (empty `.cs`, `.cache`) inside the folder compiled by the game. | minor | confirmed | **fixed** (removed) |
+| 4 | `ForceField.cs` (former lines 59, 62, 79, 86, 172) | Use of `MyEntities` and `MyAirtightDoorGeneric`. Initial assumption: rejected by the whitelist. **This assumption was wrong**: the `Sandbox.Game.Entities` namespace is entirely whitelisted. | none | disproved | replaced with `MyEntity` and `IMyDoor.OpenRatio` (equivalent; change kept but not needed) |
+| 5 | `ForceField.cs` (former line 78) | `Entity.NeedsUpdate \|= MyEntityUpdateEnum.NONE;` has no effect. | cosmetic | confirmed | **fixed** |
+| 6 | `ForceField.cs` (former line 79) | Variable `door` declared and never used. | cosmetic | confirmed | **fixed** |
+| 7 | `ForceField.cs:156` | `UpdateAfterSimulation10` without a `null` check: an exception in an `Update` crashes the game. | minor | assumed | **fixed** (guard added) |
+| 8 | `ForceField.cs` (`GetObjectBuilder`) | Returns the init object builder regardless of `copy`. | minor | assumed | not changed (no evidence of a bug) |
+| 9 | `ForceField.cs` | Sounds and rendering handled without a dedicated-server check (`IsDedicated`). | minor | to verify on a dedicated server | not changed |
+| 10 | `Data/CubeBlocks.sbc` | No `<PCU>` tag, no `BlockVariantGroup`, numeric `DamageEffectId` (old format). The game applies defaults. | minor | to verify in game | not changed |
+| 11 | `ForceFieldBlock_*.mwm` models (242) | Reference `Textures\Models\H_ForceField_{add,cm,ng}.dds`, missing from the mod and the game (they are in `Textures\Models\tmp\`). Rendering probably uses the transparent materials `H_ForceField_<color>` (texture present), so no visible effect. | minor | to verify in game | not changed. If textures are pink/checkered: copy `tmp\H_ForceField_*.dds` to `Textures\Models\` |
+| 12 | `ForceField.csproj` | Hard-coded `HintPath` to `C:\Program Files (x86)\Steam\…`. The referenced DLLs still exist in the game. IDE only. | cosmetic | confirmed | not changed |
+| 13 | `Data/CubeBlocks.sbc` (22 definitions) | **Bug that existed before the game update** (reported by the user): a switched-off or unpowered force field stays airtight. Every definition had `<IsAirTight>true</IsAirTight>`, which `MyGridGasSystem.IsAirtightBlock` checks **first**: the block was airtight whatever its state. | major | confirmed (in game + game IL) | **fixed** in the rework (`IsAirTight` removed; airtightness now follows the door state managed by the script) |
+| 14 | `ForceField.cs` (first fix, `UpdateAirtightness`, 2026-10-28) | My first fix acted on the door state, which the definition flag above overrides: **it had no effect** on the air (in-game test 2). It also made the closed field let objects through (test 2, regression vs test 1). | major | confirmed (in game) | **replaced** by the rework |
+| 15 | `ForceField.cs` (`UpdateFFVisibility`) | The collision subpart (`HangarDoor_door<N>`) was only enabled/disabled on door events, so it could stay disabled while the field was closed: objects passed through. | major | confirmed (in game, tests 2 and 3) | **fixed** (test 7). Root causes found with block-frame position logs: (a) the original `UpdateAfterSimulation10` forced the world matrix of every subpart, teleporting the collision bodies out of the doorway every 10 frames while the game constraint pulled them back (violent push, jitter) — removed; (b) a re-enabled body is placed on its subpart entity, left at the block origin by the game — the collision is now re-enabled by asking the game to rebuild the door subparts |
+| 16 | game mechanic | The game freezes the door state of a block that is off, unpowered or damaged (`OpenDoor()`/`set_Open` require `Enabled`, `IsWorking` and power), so the door alone cannot let the air out in those states. | major | confirmed (game IL) | worked around: off → switched on for one call; unpowered → the block asks for 0 W (counted as powered by the game). Damaged: not possible |
 
-Voir [CHANGELOG.md](CHANGELOG.md).
+Result of `tools/Test-Mod.ps1` on the fixed version: **0 errors**, 3 warnings (item 11).
+Valid XML for the 4 `.sbc` files, 36 definitions without duplicates, every path referenced by the
+`.sbc` files exists, script compiles without errors, every used type is whitelisted.
+
+## To test in game
+
+Details, procedure and results: [IN_GAME_TESTS.md](IN_GAME_TESTS.md).
+
+## History
+
+See [CHANGELOG.md](CHANGELOG.md).
