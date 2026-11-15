@@ -15,9 +15,9 @@ updated by their original authors. The goal is to:
 | Mod | Original author | Workshop | Last original update | Last repo update | Status | Tested on |
 |-----|-----------------|----------|----------------------|------------------|--------|-----------|
 | [Airtight Force Field Hangar Doors](Airtight%20Force%20Field%20Hangar%20Doors/) | Hannobal | [901800144](https://steamcommunity.com/sharedfiles/filedetails/?id=901800144) | 2019-02-07 | 2026-10-27 | `To test` | — |
-| [(DX11)Armor Thrusters](%28DX11%29Armor_Thrusters/) | Darth Biomech | [295393216](https://steamcommunity.com/sharedfiles/filedetails/?id=295393216) | 2015-12-10 | 2026-10-30 | `Functional` | SE 1.210.014 (build 24675677), single player |
-| [(DX11)Cryopods](%28DX11%29Cryopods/) | Darth Biomech | [294618647](https://steamcommunity.com/sharedfiles/filedetails/?id=294618647) | 2015-12-17 | 2026-10-30 | `Functional` | SE 1.210.014 (build 24675677), single player |
-| [(DX11)Docking Ring](%28DX11%29Docking_Ring/) | Darth Biomech | [294619787](https://steamcommunity.com/sharedfiles/filedetails/?id=294619787) | 2015-10-02 | 2026-10-30 | `Functional` | SE 1.210.014 (build 24675677), single player |
+| [(DX11)Armor Thrusters](%28DX11%29Armor_Thrusters/) | Darth Biomech | [295393216](https://steamcommunity.com/sharedfiles/filedetails/?id=295393216) | 2015-12-10 | 2026-11-15 | `Functional` | SE 1.210.014 (build 24675677), single player |
+| [(DX11)Cryopods](%28DX11%29Cryopods/) | Darth Biomech | [294618647](https://steamcommunity.com/sharedfiles/filedetails/?id=294618647) | 2015-12-17 | 2026-11-15 | `Functional` | SE 1.210.014 (build 24675677), single player |
+| [(DX11)Docking Ring](%28DX11%29Docking_Ring/) | Darth Biomech | [294619787](https://steamcommunity.com/sharedfiles/filedetails/?id=294619787) | 2015-10-02 | 2026-11-15 | `Functional` | SE 1.210.014 (build 24675677), single player |
 | [Mod Block Tabs](Mod%20Block%20Tabs/) | Zerma1 (created here) | — | 2026-10-30 | 2026-10-30 | `To test` | — |
 
 Statuses: `To analyze` → `Analyzed` → `In repair` → `To test` → `Functional` (or `Blocked`).
@@ -38,10 +38,12 @@ The full rules are in [CONTRIBUTING.md](CONTRIBUTING.md) and [AGENTS.md](AGENTS.
 - **Keep the original author's credits** and the original Workshop link in every mod README.
 - **Update the dates.** "Last repo update" in the mod README and in the table above must change on every change to a mod.
 - **`Functional` only after a human has tested the mod in game.** Static checks are not enough.
-- **Steam Workshop description in BBCode.** Each mod has a `docs/WORKSHOP_DESCRIPTION.txt` (BBCode, ready to paste
-  on the Workshop page, max 8000 characters). It must stay in sync with the player-facing parts of the mod's `README.md`.
+- **Steam Workshop description in BBCode.** Each mod has a `docs/WORKSHOP_DESCRIPTION.<lang>.txt`
+  or `.<lang>.bbc` per language (`en` mandatory and the reference, e.g. `WORKSHOP_DESCRIPTION.en.txt`,
+  `WORKSHOP_DESCRIPTION.fr.bbc`), in BBCode, ready to paste on the Workshop page, max 8000 characters.
+  It must stay in sync with the player-facing parts of the mod's `README.md`.
 - **Link to this repository on the Workshop page.** Once a mod update is pushed, its Steam description
-  (`docs/WORKSHOP_DESCRIPTION.txt` and the published Workshop page) must contain a link to this repository:
+  (`docs/WORKSHOP_DESCRIPTION.<lang>.txt` / `.bbc` and the published Workshop page) must contain a link to this repository:
   https://github.com/Zerma1/Space-Engineers_List-Mod.
 - **Mod folder names have no spaces.** Use underscores instead (e.g. `(DX11)Docking_Ring`).
 - **No secrets or personal paths** (Steam IDs, user names, tokens) in any file.

@@ -5,7 +5,7 @@
 | **Original author** | Darth Biomech |
 | **Original Workshop page** | https://steamcommunity.com/sharedfiles/filedetails/?id=295393216 |
 | **Last original update** | 2015-12-10 |
-| **Last repo update** | 2026-10-30 |
+| **Last repo update** | 2026-11-15 |
 | **Status** | `Functional` (local single player; dedicated server to test after republishing) |
 | **Current version** | 1.1 |
 | **Tested on Space Engineers** | 1.210.014 (build 24675677), local single player, creative (2026-10-30) |
@@ -21,7 +21,7 @@ Thrusters built into an armor block, for large and small grids, in straight and 
 - `Models/Darth_Biomech/`: 4 `.mwm` models
 - `Textures/Darth_Biomech/GUI/`: 2 `.dds` icons
 - `metadata.mod`: added in this repo (v1.1)
-- `docs/WORKSHOP_DESCRIPTION.txt`: Steam Workshop description (BBCode), added in this repo (v1.1)
+- `docs/WORKSHOP_DESCRIPTION.en.txt`: Steam Workshop description (BBCode), added in this repo (v1.1)
 - `README.txt`, `thumb.jpg`: original files from the author
 - Dependencies: none. Construction models, sounds and flame materials come from the base game (all still present in the current game).
 
@@ -89,4 +89,4 @@ See [CHANGELOG.md](CHANGELOG.md).
 
 ## Steam Workshop description
 
-The player-facing parts of this README are kept in BBCode in [docs/WORKSHOP_DESCRIPTION.txt](docs/WORKSHOP_DESCRIPTION.txt).
+The player-facing parts of this README are kept in BBCode in [docs/WORKSHOP_DESCRIPTION.en.txt](docs/WORKSHOP_DESCRIPTION.en.txt).

@@ -20,15 +20,18 @@ It applies to humans and AI agents alike.
 - **Mod folder names: no spaces, use underscores (`_`).** Name the folder after the original mod and
   replace every space with `_`, e.g. `(DX11)Docking Ring` → `(DX11)Docking_Ring`. Renaming a folder
   does not change the mod's blocks, but a world that uses it as a local mod must enable it again.
-- **Steam Workshop description in BBCode.** Every mod has a `docs/WORKSHOP_DESCRIPTION.txt` inside
-  its folder: the player-facing parts of its `README.md` (credits and original Workshop link,
+- **Steam Workshop description in BBCode.** Every mod has a `docs/WORKSHOP_DESCRIPTION.<lang>.txt`
+  or `docs/WORKSHOP_DESCRIPTION.<lang>.bbc` file inside its folder, where `<lang>` is a two-letter
+  language code (`en`, `fr`, …). The English file (`WORKSHOP_DESCRIPTION.en.txt` or `.en.bbc`) is
+  mandatory and is the reference; other languages are optional and must stay in sync with it.
+  Each file holds the player-facing parts of its `README.md` (credits and original Workshop link,
   description, how to use, changes, known limitations, versions, dates) in Steam BBCode, ready to paste
   as the Workshop description. Steam does not render Markdown, and the description is limited to
   8000 characters. Keep it in sync with `README.md`.
 - **Link to this repository in the Steam description.** Once a mod update is pushed, the mod's
   Steam description must contain a link to this repository
   (`[url=https://github.com/Zerma1/Space-Engineers_List-Mod]Space-Engineers_List-Mod on GitHub[/url]`):
-  first in `docs/WORKSHOP_DESCRIPTION.txt`, then on the Workshop page when the mod is published or
+  first in every `docs/WORKSHOP_DESCRIPTION.<lang>.txt` / `.bbc` file, then on the Workshop page when the mod is published or
   updated there. Players can then find the source, the full changelog and where to report bugs.
 - **`Functional` only after a human has tested the mod in game.**
 - **No secrets or personal paths** (Steam IDs, user names, tokens) in any file.
@@ -43,11 +46,11 @@ It applies to humans and AI agents alike.
    - `chore/<topic>`
 2. **Import a new mod.** The first commit is the mod exactly as downloaded, with no changes.
    Then add `README.md` and `CHANGELOG.md` from [`docs/templates/`](docs/templates/), the
-   `docs/WORKSHOP_DESCRIPTION.txt` file, and a row in the table of the root [README](README.md).
+   English `docs/WORKSHOP_DESCRIPTION.en.txt` (or `.en.bbc`) file, and a row in the table of the root [README](README.md).
 3. **Fix a mod.** Start by filling in the "Analysis" section of the mod's README, then make
    **minimal** fixes, one topic per commit.
 4. **Document every change.** Add an entry to the mod's `CHANGELOG.md`, update
-   `docs/WORKSHOP_DESCRIPTION.txt`, and set the **"Last repo update"** date in the mod's README and
+   every `docs/WORKSHOP_DESCRIPTION.<lang>.txt` / `.bbc` file, and set the **"Last repo update"** date in the mod's README and
    in the root README table. This is mandatory, even though git already records the date.
 5. **Open a pull request** that states:
    - the Space Engineers version used;
