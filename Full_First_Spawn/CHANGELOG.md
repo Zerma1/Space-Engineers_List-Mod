@@ -1,0 +1,19 @@
+# Changelog — Full First Spawn
+
+Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
+Categories: **Fixed**, **Changed**, **Removed**, **Added**.
+
+## [Unreleased] — 2026-11-15
+
+### Changed
+- `docs/WORKSHOP_DESCRIPTION.txt` renamed to `docs/WORKSHOP_DESCRIPTION.en.txt` (new naming rule,
+  one file per language).
+
+## [1.0] — 2026-10-30
+
+### Added
+- Mod created: health, food, energy, O² and H² filled to the maximum on each player's first spawn.
+- Starter kit on the first spawn, on top of the default tools: S-10 pistol + 2 magazines, flare gun + 5 flares.
+- `README.md` (English, reference), `README.fr.md`, `docs/WORKSHOP_DESCRIPTION.txt`.
+
+**Tested on:** not tested in game. Static check only (compiles against the game DLLs).

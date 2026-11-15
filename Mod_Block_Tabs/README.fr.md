@@ -1,11 +1,13 @@
 # Mod Block Tabs
 
+> 🇬🇧 English version (reference): [README.md](README.md).
+
 | | |
 |---|---|
 | **Auteur d'origine** | Zerma1 (créé dans ce dépôt) |
 | **Workshop d'origine** | aucun (mod créé dans ce dépôt) |
 | **Dernière mise à jour d'origine** | 2026-10-30 (création) |
-| **Dernière modification (ce dépôt)** | 2026-10-30 |
+| **Dernière modification (ce dépôt)** | 2026-11-15 |
 | **Statut** | `À tester` |
 | **Version actuelle** | 1.0 (`metadata.mod`) |
 | **Testé sur Space Engineers** | non testé |
