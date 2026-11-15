@@ -3,7 +3,19 @@
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Categories: **Fixed**, **Changed**, **Removed**, **Added**.
 
-## [Unreleased] — 2026-10-28
+## [Unreleased] — 2026-11-15
+
+### Changed
+- Folder renamed `Airtight Force Field Hangar Doors` → `Airtight_Force_Field_Hangar_Doors` (repository
+  rule: no spaces). A world that uses it as a local mod must enable it again.
+- The 2026-10-28 rework below was only in the local mod folder; it is now in the repository (2026-11-15).
+
+### Removed
+- `grep.exe.stackdump`: crash dump committed by mistake.
+
+### Added
+- `docs/WORKSHOP_DESCRIPTION.en.txt` (Steam BBCode) and `docs/TEST_RESULTS_2026-10-28.md` (raw test notes).
+
 
 ### Fixed
 - **The force fields did nothing (no colors, sounds or collisions): the script did not compile.**
@@ -62,7 +74,7 @@ Categories: **Fixed**, **Changed**, **Removed**, **Added**.
 ### Added
 - Mod `README.md`, `CHANGELOG.md` and `IN_GAME_TESTS.md`.
 
-**Tested on:** Steam build 24675677 — `tools/Test-Mod.ps1`: 0 errors (XML, duplicates, paths,
+**Tested on:** Steam build 24675677 — local `Test-Mod.ps1` script: 0 errors (XML, duplicates, paths,
 game Roslyn compilation, ModAPI whitelist) — in game (2026-10-28, solo): the mod loads and works as
 before (test 1). First airtightness fix: failed (test 2). Rework (test 3): air correct in every state,
 collision broken; test 7: air, collision, power and weapons all OK. **Visual fix after a world load

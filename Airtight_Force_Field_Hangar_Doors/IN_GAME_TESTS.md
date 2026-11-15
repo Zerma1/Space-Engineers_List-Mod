@@ -34,7 +34,7 @@ existing blocks:
 | T06 | Switch it back **on** | Field reappears in its previous solid/passable state; room repressurizes | OK (test 3) |  |
 | T07 | **Cut the power** (battery off, no other source) | Within ~2 s: room depressurizes; field invisible; you can pass | OK (test 3) | instantaneous |
 | T08 | **Restore the power** | Within ~2 s: field back in its previous state; room repressurizes | OK (test 3) | instantaneous |
-| T09 | Save, reload the world, repeat T02/T03 | State kept after reload | to retest | test 7: right after loading, base and field panel stayed fixed in space on a moving grid (fixed in b268ce0, to confirm) |
+| T09 | Save, reload the world, repeat T02/T03 | State kept after reload | to retest | test 7: right after loading, base and field panel stayed fixed in space on a moving grid (fixed afterwards in the 2026-10-28 rework, to confirm) |
 | T10 | Check `%AppData%\SpaceEngineers\SpaceEngineers.log` | No error mentioning `ForceField` | OK (test 3) | script loaded, no error; only "BlockVariants are obsolete" warnings |
 | T11 | Multiplayer / dedicated server (if possible) | Same results on host and clients |  |  |
 | T12 | Weapons: shoot bullets, flares and rockets at the field | Passable: they go through; solid: they hit the field | **OK** (test 7) | solid field is damaged by the hits |
@@ -61,7 +61,7 @@ When a test fails, note the `[ffdebug]` line shown on screen.
 | Test 6 (legacy subpart update skipped for collision) | 2026-10-28 | — | — | — | — | — | no push, but jitter; after open → closed: intangible ❌ |
 | Test 7 (subparts rebuilt by the game) | 2026-10-28 | passes ✅ | pass ✅ | blocked ✅ | pass ✅ | blocked ✅ | blocked ✅ — after load, visual left behind on a moving grid |
 
-**Overall:** Test 7 passed (air, collision, power, weapons). Only issue: visual subparts left behind after a world load on a moving grid — fixed afterwards (b268ce0), to confirm  
+**Overall:** Test 7 passed (air, collision, power, weapons). Only issue: visual subparts left behind after a world load on a moving grid — fixed afterwards in the 2026-10-28 rework, to confirm  
 **Functional:** No (only set to Yes by human confirmation)  
 **Comments:** Tests 1–3 from the user's report (`test/test_result_28-10-2026.md`). Tests 4–7 reported in chat; positions read from SpaceEngineers.log (ffdebug). Next: reload a world on a moving grid and check the visual (T09).
 

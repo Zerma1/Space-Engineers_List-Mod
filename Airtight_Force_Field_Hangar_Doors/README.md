@@ -5,9 +5,9 @@
 | **Original author** | Hannobal |
 | **Original Workshop page** | https://steamcommunity.com/sharedfiles/filedetails/?id=901800144 |
 | **Last original update** | 2019-02-07 |
-| **Last repo update** | 2026-10-28 |
+| **Last repo update** | 2026-11-15 |
 | **Status** | `To test` (rework works in game, test 7; visual fix after world load to confirm) |
-| **Current version** | 1.0 (`metadata.mod`) |
+| **Current version** | 1.1 (`metadata.mod`) |
 | **Tested on Space Engineers** | Steam build 24675677: loading and behaviour confirmed in game (2026-10-28) |
 | **Republished on the Workshop** | no |
 
@@ -60,7 +60,7 @@ Contact with the author: not attempted yet.
 ## Analysis
 
 Static analysis against **Space Engineers Steam build 24675677** (2026-10-28), with
-[`tools/Test-Mod.ps1`](../tools/Test-Mod.ps1): script compilation with the game's Roslyn compiler,
+a local `Test-Mod.ps1` script (not in this repository): script compilation with the game's Roslyn compiler,
 and comparison with the ModAPI whitelist read from `SpaceEngineers.Game.dll`.
 
 **Root cause (confirmed by compilation):** the type `MyObjectBuilder_AirtightHangarDoor` lives in
@@ -86,13 +86,15 @@ did not compile: without it, the colors, sounds and collisions of the force fiel
 | 15 | `ForceField.cs` (`UpdateFFVisibility`) | The collision subpart (`HangarDoor_door<N>`) was only enabled/disabled on door events, so it could stay disabled while the field was closed: objects passed through. | major | confirmed (in game, tests 2 and 3) | **fixed** (test 7). Root causes found with block-frame position logs: (a) the original `UpdateAfterSimulation10` forced the world matrix of every subpart, teleporting the collision bodies out of the doorway every 10 frames while the game constraint pulled them back (violent push, jitter) — removed; (b) a re-enabled body is placed on its subpart entity, left at the block origin by the game — the collision is now re-enabled by asking the game to rebuild the door subparts |
 | 16 | game mechanic | The game freezes the door state of a block that is off, unpowered or damaged (`OpenDoor()`/`set_Open` require `Enabled`, `IsWorking` and power), so the door alone cannot let the air out in those states. | major | confirmed (game IL) | worked around: off → switched on for one call; unpowered → the block asks for 0 W (counted as powered by the game). Damaged: not possible |
 
-Result of `tools/Test-Mod.ps1` on the fixed version: **0 errors**, 3 warnings (item 11).
+Result of `Test-Mod.ps1` on the fixed version: **0 errors**, 3 warnings (item 11).
 Valid XML for the 4 `.sbc` files, 36 definitions without duplicates, every path referenced by the
 `.sbc` files exists, script compiles without errors, every used type is whitelisted.
 
 ## To test in game
 
 Details, procedure and results: [IN_GAME_TESTS.md](IN_GAME_TESTS.md).
+Raw notes of the 2026-10-28 test session: [docs/TEST_RESULTS_2026-10-28.md](docs/TEST_RESULTS_2026-10-28.md).
+Steam Workshop description (BBCode): [docs/WORKSHOP_DESCRIPTION.en.txt](docs/WORKSHOP_DESCRIPTION.en.txt).
 
 ## History
 

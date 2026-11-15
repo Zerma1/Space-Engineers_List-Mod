@@ -1,0 +1,49 @@
+[h1]Airtight Force Field Hangar Doors (community fix)[/h1]
+
+Airtight force field hangar doors for large and small grids, stackable from 1 to 10 blocks high. Original mod by [b]Hannobal[/b], fixed for the current version of Space Engineers.
+
+[table]
+[tr][td][b]Version[/b][/td][td]1.1[/td][/tr]
+[tr][td][b]Tested on Space Engineers[/b][/td][td]Steam build 24675677, single player (partial)[/td][/tr]
+[tr][td][b]Last update[/b][/td][td]2026-11-15[/td][/tr]
+[/table]
+
+[h2]How it works[/h2]
+[table]
+[tr][th]Field state[/th][th]Air[/th][th]Players / objects / ships[/th][/tr]
+[tr][td]Switched off or unpowered[/td][td]passes[/td][td]pass[/td][/tr]
+[tr][td]Active, passable ("Open" switch on)[/td][td]blocked[/td][td]pass[/td][/tr]
+[tr][td]Active, solid ("Open" switch off)[/td][td]blocked[/td][td]blocked[/td][/tr]
+[/table]
+
+[list]
+[*]The terminal [b]Open[/b] switch, the toolbar / timer actions [i]Open / Open On / Open Off[/i], the use key and programmable blocks switch between solid and passable.
+[*]Field colors are set through the block name: [b]co <color>[/b] (passable) and [b]cc <color>[/b] (solid). Colors: red orange yellow lime green spring cyan sky blue purple magenta pink.
+[*]The state is stored in the block Custom Data as [i]ForceField: solid[/i] or [i]ForceField: passable[/i] (saved with the world, synced in multiplayer). Do not remove that line.
+[*]Diagnostics: add [b]ffdebug[/b] to the block name to write its state to [i]SpaceEngineers.log[/i].
+[/list]
+
+[h2]Changes in this version[/h2]
+[list]
+[*]The script compiles again (missing namespace): colors, sounds and collisions work again.
+[*]A switched-off or unpowered field is no longer airtight.
+[*]Collision of the solid field fixed (no more jitter or violent push).
+[*]Duplicate block definitions removed.
+[/list]
+
+[h2]Known limitations[/h2]
+[list]
+[*]A damaged (non-functional) field keeps its last airtightness.
+[*]State after a world reload on a moving grid: fix not yet retested.
+[*]Multiplayer and dedicated server not tested yet.
+[*]Back up your world before replacing the original Workshop version with this one.
+[/list]
+
+[h2]Source, bug reports and contributions[/h2]
+Source code and full changelog: [url=https://github.com/Zerma1/Space-Engineers_List-Mod/tree/main/Airtight_Force_Field_Hangar_Doors]Airtight_Force_Field_Hangar_Doors on GitHub[/url], part of the [url=https://github.com/Zerma1/Space-Engineers_List-Mod]Space-Engineers_List-Mod on GitHub[/url] repository.
+Please report bugs in the [url=https://github.com/Zerma1/Space-Engineers_List-Mod/issues]GitHub issues[/url] or in the comments below, with your [i]SpaceEngineers.log[/i] excerpt.
+
+[h2]Credits[/h2]
+Original mod: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=901800144]Airtight Force Field Hangar Doors[/url] by Hannobal. All models, textures and the original script belong to their author.
+Fixes by the Space-Engineers_List-Mod project, MIT license for the changes.
+Space Engineers is a trademark of Keen Software House. This project is not affiliated with Keen Software House.
