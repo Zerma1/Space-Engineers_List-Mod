@@ -1,0 +1,80 @@
+[h1]Zerma - Docking Light[/h1]
+[b]Docking Light (Zerma)[/b] est un projecteur d'amarrage pour grande et petite grille.
+
+Dans l'axe de son faisceau, il projette une [b]ligne de globes lumineux 3D[/b] qui guide l'approche d'un vaisseau vers un connecteur, un hangar ou une piste.
+
+[h2]Réglages (terminal et Programmable Block)[/h2]
+[list]
+[*][b]Distance[/b] de la ligne : 5 à 100 m en grande grille, 2 à 50 m en petite grille.
+[*][b]Espacement[/b] et [b]taille[/b] des globes.
+[*][b]Décalages[/b] vertical et horizontal de la ligne, par pas de 0,05 m (par exemple pour poser les globes à fleur d'une piste).
+[*][b]Clignotement[/b] : Aucun, Général, Vague sortante ou Vague entrante, avec période, largeur de la vague et niveau minimum réglables.
+[*][b]Couleur et intensité[/b] : sélecteur natif du projecteur. Le faisceau et les globes ont la même couleur.
+[*][b]Halo[/b] lumineux autour des globes, toujours actif.
+[/list]
+
+[h2]Actions de barre d'outils / cockpit[/h2]
+[list]
+[*]Natives : On/Off et Bascule, intensité, rayon…
+[*][b]Augmenter / Diminuer[/b] : distance, espacement, décalage vertical et décalage horizontal. Chaque action affiche la valeur courante, sans sortir des limites.
+[*][b]Pas réglable[/b] : les actions « Pas distance », « Pas espacement », « Pas décalage vertical » et « Pas décalage horizontal » font défiler les pas et affichent le pas courant. Le pas se règle aussi dans le terminal.
+[/list]
+
+[table]
+[tr][th]Réglage[/th][th]Pas disponibles (grande grille)[/th][th]Défaut[/th][/tr]
+[tr][td]Distance[/td][td]1 / 5 / 10 / 25 m[/td][td]5 m[/td][/tr]
+[tr][td]Espacement[/td][td]0,1 / 0,5 / 1 / 2 m[/td][td]0,5 m[/td][/tr]
+[tr][td]Décalages[/td][td]0,05 / 0,25 / 0,5 / 1 / 2,5 m[/td][td]0,25 m[/td][/tr]
+[/table]
+
+En petite grille, tous les pas sont divisés par deux. Les pas sont propres à chaque bloc, sauvegardés et synchronisés en multijoueur.
+
+[h2]Fonctionnement[/h2]
+[list]
+[*][b]Conditions[/b] : les globes n'apparaissent que si le projecteur est allumé, alimenté et fonctionnel.
+[*][b]Aucune collision[/b] : on vole et on marche au travers des globes.
+[*][b]Consommation électrique[/b] proportionnelle au nombre de globes et à l'intensité (environ 2,5 kW en grande grille avec 20 m de ligne et 2 m d'espacement).
+[*][b]Progression[/b] : le bloc se débloque après la construction d'un [b]Projecteur[/b] (de blueprint), en grande ou petite grille.
+[*][b]Multijoueur[/b] : réglages sauvegardés et synchronisés. Seuls les joueurs ayant accès au bloc peuvent les modifier. Le serveur dédié n'affiche rien.
+[*][b]Modèles 3D dédiés[/b] pour les deux tailles, avec niveaux de détail (LOD) pour les performances.
+[/list]
+
+[h2]Propriétés pour Programmable Block[/h2]
+[table]
+[tr][th]Propriété[/th][th]Type[/th][/tr]
+[tr][td]ZermaDL_Distance[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_Spacing[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_GlobeSize[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_BlinkMode[/td][td]long : 0 = aucun, 1 = général, 2 = vague sortante, 3 = vague entrante[/td][/tr]
+[tr][td]ZermaDL_BlinkPeriod[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_BlinkDuty[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_MinLevel[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_DistanceStep[/td][td]long : index du pas, 0 à 3[/td][/tr]
+[tr][td]ZermaDL_SpacingStep[/td][td]long : index du pas, 0 à 3[/td][/tr]
+[tr][td]ZermaDL_OffsetVStep[/td][td]long : index du pas, 0 à 4[/td][/tr]
+[tr][td]ZermaDL_OffsetHStep[/td][td]long : index du pas, 0 à 4[/td][/tr]
+[tr][td]ZermaDL_OffsetV[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_OffsetH[/td][td]float[/td][/tr]
+[/table]
+
+Les propriétés natives de lampe (Color, Intensity, Radius…) restent disponibles.
+
+[code]
+// Exemple
+var light = GridTerminalSystem.GetBlockWithName("Docking Light") as IMyReflectorLight;
+light.SetValue("ZermaDL_Distance", 50f);
+light.SetValue<long>("ZermaDL_BlinkMode", 2);
+[/code]
+
+[h2]Recettes[/h2]
+[list]
+[*][b]Grande grille[/b] : 8 plaques intérieures, 12 composants de construction, 4 grands tubes, 4 petits tubes, 8 ordinateurs, 1 composant radio, 4 verres pare-balles.
+[*][b]Petite grille[/b] : 4 plaques intérieures, 6 composants de construction, 4 petits tubes, 4 ordinateurs, 1 composant radio, 2 verres pare-balles.
+[/list]
+
+[h2]Crédits[/h2]
+[list]
+[*]Inspiré du mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=379096179]S - Docking position lights[/url] de [url=https://steamcommunity.com/id/sektan/myworkshopfiles/]Sektan[/url], publié en 2015. Le modèle des globes est repris de ce mod.
+[*]Modèles du projecteur : Zerma, à partir du projecteur vanilla de Space Engineers (Keen Software House).
+[*]Mod : Zerma.
+[/list]

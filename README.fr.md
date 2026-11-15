@@ -20,6 +20,7 @@ fonctionnent plus ou ne sont plus mis à jour par leur auteur. Le but :
 | [(DX11)Docking Ring](%28DX11%29Docking_Ring/) | Darth Biomech | [294619787](https://steamcommunity.com/sharedfiles/filedetails/?id=294619787) | 2015-10-02 | 2026-11-15 | `Functional` | SE 1.210.014 (build 24675677), single player |
 | [Mod Block Tabs](Mod_Block_Tabs/) | Zerma1 (créé ici) | — | 2026-10-30 | 2026-11-15 | `À tester` | — |
 | [Full First Spawn](Full_First_Spawn/) | Zerma1 (créé ici) | — | 2026-10-30 | 2026-11-15 | `À tester` | — |
+| [Zerma - Docking Light](Zerma_-_Docking_Light/) | Zerma1 (mod perso, idée de S - Docking position lights de Sektan) | [3839922017](https://steamcommunity.com/sharedfiles/filedetails/?id=3839922017) | inconnue | 2026-11-15 | `À tester` | — |
 
 Statuts : `À analyser` → `Analysé` → `En réparation` → `À tester` → `Fonctionnel` (ou `Bloqué`).
 Le détail de chaque mod (analyse, problèmes, tests) est dans son `README.md`,

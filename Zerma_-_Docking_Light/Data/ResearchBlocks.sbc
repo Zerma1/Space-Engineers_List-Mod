@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ResearchBlocks>
+    <ResearchBlock xsi:type="ResearchBlock">
+      <Id Type="MyObjectBuilder_ReflectorLight" Subtype="Zerma_DockingLight_Large" />
+      <UnlockedByGroups>
+        <GroupSubtype>Zerma_DockingLight_Projectors</GroupSubtype>
+      </UnlockedByGroups>
+    </ResearchBlock>
+    <ResearchBlock xsi:type="ResearchBlock">
+      <Id Type="MyObjectBuilder_ReflectorLight" Subtype="Zerma_DockingLight_Small" />
+      <UnlockedByGroups>
+        <GroupSubtype>Zerma_DockingLight_Projectors</GroupSubtype>
+      </UnlockedByGroups>
+    </ResearchBlock>
+  </ResearchBlocks>
+</Definitions>
