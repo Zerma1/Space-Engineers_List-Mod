@@ -1,0 +1,84 @@
+[h1]Zerma - Docking Light[/h1]
+[b]Docking Light (Zerma)[/b] is a docking spotlight for large and small grids.
+
+Along its beam, it projects a [b]line of glowing 3D globes[/b] that guides a ship's approach to a connector, a hangar or a landing strip.
+
+[h2]Settings (terminal and Programmable Block)[/h2]
+[list]
+[*][b]Distance[/b] of the line: 5 to 100 m on large grid, 2 to 50 m on small grid.
+[*][b]Spacing[/b] and [b]size[/b] of the globes.
+[*]Vertical and horizontal [b]offsets[/b] of the line, in steps of 0.05 m (for example to lay the globes flush with a landing strip).
+[*][b]Blinking[/b]: None, Global, Outgoing wave or Incoming wave, with adjustable period, wave width and minimum level.
+[*][b]Color and intensity[/b]: native spotlight selector. The beam and the globes share the same color.
+[*]Glowing [b]halo[/b] around the globes, always on.
+[/list]
+
+[h2]Toolbar / cockpit actions[/h2]
+[list]
+[*]Native: On/Off and Toggle, intensity, radius…
+[*][b]Increase / Decrease[/b]: distance, spacing, vertical offset and horizontal offset. Each action shows the current value and stays within the limits.
+[*][b]Adjustable step[/b]: the "Step distance", "Step spacing", "Step vertical offset" and "Step horizontal offset" actions cycle through the steps and show the current step. The step can also be set in the terminal.
+[/list]
+
+[table]
+[tr][th]Setting[/th][th]Available steps (large grid)[/th][th]Default[/th][/tr]
+[tr][td]Distance[/td][td]1 / 5 / 10 / 25 m[/td][td]5 m[/td][/tr]
+[tr][td]Spacing[/td][td]0.1 / 0.5 / 1 / 2 m[/td][td]0.5 m[/td][/tr]
+[tr][td]Offsets[/td][td]0.05 / 0.25 / 0.5 / 1 / 2.5 m[/td][td]0.25 m[/td][/tr]
+[/table]
+
+On small grid, all steps are halved. Steps are set per block, saved and synced in multiplayer.
+
+[h2]How it works[/h2]
+[list]
+[*][b]Conditions[/b]: the globes only appear when the spotlight is on, powered and functional.
+[*][b]No collision[/b]: you can fly and walk through the globes.
+[*][b]Power use[/b] proportional to the number of globes and to the intensity (about 2.5 kW on large grid with a 20 m line and 2 m spacing).
+[*][b]Progression[/b]: the block is unlocked after building a (blueprint) [b]Projector[/b], on large or small grid.
+[*][b]Multiplayer[/b]: settings are saved and synced. Only players with access to the block can change them. The dedicated server renders nothing.
+[*][b]Dedicated 3D models[/b] for both sizes, with levels of detail (LOD) for performance.
+[/list]
+
+[h2]Programmable Block properties[/h2]
+[table]
+[tr][th]Property[/th][th]Type[/th][/tr]
+[tr][td]ZermaDL_Distance[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_Spacing[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_GlobeSize[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_BlinkMode[/td][td]long: 0 = none, 1 = global, 2 = outgoing wave, 3 = incoming wave[/td][/tr]
+[tr][td]ZermaDL_BlinkPeriod[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_BlinkDuty[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_MinLevel[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_DistanceStep[/td][td]long: step index, 0 to 3[/td][/tr]
+[tr][td]ZermaDL_SpacingStep[/td][td]long: step index, 0 to 3[/td][/tr]
+[tr][td]ZermaDL_OffsetVStep[/td][td]long: step index, 0 to 4[/td][/tr]
+[tr][td]ZermaDL_OffsetHStep[/td][td]long: step index, 0 to 4[/td][/tr]
+[tr][td]ZermaDL_OffsetV[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_OffsetH[/td][td]float[/td][/tr]
+[/table]
+
+The native light properties (Color, Intensity, Radius…) are still available.
+
+[code]
+// Example
+var light = GridTerminalSystem.GetBlockWithName("Docking Light") as IMyReflectorLight;
+light.SetValue("ZermaDL_Distance", 50f);
+light.SetValue<long>("ZermaDL_BlinkMode", 2);
+[/code]
+
+[h2]Recipes[/h2]
+[list]
+[*][b]Large grid[/b]: 8 interior plates, 12 construction components, 4 large steel tubes, 4 small steel tubes, 8 computers, 1 radio-communication component, 4 bulletproof glass.
+[*][b]Small grid[/b]: 4 interior plates, 6 construction components, 4 small steel tubes, 4 computers, 1 radio-communication component, 2 bulletproof glass.
+[/list]
+
+[h2]Source, bug reports and contributions[/h2]
+Source code and full changelog: [url=https://github.com/Zerma1/Space-Engineers_List-Mod/tree/main/Zerma_-_Docking_Light]Zerma_-_Docking_Light on GitHub[/url], part of the [url=https://github.com/Zerma1/Space-Engineers_List-Mod]Space-Engineers_List-Mod on GitHub[/url] repository.
+Please report bugs in the [url=https://github.com/Zerma1/Space-Engineers_List-Mod/issues]GitHub issues[/url] or in the comments below, with your [i]SpaceEngineers.log[/i] excerpt.
+
+[h2]Credits[/h2]
+[list]
+[*]Inspired by the mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=379096179]S - Docking position lights[/url] by [url=https://steamcommunity.com/id/sektan/myworkshopfiles/]Sektan[/url], released in 2015. The globe model is taken from that mod.
+[*]Spotlight models: Zerma, based on the vanilla Space Engineers spotlight (Keen Software House).
+[*]Mod: Zerma.
+[/list]

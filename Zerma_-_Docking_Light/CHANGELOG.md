@@ -8,6 +8,7 @@ Categories: **Fixed**, **Changed**, **Removed**, **Added**.
 ### Added
 - Mod added to the repository, as published on the Workshop (3839922017). `modinfo.sbmi` is not included
   (it holds a Steam ID).
-- `README.md`, `docs/WORKSHOP_DESCRIPTION.txt`.
+- `README.md` with the credits to Sektan (idea and globe model of S - Docking position lights).
+- Workshop descriptions in BBCode: `description/En.bbc` (reference) and `description/Fr.bbc`.
 
 **Tested on:** not tested in game. Static checks only (valid XML, no duplicate `SubtypeId`, model and icon paths exist).
