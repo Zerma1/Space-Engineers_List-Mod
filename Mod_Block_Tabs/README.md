@@ -7,7 +7,7 @@
 | **Original author** | Zerma1 (created in this repository) |
 | **Original Workshop page** | none (created in this repository) |
 | **Last original update** | 2026-10-30 (creation) |
-| **Last repo update** | 2026-10-30 |
+| **Last repo update** | 2026-11-15 |
 | **Status** | `To test` |
 | **Current version** | 1.0 (`metadata.mod`) |
 | **Tested on Space Engineers** | not tested |
