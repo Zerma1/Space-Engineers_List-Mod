@@ -99,7 +99,6 @@
           </ParticleEffects>
         </Effect>
       </Effects>
-      <IsAirTight>true</IsAirTight>
       <!--Sound>BlockProjectorOn</Sound-->
       <!--PrimarySound>BlockForceFieldDoor2</PrimarySound-->
       <ResourceSinkGroup>Utility</ResourceSinkGroup>
@@ -161,7 +160,6 @@
           </ParticleEffects>
         </Effect>
       </Effects>
-      <IsAirTight>true</IsAirTight>
       <!--Sound>BlockProjectorOn</Sound-->
       <!--PrimarySound>BlockForceFieldDoor2</PrimarySound-->
       <ResourceSinkGroup>Utility</ResourceSinkGroup>
@@ -264,7 +262,6 @@
           </ParticleEffects>
         </Effect>
       </Effects>
-      <IsAirTight>true</IsAirTight>
       <!--Sound>BlockProjectorOn</Sound-->
       <!--PrimarySound>BlockForceFieldDoor2</PrimarySound-->
       <ResourceSinkGroup>Utility</ResourceSinkGroup>
@@ -326,7 +323,6 @@
           </ParticleEffects>
         </Effect>
       </Effects>
-      <IsAirTight>true</IsAirTight>
       <!--Sound>BlockProjectorOn</Sound-->
       <!--PrimarySound>BlockForceFieldDoor2</PrimarySound-->
       <ResourceSinkGroup>Utility</ResourceSinkGroup>
@@ -388,7 +384,6 @@
           </ParticleEffects>
         </Effect>
       </Effects>
-      <IsAirTight>true</IsAirTight>
       <!--Sound>BlockProjectorOn</Sound-->
       <!--PrimarySound>BlockForceFieldDoor2</PrimarySound-->
       <ResourceSinkGroup>Utility</ResourceSinkGroup>
@@ -450,7 +445,6 @@
           </ParticleEffects>
         </Effect>
       </Effects>
-      <IsAirTight>true</IsAirTight>
       <!--Sound>BlockProjectorOn</Sound-->
       <!--PrimarySound>BlockForceFieldDoor2</PrimarySound-->
       <ResourceSinkGroup>Utility</ResourceSinkGroup>
@@ -512,7 +506,6 @@
           </ParticleEffects>
         </Effect>
       </Effects>
-      <IsAirTight>true</IsAirTight>
       <!--Sound>BlockProjectorOn</Sound-->
       <!--PrimarySound>BlockForceFieldDoor2</PrimarySound-->
       <ResourceSinkGroup>Utility</ResourceSinkGroup>
@@ -574,7 +567,6 @@
           </ParticleEffects>
         </Effect>
       </Effects>
-      <IsAirTight>true</IsAirTight>
       <!--Sound>BlockProjectorOn</Sound-->
       <!--PrimarySound>BlockForceFieldDoor2</PrimarySound-->
       <ResourceSinkGroup>Utility</ResourceSinkGroup>
@@ -636,7 +628,6 @@
           </ParticleEffects>
         </Effect>
       </Effects>
-      <IsAirTight>true</IsAirTight>
       <!--Sound>BlockProjectorOn</Sound-->
       <!--PrimarySound>BlockForceFieldDoor2</PrimarySound-->
       <ResourceSinkGroup>Utility</ResourceSinkGroup>
@@ -698,7 +689,6 @@
           </ParticleEffects>
         </Effect>
       </Effects>
-      <IsAirTight>true</IsAirTight>
       <!--Sound>BlockProjectorOn</Sound-->
       <!--PrimarySound>BlockForceFieldDoor2</PrimarySound-->
       <ResourceSinkGroup>Utility</ResourceSinkGroup>
@@ -760,7 +750,6 @@
           </ParticleEffects>
         </Effect>
       </Effects>
-      <IsAirTight>true</IsAirTight>
       <!--Sound>BlockProjectorOn</Sound-->
       <!--PrimarySound>BlockForceFieldDoor2</PrimarySound-->
       <ResourceSinkGroup>Utility</ResourceSinkGroup>
@@ -863,7 +852,6 @@
           </ParticleEffects>
         </Effect>
       </Effects-->
-      <IsAirTight>true</IsAirTight>
       <!--Sound>BlockProjectorOn</Sound-->
       <!--PrimarySound>BlockForceFieldDoor2</PrimarySound-->
       <ResourceSinkGroup>Utility</ResourceSinkGroup>
@@ -925,7 +913,6 @@
           </ParticleEffects>
         </Effect>
       </Effects-->
-      <IsAirTight>true</IsAirTight>
       <!--Sound>BlockProjectorOn</Sound-->
       <!--PrimarySound>BlockForceFieldDoor2</PrimarySound-->
       <ResourceSinkGroup>Utility</ResourceSinkGroup>
@@ -1028,7 +1015,6 @@
           </ParticleEffects>
         </Effect>
       </Effects-->
-      <IsAirTight>true</IsAirTight>
       <!--Sound>BlockProjectorOn</Sound-->
       <!--PrimarySound>BlockForceFieldDoor2</PrimarySound-->
       <ResourceSinkGroup>Utility</ResourceSinkGroup>
@@ -1090,7 +1076,6 @@
           </ParticleEffects>
         </Effect>
       </Effects-->
-      <IsAirTight>true</IsAirTight>
       <!--Sound>BlockProjectorOn</Sound-->
       <!--PrimarySound>BlockForceFieldDoor2</PrimarySound-->
       <ResourceSinkGroup>Utility</ResourceSinkGroup>
@@ -1152,7 +1137,6 @@
           </ParticleEffects>
         </Effect>
       </Effects-->
-      <IsAirTight>true</IsAirTight>
       <!--Sound>BlockProjectorOn</Sound-->
       <!--PrimarySound>BlockForceFieldDoor2</PrimarySound-->
       <ResourceSinkGroup>Utility</ResourceSinkGroup>
@@ -1214,7 +1198,6 @@
           </ParticleEffects>
         </Effect>
       </Effects-->
-      <IsAirTight>true</IsAirTight>
       <!--Sound>BlockProjectorOn</Sound-->
       <!--PrimarySound>BlockForceFieldDoor2</PrimarySound-->
       <ResourceSinkGroup>Utility</ResourceSinkGroup>
@@ -1276,7 +1259,6 @@
           </ParticleEffects>
         </Effect>
       </Effects-->
-      <IsAirTight>true</IsAirTight>
       <!--Sound>BlockProjectorOn</Sound-->
       <!--PrimarySound>BlockForceFieldDoor2</PrimarySound-->
       <ResourceSinkGroup>Utility</ResourceSinkGroup>
@@ -1338,7 +1320,6 @@
           </ParticleEffects>
         </Effect>
       </Effects-->
-      <IsAirTight>true</IsAirTight>
       <!--Sound>BlockProjectorOn</Sound-->
       <!--PrimarySound>BlockForceFieldDoor2</PrimarySound-->
       <ResourceSinkGroup>Utility</ResourceSinkGroup>
@@ -1400,7 +1381,6 @@
           </ParticleEffects>
         </Effect>
       </Effects-->
-      <IsAirTight>true</IsAirTight>
       <!--Sound>BlockProjectorOn</Sound-->
       <!--PrimarySound>BlockForceFieldDoor2</PrimarySound-->
       <ResourceSinkGroup>Utility</ResourceSinkGroup>
@@ -1462,7 +1442,6 @@
           </ParticleEffects>
         </Effect>
       </Effects-->
-      <IsAirTight>true</IsAirTight>
       <!--Sound>BlockProjectorOn</Sound-->
       <!--PrimarySound>BlockForceFieldDoor2</PrimarySound-->
       <ResourceSinkGroup>Utility</ResourceSinkGroup>
@@ -1524,7 +1503,6 @@
           </ParticleEffects>
         </Effect>
       </Effects-->
-      <IsAirTight>true</IsAirTight>
       <!--Sound>BlockProjectorOn</Sound-->
       <!--PrimarySound>BlockForceFieldDoor2</PrimarySound-->
       <ResourceSinkGroup>Utility</ResourceSinkGroup>
