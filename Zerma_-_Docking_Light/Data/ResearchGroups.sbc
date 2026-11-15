@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ResearchGroups>
+    <!-- Groupe propre au mod : construire un projecteur de blueprint (grande ou petite grille) débloque le Docking Light (Zerma). -->
+    <ResearchGroup xsi:type="ResearchGroup">
+      <Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="Zerma_DockingLight_Projectors" />
+      <Members>
+        <BlockId Type="MyObjectBuilder_Projector" Subtype="LargeProjector" />
+        <BlockId Type="MyObjectBuilder_Projector" Subtype="SmallProjector" />
+      </Members>
+    </ResearchGroup>
+  </ResearchGroups>
+</Definitions>
