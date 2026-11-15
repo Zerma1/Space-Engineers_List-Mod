@@ -66,7 +66,7 @@ Contact with Sektan: not attempted yet.
 | 2 | `Data/CubeBlocks.sbc:13`, `:74` | Comment `[AUTEUR ORIGINAL À COMPLÉTER]`: original author (Sektan) not filled in | cosmetic | confirmed |
 | 3 | `Data/CubeBlocks.sbc`, `ZdlControls.cs` | In-game texts (description, terminal labels, tooltips) are in French only | minor | confirmed |
 
-The Workshop descriptions are in `docs/` (`WORKSHOP_DESCRIPTION.en.txt` is the reference, `WORKSHOP_DESCRIPTION.fr.txt` the French copy).
+The Workshop descriptions are in `docs/` (`WORKSHOP_DESCRIPTION.en.bbc` is the reference, `WORKSHOP_DESCRIPTION.fr.bbc` the French copy).
 
 Static checks (2026-11-15): the 5 `.sbc` files are valid XML, no duplicate `SubtypeId`, every `<Icon>` and
 `<Model>` of the mod exists. Not checked against the ModAPI whitelist in game.
