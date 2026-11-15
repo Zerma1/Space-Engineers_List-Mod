@@ -1,0 +1,84 @@
+[h1]Zerma - Docking Light[/h1]
+[b]Docking Light (Zerma)[/b] 是一款适用于大型和小型网格的对接探照灯。
+
+它沿光束方向投射出一条[b]发光的 3D 光球线[/b]，引导飞船驶向连接器、机库或跑道。
+
+[h2]设置（终端与编程块）[/h2]
+[list]
+[*]光球线[b]距离[/b]：大型网格 5 至 100 米，小型网格 2 至 50 米。
+[*]光球的[b]间距[/b]和[b]大小[/b]。
+[*]光球线的垂直和水平[b]偏移[/b]，步长 0.05 米（例如让光球贴合跑道表面）。
+[*][b]闪烁[/b]：无、整体、向外波动或向内波动，周期、波宽和最低亮度均可调。
+[*][b]颜色和强度[/b]：使用探照灯自带的选择器。光束与光球颜色相同。
+[*]光球周围的发光[b]光晕[/b]，始终开启。
+[/list]
+
+[h2]工具栏 / 驾驶舱动作[/h2]
+[list]
+[*]原生动作：开/关和切换、强度、半径……
+[*][b]增加 / 减少[/b]：距离、间距、垂直偏移和水平偏移。每个动作都会显示当前数值，且不会超出范围。
+[*][b]可调步长[/b]：“距离步长”、“间距步长”、“垂直偏移步长”和“水平偏移步长”动作可循环切换步长并显示当前步长。步长也可以在终端中设置。
+[/list]
+
+[table]
+[tr][th]设置[/th][th]可用步长（大型网格）[/th][th]默认值[/th][/tr]
+[tr][td]距离[/td][td]1 / 5 / 10 / 25 米[/td][td]5 米[/td][/tr]
+[tr][td]间距[/td][td]0.1 / 0.5 / 1 / 2 米[/td][td]0.5 米[/td][/tr]
+[tr][td]偏移[/td][td]0.05 / 0.25 / 0.5 / 1 / 2.5 米[/td][td]0.25 米[/td][/tr]
+[/table]
+
+小型网格上所有步长减半。步长按方块单独设置，会被保存并在多人游戏中同步。
+
+[h2]工作方式[/h2]
+[list]
+[*][b]条件[/b]：只有探照灯开启、通电且功能正常时才会显示光球。
+[*][b]无碰撞[/b]：可以飞过或走过光球。
+[*][b]耗电量[/b]与光球数量和强度成正比（大型网格上 20 米光球线、2 米间距时约 2.5 kW）。
+[*][b]科技进度[/b]：在大型或小型网格上建造一个（蓝图）[b]投影仪[/b]后解锁此方块。
+[*][b]多人游戏[/b]：设置会被保存并同步。只有拥有方块权限的玩家才能修改。专用服务器不进行渲染。
+[*]两种尺寸均有[b]专属 3D 模型[/b]，并带有细节层级（LOD）以提升性能。
+[/list]
+
+[h2]编程块属性[/h2]
+[table]
+[tr][th]属性[/th][th]类型[/th][/tr]
+[tr][td]ZermaDL_Distance[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_Spacing[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_GlobeSize[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_BlinkMode[/td][td]long：0 = 无，1 = 整体，2 = 向外波动，3 = 向内波动[/td][/tr]
+[tr][td]ZermaDL_BlinkPeriod[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_BlinkDuty[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_MinLevel[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_DistanceStep[/td][td]long：步长索引，0 至 3[/td][/tr]
+[tr][td]ZermaDL_SpacingStep[/td][td]long：步长索引，0 至 3[/td][/tr]
+[tr][td]ZermaDL_OffsetVStep[/td][td]long：步长索引，0 至 4[/td][/tr]
+[tr][td]ZermaDL_OffsetHStep[/td][td]long：步长索引，0 至 4[/td][/tr]
+[tr][td]ZermaDL_OffsetV[/td][td]float[/td][/tr]
+[tr][td]ZermaDL_OffsetH[/td][td]float[/td][/tr]
+[/table]
+
+灯光的原生属性（Color、Intensity、Radius……）仍然可用。
+
+[code]
+// 示例
+var light = GridTerminalSystem.GetBlockWithName("Docking Light") as IMyReflectorLight;
+light.SetValue("ZermaDL_Distance", 50f);
+light.SetValue<long>("ZermaDL_BlinkMode", 2);
+[/code]
+
+[h2]配方[/h2]
+[list]
+[*][b]大型网格[/b]：8 个内衬板、12 个结构零件、4 个大型钢管、4 个小型钢管、8 个计算机、1 个无线电零件、4 个防弹玻璃。
+[*][b]小型网格[/b]：4 个内衬板、6 个结构零件、4 个小型钢管、4 个计算机、1 个无线电零件、2 个防弹玻璃。
+[/list]
+
+[h2]源代码、错误报告与贡献[/h2]
+源代码和完整更新日志：[url=https://github.com/Zerma1/Space-Engineers_List-Mod/tree/main/Zerma_-_Docking_Light]GitHub 上的 Zerma_-_Docking_Light[/url]，属于 [url=https://github.com/Zerma1/Space-Engineers_List-Mod]GitHub 上的 Space-Engineers_List-Mod[/url] 仓库。
+请在 [url=https://github.com/Zerma1/Space-Engineers_List-Mod/issues]GitHub issues[/url] 或下方评论中报告错误，并附上 [i]SpaceEngineers.log[/i] 的相关片段。
+
+[h2]致谢[/h2]
+[list]
+[*]灵感来自 [url=https://steamcommunity.com/id/sektan/myworkshopfiles/]Sektan[/url] 于 2015 年发布的模组 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=379096179]S - Docking position lights[/url]。光球模型取自该模组。
+[*]探照灯模型：Zerma，基于 Space Engineers 原版探照灯（Keen Software House）制作。
+[*]模组：Zerma。
+[/list]

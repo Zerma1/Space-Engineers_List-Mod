@@ -8,7 +8,7 @@
         <SubtypeId>Zerma_DockingLight_Large</SubtypeId>
       </Id>
       <DisplayName>Docking Light (Zerma)</DisplayName>
-      <!-- Crédit : auteur original de « S - Docking position lights » introuvable dans les fichiers locaux : [AUTEUR ORIGINAL À COMPLÉTER] -->
+      <!-- Crédit : idée et modèle des globes repris de « S - Docking position lights » de Sektan (Workshop 379096179) -->
       <Description>Projecteur d'amarrage : projette dans l'axe du faisceau une ligne de globes lumineux réglable (distance, espacement, taille, décalage, clignotement, vagues). Inspiré du mod S - Docking position lights (Workshop 379096179).</Description>
       <Icon>Textures\GUI\Icons\Cubes\Zerma_DockingLight.dds</Icon>
       <CubeSize>Large</CubeSize>
@@ -70,7 +70,7 @@
         <SubtypeId>Zerma_DockingLight_Small</SubtypeId>
       </Id>
       <DisplayName>Docking Light (Zerma)</DisplayName>
-      <!-- Crédit : auteur original de « S - Docking position lights » introuvable dans les fichiers locaux : [AUTEUR ORIGINAL À COMPLÉTER] -->
+      <!-- Crédit : idée et modèle des globes repris de « S - Docking position lights » de Sektan (Workshop 379096179) -->
       <Description>Projecteur d'amarrage : projette dans l'axe du faisceau une ligne de globes lumineux réglable (distance, espacement, taille, décalage, clignotement, vagues). Inspiré du mod S - Docking position lights (Workshop 379096179).</Description>
       <Icon>Textures\GUI\Icons\Cubes\Zerma_DockingLight_Small.dds</Icon>
       <CubeSize>Small</CubeSize>
