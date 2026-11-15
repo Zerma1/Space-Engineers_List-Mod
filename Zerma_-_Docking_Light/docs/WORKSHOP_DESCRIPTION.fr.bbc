@@ -72,6 +72,10 @@ light.SetValue<long>("ZermaDL_BlinkMode", 2);
 [*][b]Petite grille[/b] : 4 plaques intérieures, 6 composants de construction, 4 petits tubes, 4 ordinateurs, 1 composant radio, 2 verres pare-balles.
 [/list]
 
+[h2]Code source, bugs et contributions[/h2]
+Code source et changelog complet : [url=https://github.com/Zerma1/Space-Engineers_List-Mod/tree/main/Zerma_-_Docking_Light]Zerma_-_Docking_Light sur GitHub[/url], dans le dépôt [url=https://github.com/Zerma1/Space-Engineers_List-Mod]Space-Engineers_List-Mod sur GitHub[/url].
+Signalez les bugs dans les [url=https://github.com/Zerma1/Space-Engineers_List-Mod/issues]issues GitHub[/url] ou dans les commentaires ci-dessous, avec un extrait de votre [i]SpaceEngineers.log[/i].
+
 [h2]Crédits[/h2]
 [list]
 [*]Inspiré du mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=379096179]S - Docking position lights[/url] de [url=https://steamcommunity.com/id/sektan/myworkshopfiles/]Sektan[/url], publié en 2015. Le modèle des globes est repris de ce mod.
