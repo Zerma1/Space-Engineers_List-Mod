@@ -14,7 +14,7 @@ updated by their original authors. The goal is to:
 
 | Mod | Original author | Workshop | Last original update | Last repo update | Status | Tested on |
 |-----|-----------------|----------|----------------------|------------------|--------|-----------|
-| [Airtight Force Field Hangar Doors](Airtight%20Force%20Field%20Hangar%20Doors/) | Hannobal | [901800144](https://steamcommunity.com/sharedfiles/filedetails/?id=901800144) | 2019-02-07 | 2026-10-27 | `To test` | — |
+| [Airtight Force Field Hangar Doors](Airtight_Force_Field_Hangar_Doors/) | Hannobal | [901800144](https://steamcommunity.com/sharedfiles/filedetails/?id=901800144) | 2019-02-07 | 2026-11-15 | `To test` | Steam build 24675677, single player (partial) |
 | [(DX11)Armor Thrusters](%28DX11%29Armor_Thrusters/) | Darth Biomech | [295393216](https://steamcommunity.com/sharedfiles/filedetails/?id=295393216) | 2015-12-10 | 2026-11-15 | `Functional` | SE 1.210.014 (build 24675677), single player |
 | [(DX11)Cryopods](%28DX11%29Cryopods/) | Darth Biomech | [294618647](https://steamcommunity.com/sharedfiles/filedetails/?id=294618647) | 2015-12-17 | 2026-11-15 | `Functional` | SE 1.210.014 (build 24675677), single player |
 | [(DX11)Docking Ring](%28DX11%29Docking_Ring/) | Darth Biomech | [294619787](https://steamcommunity.com/sharedfiles/filedetails/?id=294619787) | 2015-10-02 | 2026-11-15 | `Functional` | SE 1.210.014 (build 24675677), single player |
