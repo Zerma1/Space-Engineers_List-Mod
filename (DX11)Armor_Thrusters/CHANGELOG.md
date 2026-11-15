@@ -3,6 +3,12 @@
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Categories: **Fixed**, **Changed**, **Removed**, **Added**.
 
+## [Unreleased] — 2026-11-15
+
+### Changed
+- `docs/WORKSHOP_DESCRIPTION.txt` renamed to `docs/WORKSHOP_DESCRIPTION.en.txt` (new naming rule,
+  one file per language). Documentation only: the mod itself is unchanged.
+
 ## [1.1] — 2026-10-30
 
 ### Changed

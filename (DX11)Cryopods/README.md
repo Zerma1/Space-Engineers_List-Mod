@@ -5,7 +5,7 @@
 | **Original author** | Darth Biomech |
 | **Original Workshop page** | https://steamcommunity.com/sharedfiles/filedetails/?id=294618647 |
 | **Last original update** | 2015-12-17 |
-| **Last repo update** | 2026-10-30 |
+| **Last repo update** | 2026-11-15 |
 | **Status** | `Functional` (local single player; dedicated server to test after republishing; 4 non-blocking `MOD_ERROR`, see issue 11) |
 | **Current version** | 1.1 |
 | **Tested on Space Engineers** | 1.210.014 (build 24675677), local single player, creative (2026-10-30) |
@@ -21,7 +21,7 @@ Cryogenic pods for large and small grids: functional pod (`CryoChamber`), open p
 - `Models/Darth_Biomech/`: 8 `.mwm` models
 - `Textures/Darth_Biomech/`: model textures; `gui/`: 4 icons
 - `metadata.mod`: added in this repo (v1.1)
-- `docs/WORKSHOP_DESCRIPTION.txt`: Steam Workshop description (BBCode), added in this repo (v1.1)
+- `docs/WORKSHOP_DESCRIPTION.en.txt`: Steam Workshop description (BBCode), added in this repo (v1.1)
 - `README.txt`, `thumb.jpg`: original files from the author
 - Dependencies: none. Sounds and the glass texture come from the base game (all still present in the current game).
 
@@ -95,4 +95,4 @@ See [CHANGELOG.md](CHANGELOG.md).
 
 ## Steam Workshop description
 
-The player-facing parts of this README are kept in BBCode in [docs/WORKSHOP_DESCRIPTION.txt](docs/WORKSHOP_DESCRIPTION.txt).
+The player-facing parts of this README are kept in BBCode in [docs/WORKSHOP_DESCRIPTION.en.txt](docs/WORKSHOP_DESCRIPTION.en.txt).

@@ -5,7 +5,7 @@
 | **Original author** | Darth Biomech |
 | **Original Workshop page** | https://steamcommunity.com/sharedfiles/filedetails/?id=294619787 |
 | **Last original update** | 2015-10-02 |
-| **Last repo update** | 2026-10-30 |
+| **Last repo update** | 2026-11-15 |
 | **Status** | `Functional` (local single player; dedicated server to test after republishing) |
 | **Current version** | 1.1 |
 | **Tested on Space Engineers** | 1.210.014 (build 24675677), local single player, creative (2026-10-30) |
@@ -21,7 +21,7 @@ Modular docking ring: sectors, corners, docking clamps (merge blocks) and airloc
 - `Models/Darth_Biomech/`: 16 `.mwm` models (including the door subparts `Docking_ring_door_left/right.mwm`)
 - `Textures/Darth_Biomech/`: model textures; `gui/`: 4 icons
 - `metadata.mod`: added in this repo (v1.1)
-- `docs/WORKSHOP_DESCRIPTION.txt`: Steam Workshop description (BBCode), added in this repo (v1.1)
+- `docs/WORKSHOP_DESCRIPTION.en.txt`: Steam Workshop description (BBCode), added in this repo (v1.1)
 - `README.txt`, `thumb.jpg`: original files from the author
 - Dependencies: none. Door sounds and construction textures come from the base game.
 
@@ -107,4 +107,4 @@ See [CHANGELOG.md](CHANGELOG.md).
 
 ## Steam Workshop description
 
-The player-facing parts of this README are kept in BBCode in [docs/WORKSHOP_DESCRIPTION.txt](docs/WORKSHOP_DESCRIPTION.txt).
+The player-facing parts of this README are kept in BBCode in [docs/WORKSHOP_DESCRIPTION.en.txt](docs/WORKSHOP_DESCRIPTION.en.txt).

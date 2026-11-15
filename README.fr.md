@@ -15,9 +15,9 @@ fonctionnent plus ou ne sont plus mis à jour par leur auteur. Le but :
 | Mod | Auteur d'origine | Workshop | MAJ d'origine | Dernière modif. | Statut | Testé sur |
 |-----|------------------|----------|---------------|-----------------|--------|-----------|
 | [Airtight Force Field Hangar Doors](Airtight%20Force%20Field%20Hangar%20Doors/) | Hannobal | [901800144](https://steamcommunity.com/sharedfiles/filedetails/?id=901800144) | 2019-02-07 | 2026-10-27 | `À tester` | — |
-| [(DX11)Armor Thrusters](%28DX11%29Armor_Thrusters/) | Darth Biomech | [295393216](https://steamcommunity.com/sharedfiles/filedetails/?id=295393216) | 2015-12-10 | 2026-10-30 | `Functional` | SE 1.210.014 (build 24675677), single player |
-| [(DX11)Cryopods](%28DX11%29Cryopods/) | Darth Biomech | [294618647](https://steamcommunity.com/sharedfiles/filedetails/?id=294618647) | 2015-12-17 | 2026-10-30 | `Functional` | SE 1.210.014 (build 24675677), single player |
-| [(DX11)Docking Ring](%28DX11%29Docking_Ring/) | Darth Biomech | [294619787](https://steamcommunity.com/sharedfiles/filedetails/?id=294619787) | 2015-10-02 | 2026-10-30 | `Functional` | SE 1.210.014 (build 24675677), single player |
+| [(DX11)Armor Thrusters](%28DX11%29Armor_Thrusters/) | Darth Biomech | [295393216](https://steamcommunity.com/sharedfiles/filedetails/?id=295393216) | 2015-12-10 | 2026-11-15 | `Functional` | SE 1.210.014 (build 24675677), single player |
+| [(DX11)Cryopods](%28DX11%29Cryopods/) | Darth Biomech | [294618647](https://steamcommunity.com/sharedfiles/filedetails/?id=294618647) | 2015-12-17 | 2026-11-15 | `Functional` | SE 1.210.014 (build 24675677), single player |
+| [(DX11)Docking Ring](%28DX11%29Docking_Ring/) | Darth Biomech | [294619787](https://steamcommunity.com/sharedfiles/filedetails/?id=294619787) | 2015-10-02 | 2026-11-15 | `Functional` | SE 1.210.014 (build 24675677), single player |
 | [Mod Block Tabs](Mod%20Block%20Tabs/) | Zerma1 (créé ici) | — | 2026-10-30 | 2026-10-30 | `À tester` | — |
 
 Statuts : `À analyser` → `Analysé` → `En réparation` → `À tester` → `Fonctionnel` (ou `Bloqué`).
